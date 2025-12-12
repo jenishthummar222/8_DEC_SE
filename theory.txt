@@ -1,3 +1,84 @@
+Date :- 8/12/2025
+
+** SDLC Methodology [Software Development life cycle] **
+    "
+        The SDLC referec to a Methodology with clearly defined processes for creating high-quality software in detail.
+        the SDLC Methodology focues on the following phases of Software Devlopment 
+    "
+    1. Requirement Gathering
+    2. Analysis
+    3. Designing
+    4. Implementation
+    5. Testing
+    6. Maintenance
+
+** Client & Server **
+
+[1] Client Program 
+    -> Running on end Host
+    -> Request Server 
+        e.g. Web browser
+
+[2] Server Program
+    -> Running on end host
+    -> Provides Services
+     e.g. Webserver
+
+ // Client - Server Communication //
+
+    [1] Client  - Sometimes on
+
+    -> Intilates a Request to the server when intersted.
+      e.g Web Browser on your laptop & cell phone
+    -> Dosen't Communication directly with other clients.
+    -> needs to know the servers address.
+
+    [2] Server - Always on 
+
+    -> Service requests from many host
+    ->  e.g. web server for the WWW.demo.com web site.
+    -> doesn't initiate contract with the clients.
+    -> needs a fixeed well know address.
+
+** HTTP :- Hyper Text transfer Protocol.
+        -> Which is mainly work as a waiter or delivery boy.
+        -> Which take request from client and send request to server.
+        -> reciver response from server and return back to client.
+
+   HTTPS :- Hyper Text transfer Protocol Secure.
+        -> Protocol :- in simple language we can say rule.
+    
+** Http Or https **
+
+    // Accepts // 
+
+        url
+        methods
+        header
+        body (Post - put) (registration - update)
+
+    // Response  from Server//
+
+        status code 
+        header
+        body (content)
+ 
+** WWW - "World Wide Web" **
+    -> know as a web
+    -> it is a collection of website or web pages stored in web servers.
+    -> connected to local computers throught the internal.
+    -> these website contain text pages, digital images, audio, videos, etc.
+    -> users can access the content of these site from any part of the world over the intement using their devices such as computer, laptop,phone, etc.
+    -> the www , along with internet enables the retrival and display of text & media to your device.
+
+** Type of Application Softwere ** 
+
+    -> Application Software -> Web / Mobile
+    -> System Software
+    -> Driver Software
+    -> middleware Software
+    -> Programimg Software
+
 Date:- 12/12/2025
 
 VERSION CONTROL SYSTEM : (VCS)
