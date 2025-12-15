@@ -153,5 +153,48 @@ step 5 : add and push your content (every time when you apply changes)
         #git commit -m "message"
 
         #git push -u origin main
-
     
+---------------------------------------------------------- Date:- 15/12/2025 --------------------------------------------------------------------------------------------
+   
+USE CASE DIAGRAM: 
+
+	-> Use case diagram which is represent user activity with systems in this case diagram there are 3 main sections
+
+	[1] actor : which is represents actor or user of the systems
+
+	[2] activity : which is represent by oval symbol - which represent activity perform by respective user or actor 
+
+	[3] system : it which is surrounded by rectangle boarders.
+
+-> draw.io website for create diagram.
+
+    include : it which is indicate by << include >> like this
+            which means it is mandatory to perform specific activity
+
+    extend : this is indicate by << extend >> 
+            which is optional
+            
+----------------------------------------------------
+
+FLOW CHART DIAGRAM : 
+
+	-> flow chart diagram is very important diagram of systems planning
+	-> it represent systems flow - step by step
+	-> which is meanly represent that how systems work step by step:
+	
+	E.G.
+		Step 1
+		 |
+		 V
+		Step 2
+		...
+
+	Oval : this symbol is represent  starting point of flow chart.
+	
+	Rectangle : this symbol is represent process.
+
+	Diamond : this symbol is represent condition or decision.
+
+	Arrow : which is use for connectors.
+
+
