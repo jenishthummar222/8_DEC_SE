@@ -1,0 +1,102 @@
+----------------------------------------------------------Date:- 11/12/2025--------------------------------------------------------------------------------------------
+
+What is language ?
+     langauge is a way to communicate.
+
+----------------------------------------------------------
+Compiler : 
+            which is compile whole source file and give output after completion of source file.
+
+Interpriter : 
+            it is exectue line by line
+            line by line :- it send code to machine and machine convert into human code and resend to user.
+            interpriter is slower than Compiler
+----------------------------------------------------------
+
+What is meaning of program ?
+    it is a collection of instruction code.
+
+----------------------------------------------------------
+
+What is meaning of programing langaunge ?
+    A langaunge is used to write a program.
+----------------------------------------------------------
+
+Example of programing langaugs ?
+    c langauge, c++ , java, python, php,c#,.net..
+
+----------------------------------------------------------
+What is C programing langauge ?
+    c is a most powerfull , populer, Compiler type langauge.
+    c is easy to understend.
+    c langauge was invented by denish m. ritchie in AT & T bell lab.
+----------------------------------------------------------
+
+History of C programing:
+
+   -> Before c programing there is BCPL langauge then B langauge and Then after c langauge.
+   -> C langauge is better version of B langauge.
+   -> actully BCPL and b langauge working upon assembly language so, it diffecult to understend
+      So, denish m ritchie invented c programing langauge in 1972 (tranditional C langauge).
+   -> in 1989 ANSI standerized c programing.
+   -> ANSI :- american national stander insititute.
+   -> after standerized of C programing its know as ANSI C, C89.
+----------------------------------------------------------
+
+Features of C programing langauge
+
+    -> C language is a easy to understend langauge - mother of all langauge.
+    -> c is small becuse it contains only 32 keyword.
+    -> c contains libaries
+
+----------------------------------------------------------
+Real world uses of c langauge
+
+Operating systems
+embedded systems
+games
+kernels
+drivers
+----------------------------------------------------------
+
+Strucure of C langauge
+
+1] Documentation of program
+    -> which is represent your program's title or description.
+    -> which is represent by comments.
+    -> Compiler skip or ignore comments at executation time.
+
+    * there are two type of comments *
+
+    i) Single line comment : which is represent by //
+
+        e.g.  // this is single line comment.
+    
+    ii) Multi line comment : which is represent by /*....*/ 
+
+        e.g /* this is 
+                multi line 
+                comments
+            */
+
+2] Connection with c langauge libary
+
+    #include<stdio.h>
+    #include<conio.h>
+
+        hear, 
+            # :-> which is predefined
+            include :-> to add somthing
+            <stdio.h> :->" standard input output header file. "
+                        using of this header file we can acess inbuilt function from this file
+            <conio.h> :-> console input output header file. 
+
+3] executation of program
+    void main()
+    {
+        ...
+    }
+        hear,
+            void  : it is a data type which is dose not return value.
+            main  :- it is a function which represent that this a main executatable of program.
+            {...} :- this is represent block of code.
