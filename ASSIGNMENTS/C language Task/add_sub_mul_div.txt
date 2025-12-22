@@ -1,0 +1,35 @@
+
+// task 1:- add, sub,mul,div
+
+#include <stdio.h>
+
+void main()
+{
+    
+    int num, num1 ,num2;
+    num = 10; 
+    num1 = 20;
+    num2 = 30;
+    
+    int add = num + num1 +num2 ;
+    int sub = (num2-num1) - num; 
+    int mul = (num*num1*num2);
+    int divi = add/3;
+    
+    // Addition of three number 
+    
+    printf("addition is  = %d\n",add); 
+    
+    // subtraction of three number
+    
+     printf("subtraction is  = %d\n",sub); 
+   
+   // Multification of three number
+
+     printf("Multification is  = %d\n",mul); 
+    
+    // division of three number
+
+     printf("division is  = %d\n",divi); 
+   
+}

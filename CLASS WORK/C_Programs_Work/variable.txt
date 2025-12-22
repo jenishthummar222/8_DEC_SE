@@ -1,0 +1,16 @@
+// variable declartion, initlization, callling example
+
+#include <stdio.h>
+
+void main()
+{ 
+     
+    int num;    // hear int is a datatype & num is a variable
+
+    num = 10; // Step 2:- initlization    
+    
+    printf("num = %d\n",num); 
+
+    printf("%d + %d = %d",num,num,num+num);
+   
+}

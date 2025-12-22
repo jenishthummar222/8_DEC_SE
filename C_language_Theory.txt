@@ -1,4 +1,4 @@
-----------------------------------------------------------Date:- 11/12/2025--------------------------------------------------------------------------------------------
+----------------------------------------------------------Date:- 17/12/2025--------------------------------------------------------------------------------------------
 
 What is language ?
      langauge is a way to communicate.
@@ -100,3 +100,93 @@ Strucure of C langauge
             void  : it is a data type which is dose not return value.
             main  :- it is a function which represent that this a main executatable of program.
             {...} :- this is represent block of code.
+
+----------------------------------------------------------Date:- 19/12/2025--------------------------------------------------------------------------------------------
+pruntf() :
+    in c langauge printf  is  a function which is used to display message on output (Console Screen).
+
+    Syntax:-
+        printf("Message);
+
+    ; -> semicolon which is idication end of the line it is used to terminate statment.
+
+    by diffecult printf  sunction join with previous fuction.
+
+----------------------------------------------------------
+
+// First program in c language
+
+#include <stdio.h>
+
+void main()
+{
+    printf("Hello Welcome to my first program.");
+
+}
+
+----------------------------------------------------------
+Escapse sequence :
+
+\n :- new line
+\t :- tab
+\' :- print single qoute
+\" :- print double qoute
+\\ :- print slash
+
+----------------------------------------------------------
+
+// escapse sequence program in c language
+
+#include <stdio.h>
+
+void main()
+{
+    printf("Hello"); 
+    printf("\nWelcome to ");
+    printf("\tmy first program.");
+
+}
+
+----------------------------------------------------------
+
+** DATA TYPE **
+    -> ehich is type of value store in variable it's called data type.
+
+                                                Values
+                                                   |
+                                                   V 
+        Number                                     Charactors                                   Yes / No
+          |                                             |                                           |
+ Without         With                        Single Char      starting                           (bollean)
+ Point           Point                          
+  |               |
+e.g:- 15        e.g: 20.5                       e.g :- 'A'      e.g:- "Hello"                     true/false
+
+int (%d)        float(%f)                       char                char[size]                     bool
+(integer)       double (%lf)                      %c                    %s
+                long double(%Lf)
+
+----------------------------------------------------------
+
+variable :
+    -> it is name which can store a value.
+    -> in c language we can take any as a variable.
+    -> but there are some rule which we have to follow 
+
+** Variable devide in 3 step
+
+1] Variable declaration : 
+    ->  before use with variable we must have to declare with specific data type.
+    syntax :- 
+        <data type> variable name ;
+
+2] Variable initlization :
+    -> assign  a value
+    syntax : variable name = value;
+
+3] variable calling or variable use 
+    syntax :-
+        printf(variable name);
+
+----------------------------------------------------------
+
