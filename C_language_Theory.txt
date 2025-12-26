@@ -188,5 +188,340 @@ variable :
     syntax :-
         printf(variable name);
 
+----------------------------------------------------------Date:- 22/12/2025--------------------------------------------------------------------------------------------
+
+Token : 
+    -> in c langauge token is piece of code or We can say that identity of code.
+
+
+1]  ketwords : 
+    -> it are reserved world
+    -> which is written in small letters.
+    -> there are 32 keyword in clanguage.
+    Note :-
+        -> In C language we can't take any keyword as variable name.
+        e.g:- 
+            int int = 10;  XX
+            bcs, hear int is a keyword.
+
+    2] Identifier :- 
+        -> which means anything which is identitfy something
+        -> like a variable, function, arrays, or anything.
+        -> So, in simple language we can say that identitfier identitfy something in program.
+    
+    3] constant :-
+        -> that means fix value.
+        -> which dose not change in program
+        -> at programming time sometime we want to fix values.
+        e.g. const float pi = 3.14; Fix value
+
+    4] operator :-
+        -> a specific symbols which is represent to perform some opreations.
+        like +,-,*,/,% etc..
+    
+    5] special characters :- 
+        -> , [] : ; () these all are special characters.
+    
+
 ----------------------------------------------------------
 
+** Variable Rules **
+
+1) it name can be contain A to Z or a to z or 0-1.
+2) variable name cannot start with digit (0-9).
+3) variable name cant't contain whitespace
+    int num 10= 20;  XX
+4) we can't use any special characters in variable name.
+    but we can use onlye underscore.
+     e.g. int roll_number 
+5) any reserved word or a keyword we can't take as a variable name.
+    e.g. int int ;  XX 
+
+----------------------------------------------------------
+printf():- to print a value or message on output screen.
+
+scanf() :- which is mainly use for accept value at run time 
+    or simple langauge we can say that scanf use to read value from user.
+
+    syntax:-
+            scanf(placeholder,variable);
+
+----------------------------------------------------------
+// simple take a user input
+#include <stdio.h>
+
+void main()
+{
+    int num;
+    printf("Enter a number :- ");
+    scanf("%d",&num);
+    
+    printf("Number is :- %d",num);
+
+}
+
+----------------------------------------------------------
+accept float value from the user
+
+syntax : 
+    scanf("%f,&var);
+
+// just for understand sacnf()
+#include <stdio.h>
+
+----------------------------------------------------------
+
+void main()
+{
+    int marks;
+    
+    printf("Enter your marks : ");
+    scanf("%d",&marks);
+    
+    printf("\n Your marks = %d",marks);
+}
+
+----------------------------------------------------------
+// take float value from the user
+#include <stdio.h>
+
+void main()
+{
+    float price;
+    printf("Enter your price :- ");
+    scanf("%f",&price);
+    
+    printf("\nPrice  is :- %.2f",price);
+
+}
+
+----------------------------------------------------------
+
+// take three value from the user and print these value.
+
+#include <stdio.h>
+
+void main()
+{
+    float num1,num2,num3;
+    
+    printf("Enter your first number :- ");
+    scanf("%f",&num1);
+    
+    printf("Enter your second number :- ");
+    scanf("%f",&num2);
+    
+    printf("Enter your thread number :- ");
+    scanf("%f",&num3);
+    
+    printf("\nyour values is : \n%.2f\n%.2f\n%2.f",num1,num2,num3);
+
+}
+----------------------------------------------------------
+
+//accept book price form the user and display on console screen
+#include <stdio.h>
+
+void main()
+{
+    //step 1: variable declaration
+    float book_price;
+    
+    //step 2: ask value from user
+    printf("Enter your book price : ");
+    scanf("%f",&book_price);
+    
+    //step3: displaye value on console
+    printf("\n Your book price is = %.2f",book_price);
+
+}
+
+----------------------------------------------------------
+ ** Operators: **
+ 
+ `threre is some specific sysmbol which is mainly used to perform opreations
+ using of that operators we can perform opreations
+ e.g. number1 + number2;
+
+ hear, number1 and number2 are operands.
+ + is an operator sign or simbol.
+
+ 1] Arithmetic Operator :
+    -> to perform arithmatic opreations we need to uses arithmatic operands.
+    + - * / % 
+--------------------------------------------------
+    Example:
+        //ex of arithmatic opreators
+        #include <stdio.h>
+
+        void main()
+        {
+            int a,b;
+            
+            a=10;
+            b=5; // use of assignment opreators
+            
+            printf("\n a=%d + b=%d = %d",a,b,a+b);
+            printf("\n a=%d - b=%d = %d",a,b,a-b);
+            printf("\n a=%d * b=%d = %d",a,b,a*b);
+            printf("\n a=%d / b=%d = %d",a,b,a/b);
+            printf("\n a=%d %% b=%d = %d",a,b,a%b);            
+        }
+
+---------------------------jk-------------------------------Date:- 26/12/2025--------------------------------------------------------------------------------------------
+
+2] Assignment Operator:
+    -> to assign a value
+    =
+    sorthand operator :-
+        -> += -= *= /= %=
+    ---------------------------------------------------
+    Example:-
+        //ex of assignment opreators
+        #include <stdio.h>
+
+        void main()
+        {
+            int a,b;
+            
+            a=10;
+            b=5; // use of assignment opreators
+            
+            printf("\n a=%d ,b=%d",a,b);
+            
+            //shorthand opreators
+            
+            //a=a+b;  //opration 1 = a+b  opration2 : a= ans (a+b);
+            
+            a+=b; // opration1 :- adding value of b inside the a
+            
+            printf("\n a=%d ,b=%d",a,b);
+            
+        }
+    -----------------------------------------------------
+
+3] Relational Operator / comparision operator: 
+    -> < > <= >= == !=
+    ---------------------jk----------------------------
+    Example:-
+        //ex of Relational opreators
+        #include <stdio.h>
+
+        void main()
+        {
+            int a,b,result;
+            
+            a=20;
+            b=22; // use of assignment opreators
+            
+            result = a>b;  // 0= false , 1= true
+            printf("\n %d",result);
+            
+            result = a<b;
+            printf("\n %d",result);
+            
+            result = a==b;
+            printf("\n %d",result);
+            
+            result = a!=b;
+            printf("\n %d",result);
+            
+        }
+    ---------------------jk----------------------------
+4]logical operator :
+
+    -> && [And operator]
+    -> || [OR operator]
+    -> !  [Not operator]
+
+    ---------------------jk----------------------------
+    Example:-
+        //ex of Logical opreators
+        #include <stdio.h>
+
+        void main()
+        {
+            int a,b,c,result;
+            
+            a=20;
+            b=22; // use of assignment opreators
+            c=40;
+            
+            result = (a>b) && (a>c);
+            printf("\n %d",result);
+            
+            result = (a<b) && (a<c);
+            printf("\n %d",result);
+
+            result = (a>b) || (a<c);
+            printf("\n %d",result);
+            
+        }
+        ---------------------jk----------------------------
+5] unity operator (increment or decrement opreators) :
+    this operator divided 2 parts
+
+    prefix    ++num
+    postfix   num++
+
+    ++(increment)
+    --(decrement)
+
+    ---------------------jk----------------------------
+    Example:-
+    //ex of unity ++ -- opreators
+    #include <stdio.h>
+
+    void main()
+    {
+        int num;
+        
+        num=20;
+    
+    // increment
+        printf("\n num  %d",num);
+        printf("\n num++ %d",num++);
+        printf("\n num %d",num);
+        printf("\n ++num %d",++num);
+        
+        // decrement
+        
+        printf("\n num  %d",num);
+        printf("\n num-- %d",num--);
+        printf("\n num %d",num);
+        printf("\n --num %d",--num);
+    }
+    ---------------------jk----------------------------
+6] bitwise opreators :
+    -> which is perform on bitwise
+    XOR  ^
+    NOT  !
+    OR   |
+    LEFT SHIFT  >>
+    RIGHT SHIFT <<
+
+7] Conditinol opration : 
+    ->  exp1 ? exp2 : exp3;
+
+        ? :
+    ---------------------jk----------------------------
+    Example:-
+    //ex of Conditinol or ternary opreators : becuse it's devid in 3 parts
+    #include <stdio.h>
+
+    void main()
+    {
+        int num1,num2,max;
+        num1=45;
+        num2=99;
+        //       Exp1       Exp2   Exp3
+        max = (num1>num2) ? num1 : num2;
+
+        printf("\n max = %d",max);
+    }
+    ---------------------jk----------------------------
+    
+
+
+
+    

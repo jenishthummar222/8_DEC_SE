@@ -1,0 +1,16 @@
+// Take a three value form user and perform addetion of number
+
+#include <stdio.h>
+
+void main()
+{
+    float num1,num2,num3;
+    
+    printf("Enter three number :-\n");
+    scanf("%f%f%f",&num1,&num2,&num3);
+    
+    float add = num1+num2+num3;
+        
+    printf("\n Some of three value is : %.2f",add);
+
+}
