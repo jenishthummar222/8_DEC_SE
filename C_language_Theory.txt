@@ -493,7 +493,7 @@ void main()
     }
     ---------------------jk----------------------------
 6] bitwise opreators :
-    -> which is perform on bitwise
+    -> which is perform on bitwis
     XOR  ^
     NOT  !
     OR   |
@@ -519,9 +519,52 @@ void main()
 
         printf("\n max = %d",max);
     }
-    ---------------------jk----------------------------
-    
+---------------------------jk-------------------------------Date:- 29/12/2025--------------------------------------------------------------------------------------------
+        > greater than
+        >= greater than equal too
+        < less than
+        <= less than
+        == equal too
+------------------------JK-----------------------------
 
+** Control Statment  **
 
+    -> there are 3 statment 
+    1] conditional statement
+    2] looping statement
+    3] jumping statement
+    -----------------------JK------------------------------
 
-    
+    1] Conditional Statement :-
+        -> which is based on condition wise 
+        -> there are 5 type pf conditional statement
+
+        i) if statement
+        ii) if..else statement
+        iii) else.. if statement
+        iv) nested is statement
+        v) switch statement
+        ---------------------JK---------------------------------
+
+        i) if Statement :-
+            -> if condition goes true it will exectue
+            Syntax:-
+                if(condition)
+                {
+                    ...
+                }
+        ------------------JK-------------------------
+        ii) if..else Statement :-
+            -> if part exectue when condition goes true and else part exectue when condition goes false.
+            Syntax :-
+                if(condition)
+                {
+                    true statement
+                }
+                else
+                {
+                    false statement
+                }
+        -----------------------JK-----------------------
+        
+

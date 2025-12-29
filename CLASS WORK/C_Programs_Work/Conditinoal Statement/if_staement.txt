@@ -1,0 +1,77 @@
+-------------------------------------------
+        Example :-
+            // find even or odd
+            #include <stdio.h>
+
+            void main()
+            {
+                int num;
+                printf("Enter your number : ");
+                scanf("%d",&num);
+                
+                if(num%2==0)
+                {
+                    printf("%d it's a even number",num);
+                }else{
+                    printf("%d it's a odd number",num);
+                }
+                
+            }
+------------------jk------------------------------
+// find positive number or nagative number
+
+        #include <stdio.h>
+
+        void main()
+        {
+            int num;
+            printf("Enter your number : ");
+            scanf("%d",&num);
+            
+            if(num>0)
+            {
+                printf("%d it's a positive number",num);
+            }else{
+                printf("%d it's a nagative number",num);
+            }
+            
+        }
+-----------------------------------------------------
+// check for voting Eligibility or not
+
+        #include <stdio.h>
+
+        void main()
+        {
+            int ege;
+            printf("Enter your number : ");
+            scanf("%d",&ege);
+            
+            if(ege>=18)
+            {
+                printf("Eligibility  for Voting");
+            }else{
+                printf("Not Eligibility for voting");
+            }
+            
+        }
+        
+-----------------------------------------------------
+// check book price is high or low 
+
+        #include <stdio.h>
+
+        void main()
+        {
+            int bookPrice;
+            printf("Enter your book price : ");
+            scanf("%d",&bookPrice);
+            
+            if(bookPrice > 100)
+            {
+                printf("your book price is high");
+            }else{
+                printf("your book price is low");
+            }
+            
+        }

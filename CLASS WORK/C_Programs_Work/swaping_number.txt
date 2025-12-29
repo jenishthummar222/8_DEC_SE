@@ -1,0 +1,22 @@
+---------------------jk------------------------------------------
+// swap 2 number using 3 variable
+
+#include <stdio.h>
+
+void main()
+{
+    int a,b,temp;
+    a=10;
+    b=20;
+    
+    printf("before swap\na = %d\nb = %d",a,b);
+    
+    temp = a;
+    a=b;
+    b=temp;
+    
+    printf("\nafter swap\na = %d\nb = %d",a,b);
+    
+}
+
+---------------------jk------------------------------------------
