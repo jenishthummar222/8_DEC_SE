@@ -36,7 +36,7 @@
             }
             
         }
------------------------------------------------------
+------------------------JK-----------------------------
 // check for voting Eligibility or not
 
         #include <stdio.h>
@@ -55,8 +55,26 @@
             }
             
         }
-        
------------------------------------------------------
+-------------------------JK---------------------------
+// find grater number between two  number
+#include <stdio.h>
+
+void main()
+{
+   int num1,num2;
+   printf("Enter your 1 number : ");
+   scanf("%d",&num1);
+   printf("Enter your 2 number : ");
+   scanf("%d",&num2);
+   
+  if(num1>num2){
+      printf("num1 = %d is grater ",num1);
+  }else{
+      printf("num2 = %d is grater",num2);
+  }
+   
+}
+-------------------------JK----------------------------
 // check book price is high or low 
 
         #include <stdio.h>
@@ -75,3 +93,103 @@
             }
             
         }
+----------------------------jk------------------------------
+// marksheet using else if or nested if
+#include <stdio.h>
+
+void main()
+{
+   int marks;
+   printf("Enter your marks : ");
+   scanf("%d",&marks);
+   
+   if(marks>=0 && marks <=100)
+   {
+       if(marks<=100 && marks>70)
+       {
+            printf("A grade");    
+       }
+       else if(marks<=70 && marks>60)
+       {
+            printf("B grade");    
+       }
+        else if(marks<=60 && marks>50)
+       {
+            printf("C grade");    
+       } 
+        else if(marks<=50 && marks>40)
+       {
+            printf("D grade");    
+       } 
+        else 
+       {
+            printf("Fail");    
+       }
+   }
+   else{
+       printf("invalid Marks");
+   }
+   
+}
+----------------------------jk------------------------------
+
+// find grater number between three  number using nested if stmt
+#include <stdio.h>
+
+void main()
+{
+   int num1,num2,num3;
+   printf("Enter your 1 number : ");
+   scanf("%d",&num1);
+   printf("Enter your 2 number : ");
+   scanf("%d",&num2);
+   printf("Enter your 3 number : ");
+   scanf("%d",&num3);
+   
+  if(num1>num2 )
+  {     
+      if(num1>num3)
+        {
+            printf("num1 = %d is grater ",num1);
+        }
+      else
+        {
+            printf("num3 = %d is grater",num3);
+        }        
+  }
+  else 
+  {
+    if(num2 >num3)
+    {
+        printf("num2 = %d is grater",num2);   
+    }
+    else
+    {
+        printf("num3 = %d is grater",num3);
+    }
+  }
+   
+}
+
+----------------------------jk------------------------------
+// find char is vowel or not  using if
+#include <stdio.h>
+
+int main()
+{
+    char ch;
+    
+    printf("Enter your chareactor:- ");
+    scanf("%c",&ch);
+    
+    if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+    {
+        printf("%c it's a vowel");    
+    }
+    else
+    {
+        printf("%c it's not a vowel");
+    }
+    
+    return 0;
+}

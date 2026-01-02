@@ -1,0 +1,59 @@
+// Demo switch case Days
+#include <stdio.h>
+
+int main()
+{
+    int day;
+    
+    printf("Enter your day:- ");
+    scanf("%d",&day);
+    
+    switch(day)
+    {
+        case 1:
+            printf("Monday");
+            break;
+        case 2:
+            printf("Tuesday");
+            break;
+        case 3:
+            printf("Wednesday");
+            break;
+        default:
+            printf("invalid Day");
+    }
+
+    return 0;
+}
+----------------------JK---------------------------
+// find char is vowel or not  using switch
+#include <stdio.h>
+
+int main()
+{
+    char ch;
+    
+    printf("Enter your chareactor:- ");
+    scanf("%c",&ch);
+    
+    switch(ch)
+    {
+        case 'a':
+            
+        case 'e':
+           
+        case 'i':
+        
+        case 'o':
+        
+        case 'u':
+            printf("a vowel");
+            break;
+            
+        default:
+            printf("not Vowel");
+    }
+
+    return 0;
+}
+

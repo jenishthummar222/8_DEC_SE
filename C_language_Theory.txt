@@ -566,5 +566,91 @@ void main()
                     false statement
                 }
         -----------------------JK-----------------------
+        iii) else..if statement 
+            -> when we want to work with multiple if conditions
+            Syntax:-
+                if(condition)
+                {
+                    true statement
+                }
+                else if(condition)
+                {
+                    true statement
+                }
+                else if(condition)
+                {
+                    true statement
+                }
+                else
+                {
+                    false statement
+                }
+        -----------------------JK-----------------------
+        vi) Nested If Statement 
+            -> when if stmt is call inside another if stmt
+        Syntax:-
+            if(condition)
+            {
+                if(condition)
+                {
+                    true statement
+                }
+                else
+                {
+                    false statement
+                }
+            }
+            else
+            {
+                false statement
+            }
+         -----------------------JK-----------------------
+         
+---------------------------jk-------------------------------Date:- 2/1/2026--------------------------------------------------------------------------------------------
+
+** SWITCH CASE **
+    -> which is use for multiple condition
+     Note:
+        -> we can't use float data type.
+        -> we can't use logical operators.
+    
+    Syntax:
+        swith(expressio)
+        {
+            case value:
+                statement;
+                break;
+            
+            case value:
+                statement;
+                break;
+
+            default:
+                statement;
+        }
+
+-------------------------JK------------------------------
+** Looping Statement **
+
+    -> repitation
+    -> threre are 3 type of loop
+        1] for loop
+        2] while loop
+        3] do.. while loop
+
+        1] for loop:
+            -> it is a sequence controlled loop
+            -> which is divid into three part
+
+            Syntax:-
+                for(counter1; counter2; counter3)
+                {
+                    ...
+                }
+
+                for(initlization; condition; updation)
+                {
+                    .....
+                }
         
 
