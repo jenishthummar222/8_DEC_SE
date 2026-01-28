@@ -1,0 +1,276 @@
+/**********************************JK********************************************
+
+Create an application that can perform all string related operations 
+
+● reverse a string 
+● Concatenation  
+● Palindrome 
+● Copy  a string  
+● Length of the string  
+● Frequency of character in s string  
+● Find number of vowels and consonants  
+● Find number of blank spaces and digits  
+
+***********************************JK********************************************/ Assessment
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+
+void Reverse_a_String()
+{
+
+	char org_str[50];
+	char rev_str[50];
+	int j=0;
+
+	printf("\nEnter Your String :- ");
+	scanf(" %s",&org_str);
+
+	printf("\n** Reverse String **\n");
+
+	for(int i=strlen(org_str)-1; i>=0; --i)
+	{
+		rev_str[j++] = org_str[i];
+	}
+
+	printf("\t%s",rev_str);
+
+}
+
+void Concatenation_a_String()
+{
+	char str_1[50];
+	char str_2[50];
+
+	printf("\nEnter your First String :- ");
+	scanf(" %s",&str_1);
+
+	printf("\nEnter your Second String :- ");
+	scanf(" %s",&str_2);
+
+	printf("\nYour Full String is %s",strcat(str_1,str_2));
+}
+
+void Palindrome_String()
+{
+	char org_str[50];
+	int j=0;
+	
+	printf("\nEnter Your String :- ");
+	scanf(" %s",&org_str);
+	
+	int flag = 0;
+	
+	for(int i=0,j=strlen(org_str)-1; i<j; i++,j--)   // without Strcmp function
+	{
+	    if(org_str[i] != org_str[j])
+	    {
+	        flag = 1;
+	    }
+	}
+	
+	if(flag == 0)
+	{
+	    printf("\nIt's Palindrome String");
+	}
+	else
+	{
+	    printf("\nIt's not a Palindrome String");
+	}
+/*	
+
+    char pldm_str[50];
+    
+	for(int i=strlen(org_str)-1; i>=0; --i)    // with  strcmp function
+	{
+		pldm_str[j++] = org_str[i];
+		
+	}
+	if(strcmp(org_str,pldm_str))
+	{
+	    printf("\nIt's Palindrome String");
+	}
+	else
+	{
+	    printf("\nIt's not a Palindrome String");
+	}
+*/
+}
+
+void Copy_A_String()
+{
+    char org_str[50];
+    char cpy_str[50];
+	
+	printf("\nEnter Your String :- ");
+	scanf(" %s",&org_str);
+	
+    strcpy(cpy_str,org_str);    // using strcpy() function
+    
+    printf("\nCopy String is = %s",cpy_str); 
+    
+}
+
+void Length_of_the_string()
+{
+    char org_str[50];
+    int lenth=0;
+	
+	printf("\nEnter Your String :- ");
+	scanf(" %s",&org_str);
+	
+	for(int i=0; org_str[i] != '\0'; ++i)
+	{
+	    lenth++;
+	}
+	
+	printf("\nYour String Lenth is %d",lenth);
+}
+
+void Frequency_of_cha_in_str()
+{
+   char org_str[50];
+	
+	printf("\nEnter Your String :- ");
+	scanf(" %s",&org_str);
+	
+	for(int i= 0; i<strlen(org_str); ++i)
+	{
+	    int count =1;
+	    
+	    if(org_str[i] != '-')
+	    {
+	    
+    	    for(int j=i+1; j< strlen(org_str); ++j)
+    	    {
+    	        if(org_str[i] == org_str[j] && org_str[j]!='-')
+    	        {
+    	            count++;
+    	            org_str[j]='-';
+    	        }
+    	    }
+    	    
+	        printf("\n%c is occur %d times.",org_str[i],count);
+	    }
+	}
+}
+
+void FindNumber_of_Vowels_and_Consonants()
+{
+    char org_str[50];
+    int vowels=0;
+    int consonants =0;
+	
+	printf("\nEnter Your String :- ");
+	scanf(" %s",&org_str);
+	
+	for(int i=0; i<strlen(org_str); ++i)
+	{
+	    if((org_str[i] == 'a' || org_str[i] == 'A') || (org_str[i] == 'e' || org_str[i] == 'E') || (org_str[i] == 'i' ||
+	    org_str[i] == 'I') || (org_str[i] == 'o' || org_str[i] == 'O') || (org_str[i] == 'u' || org_str[i] == 'U'))
+	    {
+	        vowels++;
+	    }
+	    else
+	    {
+	        consonants++;
+	    }
+	}
+	
+	printf("\nTotal Vowels is = %d\nTotal Consonants is = %d",vowels,consonants);
+	
+}
+
+void FindNumber_of_blank_spaces_and_digits()
+{
+    char org_str[50];
+    int blSpace = 0;
+    int digit = 0;
+    
+    printf("Enter your String value :- ");
+    getchar();
+    fgets(org_str, sizeof(org_str), stdin);
+    
+    for(int i=0; i< strlen(org_str); ++i)
+    {
+        if(org_str[i] == ' ')
+        {
+            blSpace++;
+        }
+        else if(org_str[i] >= '0' && org_str[i] <= '9')
+        {
+            digit++;
+        }
+    }
+    
+    printf("\nTota Blank Space is %d\nTotal Digits is %d",blSpace,digit);
+}
+
+void main()
+{
+	int Choice;
+	
+	char name[50];
+
+	do    // Use Do While atleast one time show list
+	{
+		printf("\n\nMain Manu\n\t"
+		       "1. Reverse a String\n\t"
+		       "2. Concatenation\n\t"
+		       "3. Palindrome\n\t"
+		       "4. Copy a string\n\t"
+		       "5. Length of the string\n\t"
+		       "6. Frequency of character in s string\n\t"
+		       "7. Find number of vowels and consonants\n\t"
+		       "8. Find number of blank spaces and digits\n\t"
+		       "9. Exit\n\n"
+		       "Please Enter Your Choice :- ");
+		       
+		scanf("%d",&Choice);
+
+		switch(Choice)
+		{
+		case 1:
+			printf("\n1. Reverse a String\n");
+			Reverse_a_String();   // Function Call
+			break;
+		case 2:
+			printf("\n2. Concatenation\n");
+			Concatenation_a_String(); // Function Call
+			break;
+		case 3:
+			printf("\n3. Palindrome\n");
+            Palindrome_String(); // Function Call
+			break;
+		case 4:
+			printf("\n4. Copy  a string\n");
+			Copy_A_String(); // Function Call
+			break;
+		case 5:
+			printf("\n5. Length of the string\n");
+			Length_of_the_string(); /// Function Call
+			break;
+		case 6:
+			printf("\n6. Frequency of character in s string\n");
+			Frequency_of_cha_in_str(); // Function Call
+			break;
+		case 7:
+			printf("\n7. Find number of vowels and consonants\n");
+			FindNumber_of_Vowels_and_Consonants(); // Function Call
+			break;
+		case 8:
+		    printf("\n8. Find number of blank spaces and digits\n");
+		    FindNumber_of_blank_spaces_and_digits(); // Function Call
+			break;
+		case 9:
+			printf("\nThank You !!!");
+			break;
+		default:
+			printf("\nNot A Option");
+		}
+	}
+	while(Choice != 9);
+
+}
