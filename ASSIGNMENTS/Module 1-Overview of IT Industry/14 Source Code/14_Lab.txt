@@ -1,0 +1,46 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o  Write and upload your first source code file to Github.   
+ 
+==========================================JK================================================
+
+** Write and Upload Your First Source Code to GitHub **
+
+    Step 1: Write a Simple Program
+
+        Example in c:
+
+        # source_code.c
+
+        #include <stdio.h>
+
+        void main()
+        {
+            printf("hii, i am Jenish\nThis is my First Source code.");
+        }
+
+    Step 2: Initialize Git Repository
+
+        mkdir First-Source-Code
+        cd First-Source-Code
+        git init
+
+    Step 3: Add Your Source Code
+
+        git add source_code.c
+
+    Step 4: Commit Your Changes
+
+        git commit -m "Add first source code file"
+
+    Step 5: Create a Repository on GitHub
+
+        Go to GitHub
+        and create a new repository.
+
+    Step 6: Link Local Repo to GitHub
+
+        git remote add origin https://github.com/jenishthummar222/First-Source-Code.git
+        git branch -M main
+        git push -u origin main

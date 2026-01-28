@@ -1,0 +1,160 @@
+==========================================================================================
+
+                        ******** THEORY EXERCISE: ********
+            o Explain decision-making statements in C (if, else, nested if-else, switch). 
+              Provide examples of each.   
+
+==========================================================================================
+
+** Decision-Making Statements in C **
+
+        -> Decision-making statements allow a program to choose different paths of execution based on conditions. 
+           These conditions evaluate to true (1) or false (0).
+
+    * C provides the following decision-making statements:-
+
+        -> if
+
+        -> if-else
+
+        -> nested if-else
+
+        -> switch
+
+    1] if Statement :- 
+
+        -> The if statement executes a block of code only if the condition is true.
+
+        Syntax:-
+
+            if (condition)
+            {
+                // statements
+            }
+        
+        Example:-
+
+            int age = 20;
+
+            if (age >= 18)
+            {
+                printf("Eligible to vote");
+            }
+
+    2] if-else Statement :-
+
+        -> The if-else statement executes one block if the condition is true and another block if it is false.
+
+        Syntax:-
+            if (condition)
+            {
+                // true block
+            }
+            else
+            {
+                // false block
+            }
+        
+        Example:-
+
+            int num = 5;
+
+            if (num % 2 == 0)
+            {
+                printf("Even number");
+            }
+            else
+            {
+                printf("Odd number");
+            }
+
+    3] Nested if-else Statement :-
+    
+        -> A nested if-else statement means one if-else inside another. 
+           It is used when multiple conditions need to be checked.
+
+        Syntax:-
+            if (condition1)
+            {
+                if (condition2)
+                {
+                    // statements
+                }
+                else
+                {
+                    // statements
+                }
+            }
+            else
+            {
+                // statements
+            }
+
+        Example:-
+
+            int marks = 75;
+
+            if (marks >= 35)
+            {
+                if (marks >= 60)
+                {
+                    printf("First Class");
+                }
+                else
+                {
+                    printf("Second Class");
+                }
+            }
+            else
+            {
+                printf("Fail");
+            }
+
+    4] switch Statement :-
+
+        -> The switch statement is used to select one option from multiple choices based on the value of a variable or expression.
+        -> switch is faster and clearer when dealing with fixed values.
+        -> break :-
+            prevents fall-through in switch.
+        -> default:-
+            executes when no case matches.
+
+        Syntax:-
+
+            switch (expression)
+            {
+                case value1:
+                    // statements
+                    break;
+
+                case value2:
+                    // statements
+                    break;
+
+                default:
+                    // statements
+            }
+        
+        Example:-
+
+            int day = 3;
+
+            switch (day)
+            {
+                case 1:
+                    printf("Monday");
+                    break;
+                case 2:
+                    printf("Tuesday");
+                    break;
+                case 3:
+                    printf("Wednesday");
+                    break;
+                default:
+                    printf("Invalid day");
+            }
+
+
+
+
+

@@ -1,0 +1,19 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o   Identify and classify 5 applications you use daily as either system software 
+                or application software.  
+ 
+==========================================JK================================================
+
+Classification of 5 Daily-Use Applications
+
+---------------------------------------------------------------------------------------------
+| Application            | Purpose                               | Type                     |
+| ---------------------- | ------------------------------------- | ------------------------ |
+| **Windows OS**         | Manages hardware and system resources | **System Software**      |
+| **Google Chrome**      | Web browsing                          | **Application Software** |
+| **Microsoft Word**     | Document creation                     | **Application Software** |
+| **VLC Media Player**   | Play audio/video files                | **Application Software** |
+| **Antivirus Software** | System protection                     | **System Software**      |
+---------------------------------------------------------------------------------------------

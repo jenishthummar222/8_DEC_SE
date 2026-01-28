@@ -1,0 +1,17 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o          Why is the requirement analysis phase critical in software development?
+
+================================================JK====================================================   
+
+** Why Is the Requirement Analysis Phase Critical in Software Development? **
+
+   -> The requirement analysis phase is critical because it clearly defines what the software system should 
+      do and what users expect from it. 
+      
+   -> It helps developers understand user needs, system functionality,and constraints before development begins. Proper requirement analysis reduces misunderstandings, 
+      
+   -> prevents costly changes later, and ensures the final software meets user expectations. 
+
+   -> It also acts as a foundation for design, development, testing, and maintenance.

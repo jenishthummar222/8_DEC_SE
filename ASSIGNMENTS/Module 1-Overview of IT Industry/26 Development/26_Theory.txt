@@ -1,0 +1,27 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+
+        o             What are the key differences between web and desktop applications?  
+
+================================================JK====================================================   
+
+** Key Differences Between Web and Desktop Applications **
+
+| Aspect            | Web Applications                          | Desktop Applications               |
+| ----------------- | ----------------------------------------- | ---------------------------------- |
+| **Platform**      | Run in a web browser                      | Installed on a specific computer   |
+| **Installation**  | No installation required                  | Installation required              |
+| **Internet**      | Usually requires internet                 | Can work offline                   |
+| **Updates**       | Automatic updates on server               | Manual or version-based updates    |
+| **Accessibility** | Accessible from any device with a browser | Limited to the installed device    |
+| **Performance**   | Depends on browser and internet           | Generally faster and more powerful |
+| **Storage**       | Data stored on servers/cloud              | Data stored locally                |
+| **Security**      | Managed centrally on server               | Depends on local system security   |
+| **Examples**      | Gmail, Amazon, Google Docs                | MS Word, Photoshop, VLC            |
+
+In Simple Words :- 
+
+   -> Web apps are easy to access and maintain.
+
+   -> Desktop apps offer better performance and offline access.

@@ -1,0 +1,21 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o           What are the key elements of system design? 
+
+================================================JK====================================================   
+
+** Key Elements of System Design **
+
+   -> The key elements of system design include system architecture, data design, interface design, 
+      and component design. 
+      
+   -> System architecture defines the overall structure and interaction between components. 
+   
+   -> Data design focuses on how data is stored and managed. 
+   
+   -> Interface design ensures smooth interaction between users and the system. 
+   
+   -> Component design breaks the system into smaller modules for easier development and maintenance. 
+   
+   -> Together, these elements ensure the system is efficient, scalable, and reliable.

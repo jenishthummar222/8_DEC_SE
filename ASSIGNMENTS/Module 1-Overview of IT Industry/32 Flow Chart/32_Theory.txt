@@ -1,0 +1,23 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o           How do flowcharts help in programming and system design? 
+
+================================================JK====================================================   
+
+
+** How Flowcharts Help in Programming and System Design **
+
+   -> Flowcharts are visual representations of algorithms, processes, or systems. 
+   
+   ** They help programmers and designers by:- **
+
+      1. Clarifying Logic – Shows step-by-step flow of the program clearly.
+
+      2. Simplifying Complex Processes – Makes it easier to understand and debug.
+
+      3. Improving Communication – Helps team members and stakeholders understand the system.
+
+      4. Planning Before Coding – Reduces coding errors by designing logic first.
+
+      5. Documentation – Serves as a reference for future maintenance or upgrades.

@@ -1,0 +1,18 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o            Why is software testing important?  
+
+================================================JK====================================================   
+
+** Why Is Software Testing Important? **
+
+   -> Software testing is important because it ensures that the software works correctly and meets user 
+      requirements. 
+      
+   -> Testing helps identify bugs, errors, and missing functionality before the software is released. 4
+   
+   -> It improves software quality, reliability, and performance while reducing the risk of failure in 
+      real-world usage. 
+      
+   -> Testing also saves time and cost by fixing issues early in the development process.  

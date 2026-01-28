@@ -1,0 +1,75 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o  Identify and explain three common application security vulnerabilities. 
+               Suggest possible solutions. 
+ 
+==========================================JK================================================
+
+
+** Three Common Application Security Vulnerabilities and Their Solutions **
+
+    1. SQL Injection
+
+        Description:
+
+            Occurs when attackers insert malicious SQL queries through user input to access or manipulate a database.
+
+            Example:
+
+            ' OR '1'='1
+
+
+        Impact:
+
+            Unauthorized data access
+
+            Data modification or deletion
+
+        Solutions:
+
+            Use prepared statements / parameterized queries
+
+            Validate and sanitize user input
+
+            Apply least-privilege access to databases
+
+    2. Cross-Site Scripting (XSS)
+
+        Description:
+        
+            Allows attackers to inject malicious scripts into web pages viewed by other users.
+
+        Impact:
+
+            Session hijacking
+
+            Stealing cookies and user data
+
+        Solutions:
+
+            Escape and encode user input/output
+
+            Use Content Security Policy (CSP)
+
+            Avoid inline JavaScript
+
+    3. Broken Authentication
+
+        Description:
+
+            Occurs due to weak authentication mechanisms like poor password policies or session handling.
+
+        Impact:
+
+            Account takeover
+
+            Unauthorized access
+
+        Solutions:
+
+            Enforce strong password policies
+
+            Use multi-factor authentication (MFA)
+
+            Implement secure session management

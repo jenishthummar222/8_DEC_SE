@@ -1,0 +1,37 @@
+==========================================================================================
+
+                        ******** LAB EXERCISE: ********
+            o Write a C program that uses the break statement to stop printing numbers 
+            when it reaches 5. Modify the program to skip printing the number 3 using the 
+            continue statement.  
+
+==========================================================================================
+
+#include <stdio.h>
+
+int main()
+{
+    int num=1;
+    
+    while(num<=10)
+    {
+        if(num == 3)
+        {
+            num++;
+            continue;
+        }
+        if(num > 5)
+        {   
+            num++;
+            break;
+        }
+        printf(" %d ",num);
+        num++;
+    }
+
+    return 0;
+}
+
+OutPut :-
+
+     1  2  4  5 

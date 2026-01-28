@@ -1,0 +1,60 @@
+==========================================================================================
+
+                        ******** LAB EXERCISE: ********
+            o Write a C program that accepts two integers from the user and performs 
+              arithmetic, relational, and logical operations on them. Display the results.
+
+==========================================================================================
+
+#include <stdio.h>
+
+void main()
+{
+   
+    int num1,num2;
+    
+    printf("Enter first number :- ");
+    scanf("%d",&num1);
+    
+    printf("Enter Second number :- ");
+    scanf("%d",&num2);
+    
+    printf("\nPerform Arithmethic Opretion\n");
+    printf("%d + %d = %d\n",num1,num2,num1+num2);
+    printf("%d - %d = %d\n",num1,num2,num1-num2);
+    printf("%d * %d = %d\n",num1,num2,num1*num2);
+    printf("%d / %d = %d\n",num1,num2,num1/num2);
+    
+    printf("\nPerform Relational Opretion\n");
+    
+    if(num1 < num2 )
+    {
+        printf("num2= %d is biger than %d\n",num2,num1);
+    }
+    else
+    {
+        printf("num1= %d is biger than %d\n",num1,num2);
+    }
+    
+    printf("\nPerform Logical Opretion\n");
+    
+    if(num1 > 0 && num2 >0)
+    {
+        printf("Both are Positive Number");
+    }
+    else if(num1 < 0 && num2 < 0)
+    {
+        printf("Both are Nagetive Number");
+    }
+    else if(num1 > 0 && num2 < 0)
+    {
+        printf("num1 is Positive And num2 is Nagetive");
+    }
+    else
+    {
+        printf("num2 is Positive And num1 is Nagetive"); 
+    }
+    
+    
+    
+}

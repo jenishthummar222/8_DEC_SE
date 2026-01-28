@@ -1,0 +1,31 @@
+==========================================================================================
+
+                        ******** LAB EXERCISE: ********
+            o  Write a simple "Hello World" program in two different programming languages of 
+               your choice. Compare the structure and syntax. 
+
+==========================================================================================
+
+1. Hello World Program in C
+
+    #include <stdio.h>
+
+    int main() {
+        printf("Hello, World!");
+        return 0;
+    }
+
+2. Hello World Program in Python
+
+    print("Hello, World!")
+
+
+---------------------------------------------------------------------------
+| Aspect        | C                               | Python                |
+| ------------- | ------------------------------- | --------------------- |
+| Language Type | Compiled                        | Interpreted           |
+| Code Length   | More lines                      | Very short            |
+| Syntax        | Uses semicolons and braces `{}` | Simple, no semicolons |
+| Entry Point   | `main()` function               | Direct execution      |
+| Header Files  | Required (`#include <stdio.h>`) | Not required          |
+---------------------------------------------------------------------------

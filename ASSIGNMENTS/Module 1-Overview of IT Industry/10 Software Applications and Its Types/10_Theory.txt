@@ -1,0 +1,29 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o       What is the difference between system software and application software? 
+
+================================================JK====================================================   
+
+** Software Applications and Its Types **
+
+        -> Software applications are programs that help users perform specific tasks on a computer or mobile device. 
+        -> Broadly, software is classified into system software and application software.
+
+** Difference Between System Software and Application Software **
+
+--------------------------------------------------------------------------------------------------
+| Aspect           | System Software                        | Application Software               |
+| ---------------- | -------------------------------------- | ---------------------------------- |
+| Definition       | Controls and manages computer hardware | Helps users perform specific tasks |
+| Runs             | Starts when the computer boots         | Runs when user starts it           |
+| Dependency       | Essential for system operation         | Depends on system software         |
+| User Interaction | Limited direct interaction             | Directly used by users             |
+| Examples         | Operating system, device drivers       | Browser, MS Word, media player     |
+--------------------------------------------------------------------------------------------------
+
+Explanation :- 
+
+        -> System software acts as a bridge between hardware and users. Without it, the computer cannot function.
+
+        -> Application software is designed for user needs such as writing documents, browsing the internet, or watching videos.

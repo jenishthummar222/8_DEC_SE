@@ -1,0 +1,51 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o  Create a case study on the functionality of the presentation, business logic, 
+              and data access layers of a given software system.  
+ 
+==========================================JK================================================
+
+Case Study: 
+    
+    -> Online Bookstore System
+
+    Scenario: An online bookstore allows users to browse books, place orders, and view order history.
+
+    1. Presentation Layer
+
+        Functionality: 
+            Handles user interaction.
+
+        Components: 
+            Web pages, mobile app interface, forms for searching books and placing orders.
+
+        Example: 
+            The user searches for a book by entering a keyword. The UI collects input and sends it to the business layer.
+
+    2. Business Logic Layer
+
+        Functionality: 
+            Processes user requests and enforces business rules.
+
+        Components: 
+            Order processing module, discount calculation, inventory management.
+
+        Example: 
+            When a user places an order, the BLL checks inventory, calculates the total price, applies discounts, and prepares the order for storage.
+
+    3. Data Access Layer
+
+        Functionality: 
+            Communicates with the database.
+
+        Components: 
+            SQL queries, database connections, ORM (Object-Relational Mapping) modules.
+
+        Example: 
+            Saves the order details to the database and retrieves book information when requested.
+
+    Flow Example:
+
+        User enters book search → Presentation Layer → Business Logic Layer → Data Access Layer → Database
+        Database returns book info → Data Access Layer → Business Logic Layer → Presentation Layer → User sees results

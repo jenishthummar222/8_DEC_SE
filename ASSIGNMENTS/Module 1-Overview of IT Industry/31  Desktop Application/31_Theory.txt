@@ -1,0 +1,35 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o             What are the pros and cons of desktop applications compared to 
+                     web applications?   
+
+================================================JK====================================================   
+
+** Pros and Cons of Desktop Applications Compared to Web Applications  **  
+
+   Pros of Desktop Applications
+
+      1. Works Offline – No internet required
+
+      2. Better Performance – Faster and more responsive
+
+      3. Full Hardware Access – Uses system resources directly
+
+      4. More Secure for Local Data
+
+   Cons of Desktop Applications
+
+      1. Installation Required
+
+      2. Platform Dependent (Windows / macOS / Linux)
+
+      3. Manual Updates Needed
+
+      4. Limited Accessibility (only on installed system)
+
+   Comparison Summary
+
+      -> Desktop apps offer better speed and offline access
+
+      -> Web apps offer easy access, updates, and cross-platform support

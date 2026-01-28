@@ -1,0 +1,59 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o   Follow a GIT tutorial to practice cloning, branching, and merging repositories.
+
+==========================================JK================================================
+
+1. Clone a Repository
+
+    Cloning creates a local copy of a remote repository.
+
+        Steps:
+
+            1. Open Git Bash
+
+            2. Run:
+                git clone https://github.com/username/repository-name.git
+            
+            3. Move into the repository:
+                cd repository-name
+
+2. Create and Switch to a New Branch
+
+    Branches allow developers to work independently without affecting the main code.
+
+        Steps:
+            git checkout -b feature-branch
+3. Make Changes and Commit
+
+    1. Edit or add a file
+
+    2. Check status:
+
+        git status
+
+
+    3. Add changes:
+
+        git add .
+
+
+    4. Commit changes:
+
+        git commit -m "Added new feature"
+
+4. Merge Branch with Main Branch
+
+    1. Switch to main branch:
+
+        git checkout main
+
+
+    2. Merge the feature branch:
+
+        git merge feature-branch
+
+5. Push Changes to Remote Repository
+
+    git push origin main

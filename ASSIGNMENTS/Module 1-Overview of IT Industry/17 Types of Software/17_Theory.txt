@@ -1,0 +1,22 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o       What are the differences between open-source and proprietary software? 
+
+================================================JK====================================================   
+
+
+
+** Difference Between Open-Source and Proprietary Software **
+
+---------------------------------------------------------------------------------------------------------
+| Aspect           | Open-Source Software                        | Proprietary Software                 |
+| ---------------- | ------------------------------------------- | ------------------------------------ |
+| **Source Code**  | Source code is freely available             | Source code is hidden                |
+| **Cost**         | Usually free                                | Usually paid or requires a license   |
+| **Modification** | Users can modify and customize the software | Users cannot modify the software     |
+| **Distribution** | Can be freely shared and redistributed      | Redistribution is restricted         |
+| **Security**     | Community can review and improve security   | Security handled only by the company |
+| **Support**      | Community support or paid support options   | Official customer support provided   |
+| **Examples**     | Linux, Ubuntu, Firefox, Python              | Windows, MS Word, Photoshop          |
+---------------------------------------------------------------------------------------------------------

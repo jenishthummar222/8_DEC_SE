@@ -1,0 +1,19 @@
+==========================================================================================
+
+                        ******** LAB EXERCISE: ********
+            o Write a C program that includes variables, constants, and comments. Declare 
+              and use different data types (int, char, float) and display their values.
+
+==========================================================================================
+
+#include <stdio.h>
+
+void main()
+{
+    int num1 = 10;             
+    float num2 = 50.5;         // -> -> data type with variable diclaretion
+    char ch= 'J'; 
+
+    printf("integer Number = %d\nFloating Number = %.2f\nCharector Value = %c",num1,num2,ch);  // -> Print all value in console
+
+}

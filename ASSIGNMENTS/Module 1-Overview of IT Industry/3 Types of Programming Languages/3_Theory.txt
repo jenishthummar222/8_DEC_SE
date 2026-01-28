@@ -1,0 +1,25 @@
+==================================================JK==================================================
+
+                        ********  THEORY EXERCISE: *********
+        o   What are the main differences between high-level and low-level 
+            programming languages?
+==================================================JK==================================================   
+
+Types of Programming Languages
+
+    Programming languages are generally classified based on their level of abstraction from hardware.
+
+
+Differences Between High-Level and Low-Level Programming Languages
+ 
+-----------------------------------------------------------------------------------------------
+| Aspect          | High-Level Languages               | Low-Level Languages                  |
+| --------------- | ---------------------------------- | ------------------------------------ |
+| Definition      | Languages closer to human language | Languages closer to machine hardware |
+| Ease of Use     | Easy to learn, read, and write     | Difficult to learn and write         |
+| Abstraction     | High abstraction from hardware     | Very little or no abstraction        |
+| Portability     | Highly portable across systems     | Machine dependent                    |
+| Execution Speed | Slower than low-level              | Very fast                            |
+| Memory Control  | Automatic memory management        | Direct memory access                 |
+| Examples        | Python, Java, C++, JavaScript      | Assembly, Machine Language           |
+-----------------------------------------------------------------------------------------------

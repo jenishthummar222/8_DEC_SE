@@ -1,0 +1,19 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o         What is the role of application software in businesses? 
+
+================================================JK====================================================   
+
+** Role of Application Software in Businesses **
+
+   -> Application software plays a crucial role in businesses by automating daily operations, 
+      improving communication, managing data, and supporting decision-making. 
+
+   -> It helps businesses handle accounting, customer relationships, inventory, human resources, and 
+      project management efficiently. Application software increases productivity, reduces operational costs, 
+      minimizes errors, and enables better customer service. 
+
+   -> It also supports remote work, digital marketing, and business analytics, making organizations more 
+      competitive and efficient in the modern digital world.
+

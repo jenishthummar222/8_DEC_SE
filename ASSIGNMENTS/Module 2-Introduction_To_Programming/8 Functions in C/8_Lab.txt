@@ -1,0 +1,47 @@
+==========================================================================================
+
+                        ******** LAB EXERCISE: ********
+            o Write a C program that calculates the factorial of a number using a function. 
+              Include function declaration, definition, and call.   
+
+==========================================================================================
+
+/******************************************************************************
+
+    Calculates the factorial of a number using Function
+
+*******************************************************************************/
+#include <stdio.h>
+
+int factorial(int fact); // Function Declaration
+
+int main()
+{
+    int num;
+    printf("Enter Your Number :- ");
+    scanf("%d",&num);
+    
+    printf("%d Factorial is = %d",num,factorial(num)); // Function call
+
+    return 0;
+}
+
+// Function Definition
+
+int factorial(int fact)
+{
+    
+    int f = fact;
+    
+    while(fact >= 2)
+    {
+        f *= --fact;  // Jk
+    }
+    
+    return f;
+}
+
+OutPut:-
+
+    Enter Your Number :- 6
+    6 Factorial is = 720

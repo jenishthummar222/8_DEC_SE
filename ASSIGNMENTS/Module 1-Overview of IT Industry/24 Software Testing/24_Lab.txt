@@ -1,0 +1,34 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o       Develop test cases for a simple calculator program.
+
+==========================================JK================================================
+
+** Test Cases for a Simple Calculator Program **
+
+  
+Assumptions
+
+  The calculator supports:-
+
+    Addition (+)
+
+    Subtraction (−)
+
+    Multiplication (×)
+
+    Division (÷)
+
+  Test Case Table
+
+    | Test Case ID | Operation             | Input 1 | Input 2 | Expected Output | Result |
+    | ------------ | --------------------- | ------- | ------- | --------------- | ------ |
+    | TC01         | Addition              | 10      | 5       | 15              | Pass   |
+    | TC02         | Subtraction           | 10      | 5       | 5               | Pass   |
+    | TC03         | Multiplication        | 4       | 5       | 20              | Pass   |
+    | TC04         | Division              | 20      | 5       | 4               | Pass   |
+    | TC05         | Division by Zero      | 10      | 0       | Error message   | Pass   |
+    | TC06         | Addition (Negative)   | -5      | 3       | -2              | Pass   |
+    | TC07         | Multiplication (Zero) | 7       | 0       | 0               | Pass   |
+    | TC08         | Decimal Addition      | 2.5     | 1.5     | 4.0             | Pass   |

@@ -1,0 +1,45 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o  Explore different types of software environments (development, testing, 
+               production). Set up a basic environment in a virtual machine.   
+ 
+==========================================JK================================================
+
+** Exploring Software Environments **
+
+    Step 1: Development Environment
+
+        Tools: VS Code, Eclipse, IntelliJ, Python, Node.js
+
+        Purpose: Write, debug, and run code locally
+
+    Step 2: Testing / QA Environment
+
+        Tools: Jenkins, Selenium, Postman
+
+        Purpose: Test the application for bugs, performance, and integration issues
+
+    Step 3: Production Environment
+
+        Tools: Web servers, databases, cloud hosting (AWS, Azure)
+
+        Purpose: Host the live application for end users
+
+==> Setting up a Basic Environment in a Virtual Machine <==
+
+    1. Install a virtual machine tool like VirtualBox or VMware.
+
+    2. Install an OS inside the VM (e.g., Ubuntu, Windows).
+
+    3. Install development tools:
+
+        Programming language runtime (Python, Java, Node.js)
+
+        IDE (VS Code, Eclipse)
+
+        Database (MySQL, PostgreSQL)
+
+    4. Test code execution inside the VM to simulate the development environment.
+
+        This allows safe testing without affecting your main system.

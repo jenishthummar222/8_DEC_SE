@@ -1,0 +1,46 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o       What is the role of encryption in securing applications ?
+
+================================================JK====================================================   
+
+Application Security :- 
+
+        -> Application security focuses on protecting software applications from threats and attacks by identifying, 
+           fixing, and preventing security vulnerabilities throughout the application’s lifecycle.
+
+
+** Role of Encryption in Securing Applications **
+
+        Encryption is the process of converting readable data (plaintext) into unreadable data (ciphertext) to prevent unauthorized access.
+
+        ** Importance of Encryption **
+
+        1. Data Confidentiality
+
+                Protects sensitive data such as passwords, personal information, and financial data
+
+        2. Secure Data Transmission
+
+                Prevents data interception during network communication (HTTPS, TLS)
+
+        3. Data Integrity
+
+                Ensures data is not altered during transmission
+
+        4. Authentication
+
+                Verifies identity using digital certificates and encrypted keys
+
+        5. Compliance
+
+                Helps meet security standards like GDPR, PCI-DSS
+        
+** Types of Encryption Used **
+
+        -> Symmetric Encryption (AES)
+
+        -> Asymmetric Encryption (RSA)
+
+        -> Hashing (SHA-256)

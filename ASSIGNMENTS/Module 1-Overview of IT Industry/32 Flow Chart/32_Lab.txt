@@ -1,0 +1,64 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o       Draw a flowchart representing the logic of a basic online registration system. 
+
+==========================================JK================================================
+
+** Flowchart for a Basic Online Registration System **
+
+  A]. Flowchart Description
+
+    -> The online registration system collects user information, validates it, and confirms registration.
+
+    Steps:
+
+    1. Start
+
+    2. Enter user details (Name, Email, Password)
+
+    3. Validate input
+
+      -> If invalid → Show error and re-enter details
+
+      -> If valid → Proceed
+
+    4. Save data to database
+
+    5. Display registration success message
+
+    6. End
+
+  Flowchart (Text Representation)
+
+    +------------------+
+    |      Start       |
+    +------------------+
+              |
+              v
+    +------------------+
+    | Enter User Details|
+    +------------------+
+              |
+              v
+    +------------------+
+    | Validate Details  |
+    +------------------+
+        /           \
+    Invalid        Valid
+      |              |
+      v              v
+  +-----------+   +------------------+
+  | Show Error|   | Save to Database |
+  +-----------+   +------------------+
+      |              |
+      +--------------+
+              v
+    +------------------+
+    | Registration Done |
+    +------------------+
+              |
+              v
+          +------+
+          | End  |
+          +------+

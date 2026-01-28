@@ -1,0 +1,31 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o         What is the difference between source code and machine code? 
+
+================================================JK====================================================   
+
+Source Code :- 
+
+        -> Source code is a set of instructions written by a programmer in a high-level programming language 
+           such as C, Java, or Python. 
+        -> It is human-readable and must be compiled or interpreted into machine code before a computer can execute it.
+
+Difference Between Source Code and Machine Code
+
+| Aspect      | Source Code                                        | Machine Code                                   |
+| ----------- | -------------------------------------------------- | ---------------------------------------------- |
+| Definition  | Human-readable instructions written by programmers | Binary instructions understood by the computer |
+| Language    | High-level (C, Java, Python)                       | Low-level (binary 0s and 1s)                   |
+| Readability | Easy to read and modify                            | Hard for humans to read                        |
+| Execution   | Must be compiled or interpreted                    | Executed directly by CPU                       |
+| Portability | Can be run on different systems after compilation  | Hardware-specific                              |
+| Example     | `print("Hello, World!")`                           | `10110000 01101000 01010101 ...`               |
+
+Explanation
+
+        Source code is written in a form humans can understand and maintain.
+
+        Machine code is the converted form that a CPU can directly execute.
+
+        The compiler or interpreter bridges the gap between the two.

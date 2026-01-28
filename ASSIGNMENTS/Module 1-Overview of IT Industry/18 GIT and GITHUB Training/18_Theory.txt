@@ -1,0 +1,24 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o        How does GIT improve collaboration in a software development team? 
+
+================================================JK====================================================   
+
+
+ ** How GIT Improves Collaboration in a Software Development Team ** 
+
+        -> GIT improves collaboration by allowing multiple developers to work on the same project simultaneously 
+           without interfering with each other’s code. 
+        -> Each developer can create separate branches to develop eatures or fix bugs independently. 
+           GIT tracks all changes with version history, making it easy to identify 
+        -> who made what changes and revert to earlier versions if needed. 
+           It also helps resolve conflicts when multiple people modify the same file. 
+        -> By using remote repositories like GitHub, team members can share code, review changes, and 
+           collaborate efficiently from different locations.
+        
+
+        In short :
+
+        -> GIT enables teamwork by supporting branching, version control, conflict management, and easy 
+           sharing of code among developers.

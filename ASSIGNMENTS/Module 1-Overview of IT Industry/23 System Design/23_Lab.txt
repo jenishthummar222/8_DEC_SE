@@ -1,0 +1,75 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o       Design a basic system architecture for a food delivery app.
+
+==========================================JK================================================
+
+** Basic System Architecture for a Food Delivery App **
+
+  1. Overview
+
+    -> A food delivery app connects customers with restaurants and delivery partners through a centralized 
+       platform. 
+    -> The system architecture defines how different components interact to deliver this service efficiently.
+
+  2. System Architecture (Text-Based Diagram)
+
+    User (Mobile App / Web App)
+            |
+            v
+    Frontend (UI Layer)
+            |
+            v
+    Backend Server (Application Layer)
+            |
+            |---- User Management Service
+            |---- Restaurant & Menu Service
+            |---- Order Management Service
+            |---- Payment Service
+            |---- Notification Service
+            |
+            v
+    Database (Data Layer)
+            |
+            |---- User Database
+            |---- Restaurant Database
+            |---- Order Database
+            |---- Payment Records
+            |
+            v
+    External Services
+            |
+            |---- Payment Gateway (UPI / Card)
+            |---- Maps & Location API
+            |---- SMS / Email Notification API
+
+  3. Description of Components
+
+    Frontend (Mobile/Web App):
+      -> Used by customers, restaurants, and delivery partners to interact with the system.
+
+    Backend Server:
+      -> Handles business logic, processes requests, and manages workflows.
+
+    Database:
+      -> Stores user data, menus, orders, and payment information.
+
+    Payment Gateway:
+      -> Processes online payments securely.
+
+    Maps & Location Service:
+      -> Helps track delivery partners and calculate routes.
+
+    Notification Service:
+      -> Sends order updates via SMS, email, or app notifications.
+
+  4. Benefits of This Architecture
+
+    -> Scalable and modular
+
+    -> Easy to maintain
+
+    -> Secure data handling
+
+    -> Supports high user traffic

@@ -102,7 +102,7 @@ Strucure of C langauge
             {...} :- this is represent block of code.
 
 ----------------------------------------------------------Date:- 19/12/2025--------------------------------------------------------------------------------------------
-pruntf() :
+printf() :
     in c langauge printf  is  a function which is used to display message on output (Console Screen).
 
     Syntax:-
@@ -652,5 +652,156 @@ void main()
                 {
                     .....
                 }
-        
 
+---------------------------jk-------------------------------Date:- 5/1/2026--------------------------------------------------------------------------------------------
+   
+        2] While Loop :
+            -> while loop is entry control loop
+            -> it check condition at entry leval and if condition goes true loop will execute.
+
+            Syntax:
+                initlization;
+                while(condition)
+                {
+                    statement;
+                    updation;
+                }
+
+---------------------------jk-------------------------------Date:- 7/1/2026--------------------------------------------------------------------------------------------
+   
+    ** Nested For Loop **
+    
+    -> when loop call inside the another loop
+
+    Syntax:-
+        for(initlization; condition; updation)
+        {
+            for(initlization; condition; updation)
+            {
+                ...
+            }
+        }
+
+---------------------------jk-------------------------------Date:- 9/1/2026--------------------------------------------------------------------------------------------
+        3] Do.. While.. Loop:-
+            -> do while loop is an exite controlled loop - it check condition t exite leval.
+            -> do, there are at leate 1 posibility of that it exectue 1 time if condition gose false.
+
+            Syntax:-
+                initlization
+                do
+                {
+                    statement;
+                    updation;
+                }
+                while(condition);
+
+
+---------------------------jk-------------------------------
+
+** Function **
+    -> it is most powerfull topic of any programming langauge.
+    -> function provides resusability
+    -> using of function we can reduce our code.
+    -> using of fuction we can call code as per our need.
+    -> so, we can save our development time.
+
+    --> there are 2 type of function
+
+    1] bult-in functio:-
+        -> which is predefined by c  performming
+        e.g:-
+            -> printf(), scanf(), getch(), getchar()..
+    
+    2] user- defined function :-
+        -> that function which is created by user as per their requirment.
+    
+** ==> How To Create Function <== **
+
+    --> There are 3 step to follow function
+
+    Step 1:-
+        Function Declaration :-
+            -> main block of code which represent function executation.
+
+            Syntax:-
+                <return Type> function_Name();
+            
+    Step 2:- 
+        Function Defination :-
+            -> Main block of code which represent function executation.
+
+            Syntax:-
+                <return Type> function_Name()
+                {
+                    // block of code
+                }
+    
+    Step 3:-
+        Function Calling :-
+            -> use of function
+         Syntax:-
+            function_Name();
+
+---------------------------jk-------------------------------Date:- 19/1/2026--------------------------------------------------------------------------------------------
+** Array **
+        -> Array is a collection of number
+        -> simple langauge we can say that a single variable can contain single 
+           value but in array we can  store multiple value in a single variable.
+
+        E.g:-
+            int a =10;  Simple Variable
+            int a = 10,20,30,40,50;    X-> wrong
+
+        Syntax:-
+            -> in c langauge  Array represent by {} braces.
+            and we have to provide size of array
+
+            E.g. :- 
+                int arr[5]={};
+            
+
+---------------------------jk-------------------------------Date:- 23/1/2026--------------------------------------------------------------------------------------------
+
+** There are Two type of Array :- **
+
+    1] Single Dimension Array :-
+    
+        1D Array 
+
+        ex:-
+            arr[]
+    
+    2] Multi Dimension Array :-
+
+        2D array , 3D array
+
+        ex:-
+            arr[][] , arr[][][]
+
+---------------------------jk-------------------------------Date:- 28/1/2026--------------------------------------------------------------------------------------------
+
+** String :-
+    -> String is a collection of characters
+    -> in simple langauge we can say that string which is a ine king of array
+    -> or we can say that characters of Array.
+
+    Syntax :-
+        char name[6]={'h','e','l','l','o'};
+
+**********JK***************
+#include<string.h>   :-
+
+   this libaries Use of some predefined function.
+    
+    |-> 1] strlen(str_var_name) :-
+            -> use this method for find a lenth of string.
+    
+    |-> 2] gets(str_var_nm):-
+            -> get value from the user.
+            -> user use white space in your input.
+            
+    |-> 3] strcat(str_1,str_2):-
+            -> When you want to join or combin two string.
+            -> We can use inbuilt strcat() function.
+    

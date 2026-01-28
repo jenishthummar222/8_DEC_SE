@@ -1,0 +1,65 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o   Create a list of software you use regularly and classify them into the 
+                following categories: system, application, and utility software.  
+ 
+==========================================JK================================================
+
+
+
+1. System Software
+
+    -> System software controls the computer hardware and provides a platform to run other software.
+
+    -> Windows 10 / Windows 11 – 
+        Operating system used to manage the computer
+
+    -> Linux (Ubuntu) – 
+        Operating system used mainly for development and learning
+
+    -> Device Drivers – 
+        Enable hardware like printer, keyboard, mouse, and graphics card to work
+
+2. Application Software
+
+    -> Application software is used by users to perform specific tasks.
+
+    -> Microsoft Word – 
+        Creating and editing documents
+
+    -> Microsoft Excel – 
+        Managing data, calculations, and spreadsheets
+
+    -> Microsoft PowerPoint – 
+        Creating presentations
+
+    -> Google Chrome – Web browsing
+
+    -> Visual Studio Code – 
+        Writing and editing program code
+
+    -> UiPath Studio – 
+        Building RPA automation workflows
+
+    -> GitHub Desktop – 
+        Managing and uploading code to GitHub
+
+3. Utility Software
+
+    -> Utility software helps maintain, protect, and optimize the system.
+
+    -> Windows Defender – 
+        Protects the system from viruses and malware
+
+    -> Disk Cleanup – 
+        Removes temporary and unwanted files
+
+    -> WinRAR / 7-Zip – 
+        Compressing and extracting files
+
+    -> Task Manager – 
+        Monitoring system performance and running programs
+
+    -> CCleaner – 
+        Cleaning unnecessary system files

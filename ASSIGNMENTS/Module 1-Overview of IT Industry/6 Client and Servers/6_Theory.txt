@@ -1,0 +1,52 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o     Explain Client Server Communication. 
+
+================================================JK====================================================   
+
+** Client Server Communication ** 
+
+        Client–server communication is a networking model in which a client requests services or resources, 
+        and a server processes those requests and sends back responses. 
+        This model is the foundation of web applications, email systems, file sharing, and many network services.
+
+** How Client–Server Communication Works **
+
+        1. Client Request
+
+                The client (browser or app) sends a request to the server.
+
+                Example: 
+                        HTTP request for a web page.
+
+        2. Network Transmission
+
+                The request travels through network layers (TCP/IP).
+
+                Data is broken into packets and routed across the internet.
+
+        3. Server Processing
+
+                The server receives the request.
+
+                It processes logic, accesses databases, or performs computations.
+
+        4. Server Response
+
+                The server sends a response back to the client.
+
+                Example: 
+                        HTML page, JSON data, or file.
+
+        5. Client Display
+
+                The client receives the response and displays the result to the user.
+
+** Client–Server Communication Flow **
+
+        Client  → Request (HTTP/HTTPS)
+        Server  → Processing
+        Server  → Response (Data)
+        Client  → Display Output
+

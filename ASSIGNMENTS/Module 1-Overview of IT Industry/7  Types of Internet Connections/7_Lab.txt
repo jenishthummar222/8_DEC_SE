@@ -1,0 +1,27 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o   Research different types of internet connections (e.g., broadband, fiber, 
+                satellite) and list their pros and cons. 
+==========================================JK================================================
+
+
+** Different Types of Internet Connections: Pros and Cons **
+
+-------------------------------------------------------------------------------------------------------------------------
+| Internet Type           | Description                 | Pros                         | Cons                           |
+| ----------------------- | --------------------------- | ---------------------------- | ------------------------------ |
+| **Dial-up**             | Uses telephone line         | Low cost, widely available   | Very slow, blocks phone line   |
+
+| **DSL**                 | Uses telephone copper wires | Affordable, always on        | Speed decreases with distance  |
+
+| **Broadband (Cable)**   | Uses cable TV lines         | Faster than DSL, widely used | Speed drops during peak hours  |
+
+| **Fiber-Optic**         | Uses optical fiber cables   | Extremely fast, reliable     | Limited availability, costly   |
+
+| **Satellite**           | Uses satellites in space    | Available in remote areas    | High latency, expensive        |
+
+| **Mobile Data (4G/5G)** | Uses cellular networks      | Portable, fast (5G)          | Data limits, network dependent |
+
+| **Wireless (Wi-Fi)**    | Radio-based connection      | Easy setup, flexible         | Limited range, interference    |
+-------------------------------------------------------------------------------------------------------------------------

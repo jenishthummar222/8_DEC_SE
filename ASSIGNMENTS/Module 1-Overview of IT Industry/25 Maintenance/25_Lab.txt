@@ -1,0 +1,57 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+
+            o       Document a real-world case where a software application required 
+                    critical maintenance.
+
+==========================================JK================================================
+
+Case Study:-  
+
+  ** Online Banking Application Security Update **
+
+  1. Introduction
+
+    -> An online banking application used by thousands of customers experienced a critical security issue 
+      that required immediate software maintenance. 
+    -> The application handles sensitive data such as user credentials, account details, and financial 
+      transactions.
+
+  2. Problem Description
+
+    -> A security vulnerability was discovered in the authentication module of the banking application.
+
+    * Due to this flaw:
+
+      -> Unauthorized users could potentially access customer accounts
+
+      -> There was a high risk of financial fraud
+
+      -> Customer trust and bank reputation were at risk
+
+  3. Type of Maintenance Performed *
+
+      -> Corrective and Preventive Maintenance
+
+  4. Maintenance Actions Taken *
+
+      -> The vulnerable code was identified and fixed
+
+      -> Stronger encryption and multi-factor authentication were implemented
+
+      -> Security patches were released immediately
+
+      -> System logs were enhanced for monitoring suspicious activity
+
+      -> The application was tested thoroughly before redeployment
+
+  5. Impact of Maintenance
+
+    -> Improved application security
+
+    -> Prevention of data breaches
+
+    -> Increased customer trust
+
+    -> Compliance with security regulations

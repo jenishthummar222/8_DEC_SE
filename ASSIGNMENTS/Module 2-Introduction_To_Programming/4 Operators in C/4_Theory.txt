@@ -1,0 +1,136 @@
+==========================================================================================
+
+                        ******** THEORY EXERCISE: ********
+            o Write notes explaining each type of operator in C: arithmetic, relational, 
+              logical, assignment, increment/decrement, bitwise, and conditional operators.  
+
+==========================================================================================
+** Operators **
+
+    -> `threre is some specific sysmbol which is mainly used to perform opreations
+        using of that operators we can perform opreations `
+        e.g. 
+            number1 + number2;
+
+        hear, 
+            number1 and number2 are operands.
+            + is an operator sign or simbol.
+    
+    1] Arithmetic Operators:-
+        -> Arithmetic operators are used to perform basic mathematical calculations.
+
+        | Operator | Description         |
+        | -------- | ------------------- |
+        | +        | Addition            |
+        | -        | Subtraction         |
+        | *        | Multiplication      |
+        | /        | Division            |
+        | %        | Modulus (remainder) |
+
+        Example:-
+
+            int a = 10, b = 3;
+            printf("%d", a + b);   // Output: 13
+            printf("%d", a % b);   // Output: 1
+
+    2] Relational Operators:-
+        -> Relational operators are used to compare two values and return either true (1) or false (0).
+
+        | Operator | Description              |
+        | -------- | ------------------------ |
+        |  ==      | Equal to                 |
+        |  !=      | Not equal to             |
+        |  >       | Greater than             |
+        |  <       | Less than                |
+        |  >=      | Greater than or equal to |
+        |  <=      | Less than or equal to    |
+
+        Example:-
+            
+            int x = 5, y = 8;
+            printf("%d", x < y);   // Output: 1
+
+    3] Logical Operators :-
+
+        -> Logical operators are used to combine multiple conditions.
+
+        | Operator | Description | 
+        | -------- | ----------- | 
+        | &&       | Logical AND | 
+        | ||       | Logical OR  | 
+        | !        | Logical NOT |  
+
+        Example:-
+
+            int a = 5, b = 10;
+            if (a > 0 && b > 0)
+            {
+                printf("Both are positive");
+            }
+ 
+    4] Assignment Operators:-
+
+        -> Assignment operators assign values to variables.
+
+        | Operator | Description         |
+        | -------- | ------------------- |
+        |  =       | Assign              |
+        |  +=      | Add and assign      |
+        |  -=      | Subtract and assign |
+        |  *=      | Multiply and assign |
+        |  /=      | Divide and assign   |
+        |  %=      | Modulus and assign  |
+
+        Example:-
+
+            int x = 5;
+            x += 3;   // x = x + 3 → x = 8
+
+    5] Increment and Decrement Operators:-
+
+        -> These operators increase or decrease the value of a variable by 1.
+
+        Types:-
+
+            Pre-increment: ++x
+
+            Post-increment: x++
+
+        Example:-
+
+            int a = 5;
+            printf("%d", a++);  // Output: 5
+            printf("%d", a);    // Output: 6
+    
+    6] Bitwise Operators:-
+
+        -> Bitwise operators perform operations at the bit level.
+
+        | Operator | Description |                          
+        | -------- | ----------- | 
+        |  &       | Bitwise AND |            
+        |  |       | Bitwise OR  |
+        |  ^       | Bitwise XOR |            
+        |  ~       | Bitwise NOT |            
+        |  <<      | Left shift  |            
+        |  >>      | Right shift |           
+
+        Example:-
+
+            int a = 5, b = 3;
+            printf("%d", a & b);   // Output: 1
+
+    7] Conditional (Ternary) Operator :-
+
+        -> The conditional operator is a short form of if-else.
+
+        Syntax:-
+
+            (condition) ? expression1 : expression2;
+
+        Example:-
+            int a = 10, b = 20;
+            int max = (a > b) ? a : b;
+
+
+

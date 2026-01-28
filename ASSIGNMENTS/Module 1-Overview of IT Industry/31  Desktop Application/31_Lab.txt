@@ -1,0 +1,67 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o       Build a simple desktop calculator application using a GUI library. 
+
+==========================================JK================================================
+
+
+** Simple Desktop Calculator Application (GUI) **
+
+   Below is a basic calculator using Python and Tkinter (a standard GUI library).
+
+   Software Used
+
+      -> Language: Python
+
+      -> GUI Library: Tkinter
+
+   Program Code (Python – Tkinter Calculator)
+
+      import tkinter as tk
+
+      def click(event):
+         text = event.widget.cget("text")
+         if text == "=":
+            try:
+                  result = str(eval(screen.get()))
+                  screen.set(result)
+            except Exception:
+                  screen.set("Error")
+         elif text == "C":
+            screen.set("")
+         else:
+            screen.set(screen.get() + text)
+
+      root = tk.Tk()
+      root.title("Simple Calculator")
+      root.geometry("300x400")
+
+      screen = tk.StringVar()
+      entry = tk.Entry(root, textvar=screen, font="Arial 20")
+      entry.pack(fill=tk.X, padx=10, pady=10)
+
+      buttons = [
+         "7","8","9","/",
+         "4","5","6","*",
+         "1","2","3","-",
+         "0","C","=","+"
+      ]
+
+      frame = tk.Frame(root)
+      frame.pack()
+
+      for btn in buttons:
+         b = tk.Button(frame, text=btn, font="Arial 18", width=5, height=2)
+         b.pack(side=tk.LEFT, padx=5, pady=5)
+         b.bind("<Button-1>", click)
+
+      root.mainloop()
+
+   Output :-
+
+      A calculator window appears
+
+      Supports Addition, Subtraction, Multiplication, Division
+
+      Buttons: 0–9, +, -, *, /, C, =

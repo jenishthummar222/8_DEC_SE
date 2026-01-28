@@ -1,0 +1,65 @@
+==================================================JK==================================================
+
+                        ********  THEORY EXERCISE: *********
+        o  What are the key steps involved in the programming process?  
+
+==================================================JK==================================================   
+
+What is Programming?
+
+    Programming is the process of designing, writing, testing, and maintaining a set of instructions (called a program) 
+    that tells a computer how to perform a specific task or solve a problem. 
+    These instructions are written in a programming language such as C, Java, Python, etc.
+
+------------------------------------------------------
+** Key Steps Involved in the Programming Process **
+------------------------------------------------------
+
+    1. Problem Definition
+
+        -> Clearly understand the problem to be solved
+
+        -> Identify inputs, outputs, and constraints
+
+    2. Analysis
+
+        -> Break the problem into smaller parts
+
+        -> Decide the logic and approach to solve it
+
+    3. Algorithm Design
+
+        -> Create a step-by-step solution
+
+        -> Represented using algorithms or flowcharts
+
+    4. Coding
+
+        -> Write the algorithm using a programming language
+
+        -> Follow proper syntax and coding standards
+
+    5. Compilation / Interpretation
+
+        -> Convert source code into machine-readable form
+
+        -> Done using a compiler or interpreter
+
+    6. Testing and Debugging
+
+        -> Run the program to find errors
+
+        -> Fix syntax, runtime, and logical errors
+
+    7. Documentation
+
+        -> Write explanations and comments
+
+        -> Helps others understand and maintain the program
+
+    8. Maintenance
+
+        -> Update and improve the program over time
+
+        -> Fix bugs and add new features
+

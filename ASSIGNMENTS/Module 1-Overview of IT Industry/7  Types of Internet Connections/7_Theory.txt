@@ -1,0 +1,25 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o     How does broadband differ from fiber-optic internet? 
+
+================================================JK====================================================   
+
+** Difference Between Broadband and Fiber-Optic Internet **
+
+----------------------------------------------------------------------------
+| Aspect       | Broadband Internet            | Fiber-Optic Internet      |
+| ------------ | ----------------------------- | ------------------------- |
+| Medium       | Copper cables                 | Fiber-optic cables        |
+| Speed        | Moderate (up to 100–300 Mbps) | Very high (up to 1 Gbps+) |
+| Latency      | Higher                        | Very low                  |
+| Reliability  | Affected by interference      | Highly reliable           |
+| Cost         | Cheaper                       | More expensive            |
+| Availability | Widely available              | Limited in some areas     |
+----------------------------------------------------------------------------
+
+Explanation :- 
+
+        Broadband is a general term for high-speed internet that is always on, commonly delivered via cable or DSL.
+
+        Fiber-optic internet uses light signals through glass fibers, offering much faster and more stable connections.

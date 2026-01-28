@@ -1,0 +1,36 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o          What are the main stages of the software development process? 
+
+================================================JK====================================================   
+
+** Main Stages of the Software Development Process **
+
+   The Software Development Life Cycle (SDLC) is a step-by-step process used to design, develop, test, and maintain software efficiently. 
+
+=> The main stages are:- 
+
+   1. Requirement Analysis
+
+      -> In this stage, user needs are gathered and analyzed. The goal is to understand what the software should do.
+
+   2. System Design
+
+      -> The overall structure of the software is planned, including system architecture, database design, and interfaces.
+
+   3. Development (Coding)
+
+      -> Programmers write the actual code based on the design specifications using suitable programming languages.
+
+   4. Testing
+
+      -> The software is tested to find and fix bugs. This ensures the software works correctly and meets requirements.
+
+   5. Deployment
+
+      -> The software is released and made available to users in a real environment.
+
+   6. Maintenance
+
+      -> After deployment, the software is updated to fix issues, improve performance, and add new features.

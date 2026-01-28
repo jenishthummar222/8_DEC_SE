@@ -1,0 +1,89 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o     Write a requirement specification for a simple library management system.
+
+==========================================JK================================================
+
+1. Introduction
+
+  -> The Library Management System (LMS) is designed to automate and manage the day-to-day operations of 
+     a library. 
+  -> It helps librarians and users efficiently manage books, members, and transactions such as issuing 
+    and returning books.
+
+2. Objectives
+
+  -> To maintain records of books and library members
+
+  -> To automate book issue and return processes
+
+  -> To reduce manual work and errors
+
+  -> To improve efficiency and accessibility
+
+3. Scope of the System
+
+  -> The system will be used in a small library such as a school or college library. 
+     It will manage books, members, and basic transactions.
+
+4. Functional Requirements
+
+  -> The system should be able to:
+
+  -> Add, update, delete, and search books
+
+  -> Register and manage library members
+
+  -> Issue books to members
+
+  -> Accept returned books
+
+  -> Display availability status of books
+
+  -> Maintain issue and return history
+
+  -> Calculate fines for late returns (optional)
+
+5. Non-Functional Requirements
+
+  -> The system should be user-friendly
+
+  -> It should respond quickly to user actions
+
+  -> Data should be stored securely
+
+  -> The system should be reliable and available during library hours
+
+6. User Roles
+
+  Librarian: Manage books, members, and transactions
+
+  Member: Search books and view issued book details
+
+7. Hardware Requirements
+
+  -> Computer system
+
+  -> Minimum 4 GB RAM
+
+  -> Printer (optional)
+
+8. Software Requirements
+
+  Operating System: Windows / Linux
+
+  Database: MySQL / SQLite
+
+  Front-end: Simple GUI or web interface
+
+9. Constraints
+
+  -> Limited to basic library operations
+
+  -> Internet connection required only for online systems
+
+10. Conclusion
+
+  -> This requirement specification defines the basic features and limitations of a simple Library Management 
+     System to ensure efficient library operations.

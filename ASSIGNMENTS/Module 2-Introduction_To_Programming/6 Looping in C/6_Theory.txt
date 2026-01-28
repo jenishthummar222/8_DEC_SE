@@ -1,0 +1,118 @@
+==========================================================================================
+
+                        ******** THEORY EXERCISE: ********
+            o Compare and contrast while loops, for loops, and do-while loops. Explain the 
+              scenarios in which each loop is most appropriate.   
+
+==========================================================================================
+
+** Looping Statements in C **
+
+    -> Loops are used to execute a block of code repeatedly as long as a given condition is true.
+
+    * C provides three main loops:-
+
+        -> while loop
+
+        -> for loop
+
+        -> do-while loop
+
+    1] while Loop :- 
+
+        -> The while loop checks the condition before executing the loop body.
+        -> If the condition is false initially, the loop may not execute at all.
+
+        Syntax:-
+            while (condition)
+            {
+                // statements
+            }
+        
+        Example:-
+
+            int i = 1;
+            while (i <= 5)
+            {
+                printf("%d ", i);
+                i++;
+            }
+
+           ** Best Used When: **
+
+                -> Number of iterations is not known in advance
+
+                -> Loop depends on user input or condition
+
+                -> Entry-controlled loop
+
+    2] for Loop :-
+
+        -> The for loop combines initialization, condition, and increment/decrement in a single line.
+        -> It is also an entry-controlled loop.
+
+        Syntax:-
+
+            for (initialization; condition; increment/decrement)
+            {
+                // statements
+            }
+        
+        Example:-
+
+            for (int i = 1; i <= 5; i++)
+            {
+                printf("%d ", i);
+            }
+        
+         ** Best Used When: **
+
+                -> Number of iterations is known beforehand
+
+                -> Loop counters are needed
+
+                -> Compact and readable looping
+
+    3] do-while Loop :-
+    
+        -> The do-while loop executes the loop body at least once, because the condition is checked after execution.
+        -> It is an exit-controlled loop.
+
+        Syntax:-
+
+            do
+            {
+                // statements
+            }
+            while (condition);
+
+        Example:-
+
+            int i = 1;
+            do
+            {
+                printf("%d ", i);
+                i++;
+            }
+            while (i <= 5);
+
+            ** Best Used When: **
+                -> Loop must execute at least once
+                -> Menu-driven programs
+                -> Example: 
+                    Display menu until user chooses Exit
+                
+        ** Comparision Of loop ** 
+
+    | Feature            | while              | for              | do-while               |
+    | ------------------ | ------------------ | ---------------- | ---------------------- |
+    | Condition check    | Before loop        | Before loop      | After loop             |
+    | Minimum executions | 0                  | 0                | 1                      |
+    | Loop control       | Separate           | In one line      | Separate               |
+    | Readability        | Moderate           | High             | Moderate               |
+    | Best for           | Unknown iterations | Known iterations | At least one execution |
+
+
+
+
+

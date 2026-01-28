@@ -1,0 +1,45 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o   Design a simple HTTP client-server communication in any language.
+
+==========================================JK================================================
+
+
+Simple HTTP Client–Server Communication (Python)
+
+      1. HTTP Server Program
+
+            from http.server import HTTPServer, BaseHTTPRequestHandler
+
+            class MyServer(BaseHTTPRequestHandler):
+                  def do_GET(self):
+                        self.send_response(200)
+                        self.send_header("Content-type", "text/plain")
+                        self.end_headers()
+                        self.wfile.write(b"Hello Client, this is Server")
+
+            server = HTTPServer(("localhost", 8000), MyServer)
+            print("Server running on port 8000...")
+            server.serve_forever()
+
+      2. HTTP Client Program
+
+            import requests
+
+            response = requests.get("http://localhost:8000")
+            print("Server Response:", response.text)
+
+
+Explanation
+
+      1. The client sends an HTTP GET request.
+
+      2. The request travels through TCP/IP layers.
+
+      3. The server receives and processes the request.
+
+      4. The server sends an HTTP response back to the client.
+
+      5. The client displays the response.
+

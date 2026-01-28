@@ -1,0 +1,55 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o   Describe the roles of the client and server in web communication. 
+
+================================================JK====================================================   
+
+World Wide Web & How the Internet Works
+
+       -> The World Wide Web (WWW) is a service that runs on the Internet and allows users to access web pages 
+        using browsers. 
+       -> The Internet is a global network of computers connected through cables, routers, and wireless links, 
+        enabling data transfer using standard protocols.
+
+
+** Roles of Client and Server in Web Communication **
+
+        Client
+
+                -> A client is a device or application that requests services or data from a server.
+
+                -> Functions of a Client:
+
+                -> Sends HTTP/HTTPS requests
+
+                -> Takes user input
+
+                -> Displays web pages
+
+                -> Manages cookies and cache
+
+                -> Examples: 
+                        Web browsers (Chrome, Firefox), mobile apps
+
+        Server
+
+                -> A server is a computer system that stores, processes, and delivers web content to clients.
+
+                -> Functions of a Server:
+
+                -> Receives client requests
+
+                -> Processes business logic
+
+                -> Accesses databases
+
+                -> Sends responses back to clients
+
+                -> Examples: 
+                        Web servers (Apache, Nginx), application servers
+
+        Client–Server Communication Summary
+
+                Client  → Request (HTTP/HTTPS)
+                Server  → Response (Web Content)

@@ -1,0 +1,70 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o    Explain the function of the TCP/IP model and its layers. 
+
+================================================JK====================================================   
+
+Network Layers on Client and Server
+
+        -> Both the client and the server communicate using the same network layers. 
+        -> These layers ensure that data is sent, routed, received, and understood correctly over the network. 
+        -> The most widely used model for this communication is the TCP/IP model.
+
+** TCP/IP Model and Its Layers **
+
+        -> The TCP/IP model explains how data is transmitted over the Internet. 
+        -> It consists of four layers, and each layer has a specific role.
+
+        1. Application Layer
+
+                Provides network services to applications
+
+                Handles protocols like HTTP, HTTPS, FTP, SMTP
+
+                Example: 
+                        Web browser sending an HTTP request
+
+        2. Transport Layer
+
+                Ensures data delivery between client and server
+
+                Uses TCP (reliable, connection-oriented) and UDP (fast, connectionless)
+
+                Handles error checking and flow control
+
+        3. Internet Layer
+
+                Responsible for logical addressing and routing
+
+                Uses IP (Internet Protocol)
+
+                Breaks data into packets and routes them to the destination
+
+        4. Network Access Layer
+
+                Handles physical transmission of data
+
+                Includes Ethernet, Wi-Fi, MAC addressing
+
+                Converts packets into electrical or wireless signals
+
+** Data Flow Through TCP/IP Layers **
+
+        Client Application
+                ↓
+        Transport Layer (TCP)
+                ↓
+        Internet Layer (IP)
+                ↓
+        Network Access Layer
+                ↓
+        Network
+                ↓
+        Server Network Access Layer
+                ↓
+        Internet Layer
+                ↓
+        Transport Layer
+                ↓
+        Server Application

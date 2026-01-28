@@ -1,0 +1,57 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o   Research and create a diagram of how data is transmitted from a client to 
+                a server over the internet. 
+
+==========================================JK================================================
+
+** Diagram: Data Transmission from Client to Server **
+
++------------+
+|   Client   |
+| (Browser)  |
++------------+
+      |
+      | 1. HTTP / HTTPS Request
+      v
++------------+
+|    DNS     |
+| (IP Lookup)|
++------------+
+      |
+      v
++------------+      +------------+      +------------+
+|    ISP     | ---> |  Routers   | ---> |  Routers   |
++------------+      +------------+      +------------+
+      |
+      v
++------------+
+|   Server   |
+| (Website)  |
++------------+
+      |
+      | 2. HTTP / HTTPS Response
+      v
++------------+
+|   Client   |
+| (Browser)  |
++------------+
+
+
+
+** Step-by-Step Explanation **
+
+    1. The user enters a website URL in the browser.
+
+    2. DNS (Domain Name System) converts the domain name into an IP address.
+
+    3. The client sends an HTTP/HTTPS request to the server.
+
+    4. Data is broken into packets and routed through ISPs and routers.
+
+    5. The server processes the request.
+
+    6. The server sends an HTTP response (HTML, CSS, images).
+
+    7. The browser displays the web page.

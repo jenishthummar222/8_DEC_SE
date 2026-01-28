@@ -1,0 +1,40 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o    Simulate HTTP and FTP requests using command line tools (e.g., curl). 
+
+==========================================JK================================================
+
+Simulating HTTP and FTP Requests Using curl (Command Line)
+
+    1. Simulate an HTTP Request
+
+        curl http://example.com
+
+        -> Sends an HTTP GET request
+        -> Displays the HTML content of the webpage
+
+    2. Simulate an HTTP Request with Headers
+
+        curl -I http://example.com
+
+        -> Shows response headers (status code, server type, content type)
+
+    3. Simulate an HTTPS Request
+
+        curl https://example.com
+
+        -> Sends a secure HTTPS request using SSL/TLS encryption
+
+    4. Simulate an FTP Request (List Files)
+
+        curl ftp://ftp.gnu.org
+
+        -> Connects to an FTP server
+        -> Lists available files (if public access is allowed)
+
+    5. Download a File Using FTP
+
+        curl -O ftp://ftp.gnu.org/gnu/README
+
+       -> Downloads a file from the FTP server

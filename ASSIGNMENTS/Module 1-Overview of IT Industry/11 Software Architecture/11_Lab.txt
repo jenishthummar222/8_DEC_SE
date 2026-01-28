@@ -1,0 +1,55 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o    Design a basic three-tier software architecture diagram for a web application.  
+ 
+==========================================JK================================================
+
+** Basic Three-Tier Software Architecture Diagram (Web Application) **
+
+        +---------------------------+
+        |   Presentation Layer      |
+        |  (Client / UI Layer)      |
+        |  - Web Browser            |
+        |  - HTML, CSS, JavaScript  |
+        +-------------+-------------+
+                    |
+                    | HTTP / HTTPS
+                    |
+        +-------------v-------------+
+        |   Application Layer       |
+        |  (Business Logic Layer)   |
+        |  - Web Server / API       |
+        |  - Authentication         |
+        |  - Business Rules         |
+        +-------------+-------------+
+                    |
+                    | SQL / ORM
+                    |
+        +-------------v-------------+
+        |      Data Layer           |
+        |  (Database Layer)         |
+        |  - MySQL / PostgreSQL     |
+        |  - Data Storage           |
+        +---------------------------+
+
+
+** Explanation of Each Layer **
+
+    1. Presentation Layer
+
+        Handles user interaction
+
+        Displays data to users
+
+    2. Application Layer
+
+        Processes user requests
+
+        Contains business logic
+
+    3. Data Layer
+
+        Stores and retrieves data
+
+        Ensures data integrity and security

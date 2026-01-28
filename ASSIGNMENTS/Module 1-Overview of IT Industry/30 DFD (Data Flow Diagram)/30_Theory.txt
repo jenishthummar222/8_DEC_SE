@@ -1,0 +1,19 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o            What is the significance of DFDs in system analysis?  
+
+================================================JK====================================================   
+
+** Significance of DFDs in System Analysis **
+
+   -> Data Flow Diagrams (DFDs) are important in system analysis because they visually represent how data flows 
+      through a system. 
+      
+   -> They help analysts understand system processes, data storage, and interactions between users and the 
+      system. 
+      
+   -> DFDs make complex systems easy to understand, improve communication among stakeholders, and help identify 
+      missing or redundant processes. 
+      
+   -> They also serve as a foundation for system design and development.

@@ -1,0 +1,97 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o      Perform a functional analysis for an online shopping system.
+
+==========================================JK================================================
+
+** Functional Analysis of an Online Shopping System **
+
+  1. Introduction
+
+    -> An Online Shopping System allows users to browse products, place orders, make payments, and 
+       track deliveries through a web or mobile platform. Functional analysis identifies what the 
+       system must do to meet user and business needs.
+
+  2. User Roles
+
+    -> Customer
+
+    -> Admin
+
+    -> Seller (optional)
+
+  3. Functional Requirements
+
+    A. User Registration & Login
+
+      -> User registration using email/phone
+
+      -> Secure login and logout
+
+      -> Password recovery
+
+    B. Product Management
+
+      -> View product categories
+
+      -> Search products by name, price, or category
+
+      -> View product details (price, description, images)
+
+    C. Shopping Cart
+
+      -> Add products to cart
+
+      -> Update product quantity
+
+      -> Remove products from cart
+
+      -> View cart summary
+
+    D. Order Processing
+
+      -> Place orders
+
+      -> Generate order ID
+
+      -> Order confirmation via email/SMS
+
+    E. Payment System
+
+      -> Support multiple payment methods (UPI, card, net banking, COD)
+
+      -> Secure payment processing
+
+      -> Payment status update
+
+    F. Delivery & Tracking
+
+      -> Provide delivery address management
+
+      -> Track order status
+
+      -> Delivery confirmation
+
+    G. Admin Functions
+
+      -> Add, update, and delete products
+
+      -> Manage users and orders
+
+      -> View sales reports
+
+  4. Non-Functional Requirements
+
+      -> Fast response time
+
+      -> High availability
+
+      -> Secure data handling
+
+      -> Scalability for high traffic
+  
+  5. Conclusion
+
+    -> The functional analysis defines all core features required for smooth operation of an online shopping 
+       system and ensures user satisfaction and business efficiency.

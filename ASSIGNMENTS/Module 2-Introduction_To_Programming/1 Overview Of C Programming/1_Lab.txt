@@ -1,0 +1,96 @@
+==========================================================================================
+
+                        ******** LAB EXERCISE: ********
+            o Research and provide three real-world applications where C programming is 
+            extensively used, such as in embedded systems, operating systems, or game 
+            development.
+
+==========================================================================================
+
+1. Embedded Systems
+
+    -> C programming is the most widely used language in embedded systems. Embedded systems are 
+       specialized computer systems designed to perform specific tasks within larger systems.
+
+    ** Real-world examples
+
+        -> Microcontrollers (Arduino, PIC, AVR, ARM)
+
+        -> Washing machines, microwave ovens
+
+        -> Automotive systems (engine control units, airbags, ABS)
+
+        -> Medical devices (ECG machines, infusion pumps)
+
+        -> IoT devices and smart sensors
+
+    ** Why C is used
+
+       -> Direct access to hardware and memory
+
+       -> Very fast execution speed
+
+       -> Requires low memory, ideal for resource-constrained devices
+
+       -> Easy to write low-level drivers and firmware
+
+       -> Because embedded systems often have limited RAM and processing power, 
+          C is preferred over high-level languages.
+
+
+2. Operating Systems and System Software
+
+    -> C plays a critical role in operating system development. 
+    -> Most modern operating systems are either fully or partially written in C.
+
+    ** Real-world examples
+
+        -> UNIX (originally written in C)
+
+        -> Linux kernel
+
+        -> Windows kernel (partially)
+
+        -> macOS and iOS core components
+
+        -> Device drivers and system utilities
+
+    ** Why C is used
+
+        -> Provides low-level control over CPU, memory, and processes
+
+        -> Highly portable across different hardware platforms
+
+        -> Produces efficient and reliable machine code
+
+        -> Ideal for writing kernels, schedulers, and memory managers
+
+        -> Without C, modern operating systems would not achieve the required performance and stability.
+
+
+3. Game Development and Graphics Engines
+
+    -> C is heavily used in game engines and performance-critical parts of games, 
+       especially where speed and efficiency are essential.
+
+    ** Real-world examples
+
+        -> Game engines like Unity (core parts) and Unreal Engine (via C/C++)
+
+        -> 2D and 3D game engines
+
+        -> Physics engines and rendering engines
+
+        -> Console and PC games
+
+    ** Why C is used
+
+        -> High performance for graphics rendering and physics calculations
+
+        -> Better control over memory management
+
+        -> Efficient use of system resources
+
+        -> Works closely with graphics APIs like OpenGL and DirectX
+
+        -> Even when games use higher-level languages, the core engine is often written in C or C++ for maximum speed.

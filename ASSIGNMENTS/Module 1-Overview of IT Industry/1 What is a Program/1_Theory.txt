@@ -1,0 +1,15 @@
+====================================================================================================
+
+                        ********  THEORY EXERCISE: *********
+        o  Explain in your own words what a program is and how it functions. 
+
+====================================================================================================   
+
+A program is a logical sequence of instructions created to solve a problem or complete a task using a computer. 
+When a program is written, it is first converted into a form the computer understands (machine code) using a compiler or interpreter. 
+After that, the computer executes each instruction in order.
+
+Programs work by taking input, processing data using logic, and producing output. 
+For example:-
+     a calculator program takes numbers as input, performs arithmetic operations, and displays the result. 
+     In this way, programs act as a bridge between human ideas and computer operations.

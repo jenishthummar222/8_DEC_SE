@@ -1,0 +1,34 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o      What are the differences between HTTP and HTTPS protocols ? 
+
+================================================JK====================================================   
+
+Protocols :-
+        
+        Protocols are rules and standards that define how data is transmitted and received over a network. 
+        Examples:-
+                 include HTTP, HTTPS, FTP, SMTP, etc.
+
+
+** Differences Between HTTP and HTTPS ** 
+
+----------------------------------------------------------------------------------
+| Aspect      | HTTP                        | HTTPS                              |
+| ----------- | --------------------------- | ---------------------------------- |
+| Full Form   | HyperText Transfer Protocol | HyperText Transfer Protocol Secure |
+| Security    | Not secure                  | Secure                             |
+| Encryption  | No encryption               | Uses SSL/TLS encryption            |
+| Data Safety | Data can be intercepted     | Data is encrypted and safe         |
+| Port Number | 80                          | 443                                |
+| Use Case    | Non-sensitive data          | Sensitive data (login, banking)    |
+----------------------------------------------------------------------------------
+
+Explanation :- 
+
+        -> HTTP transfers data in plain text, making it vulnerable to attacks like data sniffing.
+
+        -> HTTPS encrypts data using SSL/TLS, ensuring confidentiality, integrity, and authentication.
+
+        -> Modern browsers mark HTTP sites as Not Secure, while HTTPS is trusted.

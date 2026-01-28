@@ -1,0 +1,86 @@
+===========================================JK===============================================
+
+                        ******** LAB EXERCISE: ********
+            o       Create a DFD for a hospital management system.
+
+==========================================JK================================================
+
+** Data Flow Diagram (DFD) for a Hospital Management System **
+
+  1. DFD – Level 0 (Context Diagram)
+
+    External Entities:
+
+      Patient
+
+      Doctor
+
+      Admin
+
+    Process:
+
+      Hospital Management System
+
+    Data Flows:
+
+      Patient details, appointment requests
+
+      Medical reports, prescriptions
+
+      Billing and payment details
+
+  ****************************************************************
+      Patient ─────► Hospital Management System ─────► Doctor
+          ▲                    │                         │
+          │                    ▼                         ▼
+      Payment Details        Admin                   Medical Reports
+
+  *****************************************************************
+
+  2. DFD – Level 1 (Detailed Diagram)
+
+    Processes:
+
+      1. Patient Registration
+
+      2. Appointment Management
+
+      3. Diagnosis & Treatment
+
+      4. Billing & Payment
+
+    Data Stores:
+
+      Patient Database
+
+      Doctor Database
+
+      Medical Records
+
+      Billing Database
+
+********************************
+      Patient
+        |
+        v
+      [1. Patient Registration] ───► Patient Database
+        |
+        v
+      [2. Appointment Management] ───► Doctor Database
+        |
+        v
+      Doctor ───► [3. Diagnosis & Treatment] ───► Medical Records
+        |
+        v
+      [4. Billing & Payment] ───► Billing Database ───► Admin
+
+**********************************
+  3. Explanation
+
+    -> Patients register and book appointments
+
+    -> Doctors diagnose patients and update medical records
+
+    -> Billing process generates invoices and handles payments
+
+    -> Admin manages overall hospital operations

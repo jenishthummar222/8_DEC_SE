@@ -1,0 +1,23 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+
+        o             What types of software maintenance are there? 
+
+================================================JK====================================================   
+
+** Types of Software Maintenance **
+
+There are four main types of software maintenance:
+
+   1. Corrective Maintenance
+      -> Fixes bugs and errors discovered after software deployment.
+
+   2. Adaptive Maintenance
+      -> Updates software to work with new hardware, operating systems, or environments.
+
+   3. Perfective Maintenance
+      -> Improves performance, usability, or adds new features based on user feedback.
+
+   4. Preventive Maintenance
+      -> Improves software reliability and maintainability to prevent future problems.

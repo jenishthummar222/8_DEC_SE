@@ -1,0 +1,318 @@
+/**************************************19/01/2026****************************************
+
+Array Demo
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{   // array index always start 0
+    // Syntax :- datatype vareable[size] = {element1,element2,...};
+    
+    int a[5] = {10,20,30,40,50};
+    
+    printf("\n %d ",a[0]);  // access 1st element or 0th index position value
+    
+    printf("\n %d ",a[4]);
+
+    return 0;
+}
+
+=======================JK===============================
+//Array Demo using loop
+
+#include <stdio.h>
+
+int main()
+{   // array index always start 0
+    // Syntax :- datatype vareable[size] = {element1,element2,...};
+    
+    int a[5] = {10,20,30,40,50};
+    
+    for(int i=0; i<5;++i)
+    {
+        printf("%d\t",a[i]);
+    }
+    
+
+    return 0;
+}
+=======================JK===============================
+//Array Demo :- float value 
+
+#include <stdio.h>
+
+int main()
+{ 
+    
+    float a[5] = {10.20,20.50,30.75};
+    
+    for(int i=0; i<5;++i)
+    {
+        printf("Element (%d) : %.2f\n",i+1,a[i]);
+    }
+
+    return 0;
+}
+
+=======================JK===============================
+//Array Demo :- Daynemic array
+
+#include <stdio.h>
+
+int main()
+{ 
+    
+    int a[5];
+    
+    for(int i=0; i<5; ++i)
+    {
+        printf("Enter Number (%d) :- ",i+1);
+        scanf("%d",&a[i]);
+    }
+    printf("\n--------------------------------\n");
+    for(int i=0; i<5;++i)
+    {
+        printf("Element (%d) : %d\n",i+1,a[i]);
+    }
+
+    return 0;
+}
+
+=======================JK===============================
+//Array Demo :- sum of number
+
+#include <stdio.h>
+
+int main()
+{ 
+    
+    int a[5];
+    int sum=0;
+    
+    for(int i=0; i<5; ++i)
+    {
+        printf("Enter Number (%d) :- ",i+1);
+        scanf("%d",&a[i]);
+    }
+    printf("\n--------------------------------\n");
+    for(int i=0; i<5;++i)
+    {
+        sum+=a[i];
+    }
+    printf("Total Sum is = %d",sum);
+    return 0;
+}
+
+=======================JK===============================
+//Array Demo :- max number
+
+#include <stdio.h>
+
+int main()
+{ 
+    
+    int a[5];
+    
+    for(int i=0; i<5; ++i)
+    {
+        printf("Enter Number (%d) :- ",i+1);
+        scanf("%d",&a[i]);
+    }
+    
+    printf("\n--------------------------------\n");
+    
+     int max=a[0];
+    
+    for(int i=1; i<5;++i)
+    {
+        if(max<a[i])
+        {
+            max=a[i];
+        }
+    }
+    printf("Max Number is = %d",max);
+    return 0;
+}
+
+=======================JK===============================
+
+//Array Demo :- minimum number
+
+#include <stdio.h>
+
+int main()
+{ 
+    
+    int a[5];
+    
+    for(int i=0; i<5; ++i)
+    {
+        printf("Enter Number (%d) :- ",i+1);
+        scanf("%d",&a[i]);
+    }
+    
+    printf("\n--------------------------------\n");
+    
+     int min=a[0];
+    
+    for(int i=1; i<5;++i)
+    {
+        if(a[i]<min)
+        {
+            min=a[i];
+        }
+    }
+    printf("Min Number is = %d",min);
+    return 0;
+}
+---------------------------jk-------------------------------Date:- 23/1/2026--------------------------------------------------------------------------------------------
+
+//******************** Multidimension Array ***********************
+//2D Array
+
+#include <stdio.h>
+
+int main()
+{
+    int arr[2][3]=
+    {
+      {10,20,30},
+      {40,50,60}
+    };
+    
+    printf("\n%d ",arr[0][0]);
+    printf("\n%d ",arr[1][2]);
+
+    return 0;
+}
+
+=======================JK===============================
+
+//2D Array
+
+#include <stdio.h>
+
+int main()
+{
+    int arr[2][3]=
+    {
+      {10,20,30},
+      {40,50,60}
+    };
+    
+    for(int row =0; row<2; row++)
+    {
+        for(int col=0; col<3; col++)
+        {
+            printf(" %d ",arr[row][col]);
+        }
+        printf("\n");
+    }
+    
+
+    return 0;
+}
+
+=======================JK===============================
+
+//2D Array :- Daynemic Array
+
+#include <stdio.h>
+
+int main()
+{
+    int arr[2][3];
+    
+    for(int row =0; row<2; row++)
+    {
+        for(int col=0; col<3; col++)
+        {
+            printf("Enter arr[%d][%d] Element :- ",row,col);
+            scanf("%d",&arr[row][col]);
+        }
+        
+    }
+    printf("\n----------------------------------\n");
+    
+    for(int row =0; row<2; row++)
+    {
+        for(int col=0; col<3; col++)
+        {
+            printf(" %d ",arr[row][col]);
+        }
+        printf("\n");
+    }
+    
+
+    return 0;
+}
+
+=======================JK===============================
+
+//1D Array :- Swaping Array into acceding order.
+
+#include <stdio.h>
+
+int main()
+{
+    int arr[5]; // {5,8,1,2 6}
+    
+    for(int row =0; row<5; row++)
+    {
+        
+        printf("Enter arr[%d] Element :- ",row);
+        scanf("%d",&arr[row]);
+    
+        
+    }
+    printf("\n----------------------------------\n");  
+    
+    
+    for(int row =0; row<4; row++)
+    {
+       
+        for(int col=row+1; col<5; col++)
+        {
+           if(arr[row] > arr[col])
+           {
+               int temp = arr[row];
+               arr[row] = arr[col];
+               arr[col] = temp;
+           }
+        }
+        
+    }
+    //printf("\n----------------------------------\n"); 
+    
+    for(int i=0; i<5; i++)
+    {
+        printf("%d ",arr[i]);
+    }    
+
+    return 0;
+}
+
+=======================JK===============================
+
+// Array pattern
+
+#include <stdio.h>
+
+int main()
+{
+    
+    char str[10]= "INDIA";
+
+    for(int i = 0; i<5; ++i)
+    {
+        for(int j=0; j<=i; ++j)
+        {
+            printf(" %c",str[j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+=======================JK===============================

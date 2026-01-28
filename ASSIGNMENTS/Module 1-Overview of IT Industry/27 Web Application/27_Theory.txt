@@ -1,0 +1,30 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+
+        o             What are the advantages of using web applications over desktop applications?
+
+================================================JK====================================================   
+
+** Advantages of Web Applications Over Desktop Applications **
+
+   1. Easy Accessibility
+      -> Web applications can be accessed from anywhere using a web browser and internet connection.
+
+   2. No Installation Required
+      -> Users do not need to install software on their computers; they can use the app directly through a browser.
+
+   3. Automatic Updates
+      -> Updates are done on the server, so users always use the latest version without manual updates.
+
+   4. Cross-Platform Compatibility
+      -> Web applications work on all operating systems such as Windows, macOS, Linux, and mobile devices.
+
+   5. Lower Maintenance Cost
+      -> Maintenance and upgrades are handled centrally, reducing cost and effort.
+
+   6. Easy Collaboration
+      -> Multiple users can work together in real time, making collaboration easier.
+
+   7. Data Backup and Recovery
+      -> Data is stored on servers or cloud, reducing the risk of data loss.

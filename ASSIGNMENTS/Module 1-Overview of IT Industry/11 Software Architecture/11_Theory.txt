@@ -1,0 +1,39 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o       What is the significance of modularity in software architecture?
+
+================================================JK====================================================   
+
+** Software Architecture ** 
+
+        -> Software architecture describes the overall structure of a software system, including its components, 
+          relationships, and design principles. 
+        -> A good architecture ensures scalability, maintainability, and performance.
+
+** Significance of Modularity in Software Architecture **
+
+        -> Modularity means dividing a software system into independent and manageable modules, 
+           each performing a specific function.
+        
+** Importance of Modularity ** 
+
+        1. Ease of Maintenance
+
+                Bugs can be fixed in one module without affecting others
+
+        2. Reusability
+
+                Modules can be reused in different projects
+
+        3. Scalability
+
+                Individual modules can be scaled independently
+
+        4. Improved Testing
+
+                Modules can be tested separately
+
+        5. Team Productivity
+
+                Different teams can work on different modules simultaneously 

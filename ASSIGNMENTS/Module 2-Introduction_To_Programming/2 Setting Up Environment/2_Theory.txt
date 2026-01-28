@@ -1,0 +1,77 @@
+====================================================================================================
+
+                        ********  THEORY EXERCISE: *********
+                        
+            o Describe the steps to install a C compiler (e.g., GCC) and set up an Integrated 
+            Development Environment (IDE) like DevC++, VS Code, or CodeBlocks. 
+
+====================================================================================================
+
+Step 1: Install a C Compiler (GCC)
+
+    -> A C compiler converts C source code into executable programs. GCC (GNU Compiler Collection) is the most commonly used compiler.
+
+    ** For Windows (Using MinGW-w64)
+
+        1] Go to the official MinGW-w64 website.
+
+        2] Download the installer.
+
+        3] Run the installer and select:
+
+            -> Architecture: x86_64
+
+            -> Threads: posix
+
+            -> Exception: seh
+
+        4] Install it in a folder such as:
+
+            -> C:\mingw64
+    
+        5] Add GCC to the System PATH:
+
+            -> Open Environment Variables
+
+            -> Edit Path
+
+            -> Add:
+
+                -> C:\mingw64\bin
+
+
+        6] Verify installation:
+
+            -> Open Command Prompt
+
+            -> Type:
+
+                -> gcc --version
+
+Step 2: Set Up an IDE
+
+    -> An IDE provides a code editor, compiler integration, and debugging tools.
+
+Dev-C++ :-
+
+    ** Installation Steps **
+
+        1] Download Dev-C++ from its official website.
+
+        2] Run the installer.
+
+        3] During installation:
+
+            -> Choose TDM-GCC (compiler included)
+
+        4] Complete installation.
+
+    ** Usage **
+
+        -> Open Dev-C++
+
+        -> Go to File → New → Source File
+
+        -> Write C code
+
+        -> Press F9 to compile and run

@@ -1,0 +1,19 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o           What is the role of software analysis in the development process?
+
+================================================JK====================================================   
+
+
+** Role of Software Analysis in the Development Process **
+
+   -> Software analysis plays a vital role in the development process by identifying and defining system 
+      requirements before design and coding begin. 
+      
+   -> It helps understand user needs, system behavior, and constraints. 
+   
+   -> Proper analysis reduces errors, avoids misunderstandings, and minimizes costly changes in later stages. 
+   
+   -> It also provides a clear roadmap for developers, testers, and stakeholders, ensuring the final product 
+      meets expectations. 

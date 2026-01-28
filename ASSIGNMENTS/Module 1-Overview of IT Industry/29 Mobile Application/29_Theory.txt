@@ -1,0 +1,27 @@
+===============================================JK=====================================================
+
+                        ********  THEORY EXERCISE: *********
+        o            What are the differences between native and hybrid mobile apps? 
+
+================================================JK====================================================   
+
+** Differences Between Native and Hybrid Mobile Apps **
+
+| Aspect                        | Native Mobile Apps                       | Hybrid Mobile Apps                     |
+| ----------------------------- | ---------------------------------------- | -------------------------------------- |
+| **Technology**                | Built using platform-specific languages  | Built using web technologies           |
+|                               | (Java/Kotlin for Android, Swift for iOS) | (HTML, CSS, JavaScript)                |
+| **Platform Support**          | Separate apps for each platform          | Single app works on multiple platforms |
+| **Performance**               | High performance and smooth              | Slightly lower than native             |
+| **Access to Device Features** | Full access to device hardware           | Limited or via plugins                 |
+| **Development Time**          | Longer                                   | Shorter                                |
+| **Development Cost**          | Higher                                   | Lower                                  |
+| **UI/UX**                     | Best user experience                     | UI may feel less native                |
+| **Maintenance**               | Harder (multiple codebases)              | Easier (single codebase)               |
+| **Examples**                  | WhatsApp, Instagram                      | Uber, Instagram (partly hybrid)        |
+
+In Simple Words:-
+
+   -> Native apps are faster and feel more natural.
+
+   -> Hybrid apps are cheaper and quicker to develop.

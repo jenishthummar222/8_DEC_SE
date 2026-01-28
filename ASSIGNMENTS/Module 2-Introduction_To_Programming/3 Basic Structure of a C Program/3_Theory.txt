@@ -1,0 +1,61 @@
+==========================================================================================
+
+                        ******** THEORY EXERCISE: ********
+            o Explain the basic structure of a C program, including headers, main function, 
+              comments, data types, and variables. Provide examples. 
+
+==========================================================================================
+
+Strucure of C langauge
+
+1] Documentation of program
+    -> which is represent your program's title or description.
+    -> which is represent by comments.
+    -> Compiler skip or ignore comments at executation time.
+
+    ** there are two type of comments **
+
+        i) Single line comment : which is represent by //
+
+            e.g.  // this is single line comment.
+        
+        ii) Multi line comment : which is represent by /*....*/ 
+
+            e.g /* this is 
+                    multi line 
+                    comments
+                */
+
+2] Connection with c langauge libary
+
+    #include<stdio.h>
+    #include<conio.h>
+
+        hear, 
+            # :-> which is predefined
+            include :-> to add somthing
+            <stdio.h> :->" standard input output header file. "
+                        using of this header file we can acess inbuilt function from this file
+            <conio.h> :-> console input output header file. 
+
+3] executation of program
+    void main()
+    {
+        ...
+    }
+        hear,
+            void  : it is a data type which is dose not return value.
+            main  :- it is a function which represent that this a main executatable of program.
+            {...} :- this is represent block of code.
+
+Example :-
+
+    // Print number on console      -> It's comments
+    #include <stdio.h>  //          -> c langauge libary
+
+    void main() {       //          -> Main function 
+
+        int num; //                 -> data type with variable diclaretion
+        num = 10; //                -> variable initlization
+        printf("%d",num);//         -> print variable value in console.
+    }

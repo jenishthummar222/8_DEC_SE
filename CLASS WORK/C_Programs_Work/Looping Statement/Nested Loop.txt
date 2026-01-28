@@ -1,0 +1,350 @@
+---------------------------jk-------------------------------Date:- 7/1/2026--------------------------------------------------------------------------------------------
+/* pettern 1 */
+// Demo for nested loop
+
+#include <stdio.h>
+
+int main()
+{
+    for(int row=1; row<=5; row++)
+    {
+        printf("\n%d",row);
+        for(int col=1; col<=3; col++)
+        {
+            printf(" # ");
+        }
+    }
+
+    return 0;
+}
+
+========================JK==============================
+/* pettern 2
+
+# # # # #
+# # # # #
+# # # # #
+# # # # #
+# # # # #
+
+*/
+#include <stdio.h>
+
+int main()
+{
+    for(int row=1; row<=5; row++)
+    {
+        for(int col=1; col<=5; col++)
+        {
+            printf(" # ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+========================JK==============================
+
+/* pettern 3
+
+# # # # #
+# # # # #
+# # $ # #
+# # # # #
+# # # # #
+
+*/
+#include <stdio.h>
+
+int main()
+{
+    for(int row=1; row<=5; row++)
+    {
+        for(int col=1; col<=5; col++)
+        {
+            if(row==3 && col==3){
+                printf(" $ ");
+            }else
+            {
+                printf(" # ");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+========================JK==============================
+
+/* pettern 4
+# 
+# # 
+# # # 
+# # # #
+# # # # #
+
+*/
+#include <stdio.h>
+
+int main()
+{
+    for(int row=1; row<=5; row++)
+    {
+        for(int col=1; col<=row; col++)
+        {
+            
+            printf(" # ");
+            
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+========================JK==============================
+
+/* pettern 5
+
+1 
+2 2 
+3 3 3 
+4 4 4 4
+5 5 5 5 5
+
+*/
+#include <stdio.h>
+
+int main()
+{
+    for(int row=1; row<=5; row++)
+    {
+        for(int col=1; col<=row; col++)
+        {
+            
+            printf(" %d ",row);
+            
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+========================JK==============================
+
+/* pettern 6
+
+1 
+1 2 
+1 2 3 
+1 2 3 4
+1 2 3 4 5
+
+*/
+#include <stdio.h>
+
+int main()
+{
+    for(int row=1; row<=5; row++)
+    {
+        for(int col=1; col<=row; col++)
+        {
+            
+            printf(" %d ",col);
+            
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+========================JK==============================
+
+/* pettern 7
+
+1 
+2 3 
+4 5 6 
+7 8 9 10
+
+*/
+#include <stdio.h>
+
+int main()
+{
+    int num = 1;
+    for(int row=1; row<=4; row++)
+    {
+        for(int col=1; col<=row; col++)
+        {
+            
+            printf(" %d ",num++);
+            
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+========================JK==============================
+
+/* pettern 8
+
+A 
+B C 
+D E F 
+G H I J 
+
+*/
+#include <stdio.h>
+
+int main()
+{
+    int num = 65;
+    for(int row=1; row<=4; row++)
+    {
+        for(int col=1; col<=row; col++)
+        {
+            
+            printf(" %c ",num++);  // convert number to ASCII value 
+            
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+========================JK==============================
+
+/* pettern 9
+
+A To Z
+
+
+*/
+#include <stdio.h>
+
+int main()
+{
+    int num = 65;
+    for(int row=1; row<=26; row++)
+    {
+       
+        printf(" %c ",num++);  // convert number to ASCII value 
+            
+      
+    }
+
+    return 0;
+}
+
+========================JK==============================
+
+/* pettern 10
+
+A 
+B C 
+D E F 
+G H I J 
+K L M N O
+
+*/
+#include <stdio.h>
+
+int main()
+{
+    int num = 65;
+    for(int row=1; row<=5; row++)
+    {
+        for(int col=1; col<=row; col++)
+        {
+            printf(" %c ",num++);  
+           // ch+=1;
+            
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+========================JK==============================
+---------------------------jk-------------------------------Date:- 9/1/2026--------------------------------------------------------------------------------------------
+
+/* pettern 11
+
+ *  *  *  *  * 
+ *  *  *  * 
+ *  *  * 
+ *  * 
+ * 
+
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    
+    for(int row=5; row>=1; row--)
+    {
+        for(int col=1; col<=row; col++)
+        {
+            printf(" * ");              
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+========================JK==============================
+
+/* 
+ pettern 12
+    * 
+    *  * 
+    *  *  * 
+    *  *  *  * 
+    *  *  *  *  * 
+    *  *  *  * 
+    *  *  * 
+    *  * 
+    * 
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    for(int row= 1; row<=4; row++)
+    {
+        for(int col=1; col<=row; col++)
+        {
+            printf(" * ");
+        }
+        
+        printf("\n");
+    }
+    for(int row=5; row>=1; row--)
+    {
+        for(int col=1; col<=row; col++)
+        {
+            printf(" * ");  
+           // ch+=1;
+            
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+========================JK==============================
+

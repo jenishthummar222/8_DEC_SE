@@ -1,0 +1,79 @@
+==========================================================================================
+
+                        ******** THEORY EXERCISE: ********
+            o What are functions in C? Explain function declaration, definition, and how to 
+              call a function. Provide examples.  
+
+==========================================================================================
+
+Functions in C
+
+    -> A function is a block of code that performs a specific task. 
+    -> Functions help in modular programming, making the code organized, reusable, and easier to debug.
+
+    1. Function Declaration (Prototype)
+
+        Purpose: 
+            -> Tells the compiler about the function’s name, return type, and parameters before it is used.
+
+        Syntax:
+
+            return_type function_name(parameter_list);
+
+
+        Example:
+
+            int add(int a, int b); // Function declaration
+
+    2. Function Definition
+
+        Purpose: 
+        -> Contains the actual code (body) of the function.
+
+        Syntax:
+
+            return_type function_name(parameter_list) {
+                // code to perform task
+                return value; // if return_type is not void
+            }
+
+
+        Example:
+
+            int add(int a, int b) {
+                return a + b; // returns sum of a and b
+            }
+
+    3. Function Call
+
+        Purpose: 
+        -> Executes the function. You call a function from main() or another function.
+
+        Syntax:
+
+        -> variable = function_name(arguments);
+
+
+        Example:
+
+            #include <stdio.h>
+
+            // Function declaration
+            int add(int a, int b);
+
+            int main() {
+                int sum;
+                sum = add(5, 3); // Function call
+                printf("Sum = %d\n", sum);
+                return 0;
+            }
+
+            // Function definition
+            int add(int a, int b) {
+                return a + b;
+            }
+
+
+        Output:
+
+            Sum = 8
