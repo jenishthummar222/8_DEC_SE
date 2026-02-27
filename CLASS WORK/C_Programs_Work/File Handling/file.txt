@@ -1,0 +1,109 @@
+---------------------------jk-------------------------------Date:- 11/2/2026--------------------------------------------------------------------------------------------
+
+// first demo file handling
+
+#include<stdio.h>
+
+main()
+{
+	FILE *fp;   // file pointer
+	
+	fp = fopen("myFile.txt","w");
+	
+	// write on myFile
+	
+	fprintf(fp,"Hello this is my first file demo\n\n");
+	fprintf(fp,"Name :- C Language Developer \n");
+	fprintf(fp,"Score :- 89 \n");	
+	
+	printf("File Is created");
+	
+	fclose(fp); // close file
+}
+
+=======================JK===============================
+
+// first demo file handling
+
+#include<stdio.h>
+
+main()
+{
+	FILE *fp;   // file pointer
+	
+	fp = fopen("myFile.txt","a"); // append mode
+	
+	if(fp == NULL)
+	{
+		printf("File is not Exies");
+		return 0;
+		
+	}	
+	
+	// write on myFile
+	
+	fprintf(fp,"Name :- Python Developer \n");
+	fprintf(fp,"Score :- 92 \n");
+	
+	
+	printf("File Is Appended..");
+	
+	fclose(fp); // close file
+}
+
+=======================JK===============================
+
+// file handling :- read file
+
+#include<stdio.h>
+
+main()
+{
+	FILE *fp;   // file pointer
+	char ch;
+	
+	fp = fopen("myFile.txt","r"); // append mode
+	
+	if(fp == NULL)
+	{
+		printf("File is not Exies");
+		return 0;	
+		
+	}
+	else
+	{
+		while((ch=fgetc(fp)) != EOF)  // eof :- end of file
+		{
+			printf("%c",ch);    // retrve one by one charetcter.
+		}
+	}	
+	
+	fclose(fp); // close file
+}
+
+=======================JK===============================
+
+// file handling :- get vaue from the user
+
+#include<stdio.h>
+
+main()
+{
+	FILE *fp;   // file pointer
+	char name[20];
+	char subject[20];
+
+	fp = fopen("myUser.txt","w"); 
+	
+	printf("Enter Name :- ");
+	scanf("%s",&name);
+	
+	printf("Enter Subject :- ");
+	scanf("%s",&subject);
+	
+	fprintf(fp,"Name :- %s\nSubject :- %s",name,subject);
+	
+	printf("File is Created..");
+	
+	fclose(fp); // close file
+}

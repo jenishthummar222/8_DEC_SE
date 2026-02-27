@@ -1,0 +1,72 @@
+---------------------------jk-------------------------------Date:- 25/2/2026--------------------------------------------------------------------------------------------
+
+#include<iostream>
+#include<fstream>  // reda and write file
+
+using namespace std;
+
+main()
+{
+	// open file & write  inside the file
+	ofstream file("cpp_file.txt");
+	
+	file<<"\n Welcome to C++";
+	file<<"\n It is File Handling Concept.";	
+	
+	file.close();
+}
+
+
+=======================JK===============================
+
+#include<iostream>
+#include<fstream>  // reda and write file
+
+using namespace std;
+
+main()
+{
+	// read the file.
+	ifstream file("cpp_file.txt"); // read data fro file
+	
+	string line;
+	
+	while(getline(file,line))   // getline function use for get a line by by charector.
+	{
+		cout<<line<<endl;
+	}
+	
+	file.close();
+}
+
+=======================JK===============================
+
+#include<iostream>
+#include<fstream>  // reda and write file
+
+using namespace std;
+
+main()
+{
+	string name,subject;
+	
+	cout<<"Enter name :- "<<endl;
+	cin>>name;
+	
+	cout<<"Enter Subject :- "<<endl;
+	cin>>subject;
+	
+	ofstream file("new_file.txt",ios::app);
+	
+	file<<"name : "<<name<<endl;
+	file<<"Subject : "<<subject<<endl;
+	
+	
+	file.close();
+}
+
+=======================JK===============================
+
+
+
+=======================JK===============================

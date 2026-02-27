@@ -1,0 +1,132 @@
+---------------------------jk-------------------------------Date:- 20/2/2026--------------------------------------------------------------------------------------------
+
+#include<iostream>
+using namespace std;
+
+class Bank 
+{
+	
+	public:
+		int balance ;   // data member
+	
+};
+
+main()
+{
+	Bank b = Bank();
+	b.balance = 50000;
+	
+	cout<<"\n Balance = "<<b.balance;
+	
+}
+
+/*
+
+	-> Threr is no data control - we can access from any where.
+	-> There is no security - it is  not safe for any kind data.
+	
+	Solution :- use hear encapsulation concept.
+	
+*/
+
+=======================JK===============================
+
+// privas program incap_1.cpp solusion
+
+#include<iostream>
+using namespace std;
+
+class Bank 
+{
+	
+	private:
+		int balance ;   // data member
+		
+	public :
+		void deposite(int amount)
+		{
+			if(amount > 0)
+			{
+				balance = amount;
+			}
+		}
+		
+		int display()
+		{
+			return balance;
+		}
+	
+};
+
+main()
+{
+	Bank b = Bank();
+	
+	int amount;
+	
+	cout <<"\n Enter Your Deposite Amount :- ";
+	cin>>amount;
+	
+	b.deposite(amount);
+	
+	cout<<"\n Balance = "<<b.display();
+	
+}
+
+/*
+
+	1] Data hiding.
+	2] data private from outside wold.
+	3] security - no one can directlu access from the outside world.
+	4] data control - no noe can add unwanter value or apply changes.
+	
+*/
+
+=======================JK===============================
+
+#include<iostream>
+using namespace std;
+
+class Student
+{
+	private : 
+		int id ;
+		string name;
+		int mark;
+		
+	public :
+		void setId(int id)
+		{
+			this->id = id;	
+		}
+		int getId()
+		{
+			return id;	
+		}	
+		void setName(string name)
+		{
+			this->name = name;	
+		}
+		string getName()
+		{
+			return name;	
+		}
+		void setMark(int mark)
+		{
+			this->mark = mark;	
+		}
+		int getMark()
+		{
+			return mark;	
+		}
+};
+
+main()
+{
+	Student st;
+	st.setId(222);
+	st.setName("Jenish");
+	st.setMark(95);
+	cout<<"\n** Student Details **\n\nId is = "<<st.getId()<<"\nName is = "<<st.getName()<<"\nMark is = "<<st.getMark();
+}
+

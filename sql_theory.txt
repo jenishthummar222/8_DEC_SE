@@ -1,0 +1,212 @@
+---------------------------jk-------------------------------Date:- 27/2/2026--------------------------------------------------------------------------------------------
+
+What is DataBase ?
+
+    -> DataBase is a collection of data.
+    -> which is contain data in tabular forment 
+    -> row and colume wise we can store multiple data in single frame.
+    -> ro represnet single record & column reoresent specific filed name of that record.
+
+    E.g :-
+
+        name        subject     city        pincode         ==> (colume name[4])
+        ---------------------------------------------
+        Jenish      Python      junagdh     362020          ==> (Row Name[1])
+
+    -> we can store multiple record we can retrive record specific condition wise even we can update and delete
+        specific record condition wise.
+
+SQl :- 
+    -> Structure Query Language.
+    -> it is a programming language.
+    
+    ** Using Sql we can perform CRUD operations.
+        1] create.
+        2] read.
+        3] update.
+        4] delete.
+
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=
+
+    ** Login with MySql CMD Panel **
+
+        # mysql -u root -p 
+
+        Enter Password :- Jenish 
+
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=
+
+    ===> DDL :- 
+            -> Data Defination Language 
+
+            -> to create structure & table we use DDL commands using below commands,
+                we can create structure we cna add and remove fileds we can remove table or
+                we can rename it using DDl commands.
+
+            1) Cretae
+            2) Alter
+            3) Drop
+            4) Truncate  
+            5) Rename 
+
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=
+        
+    ===> DML :-
+            -> Data Manipualtion Language.
+
+            1) Insert 
+            2) Update 
+            3) Delete 
+            4) Select 
+
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=
+        
+    ===> DQL :-
+           -> Data Query Language.
+
+           1) Select 
+
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=
+        
+    ===> DCL :-
+            -> Data Control Language.
+
+            1) Grant 
+            2) Revoke 
+
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=
+        
+    ===> TCL :- 
+            -> Transaction Control Language.
+
+            1) Commit 
+            2) Rollback 
+            3) Savepint 
+
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=
+    
+    ** Create DataBase **
+
+        -> create database <db_nm>;
+
+        E.g :-
+
+            create database 8DECSE;
+        
+    ** Show DataBase **
+
+        -> show databases;
+
+    ** Remove DataBase **
+
+        drop database <db_nm>;
+
+        E.g:-
+            drop database mydb;
+
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=
+
+    Select your dataBase which you want to workupon it.
+
+    Syntax :-
+        -> use <db_nm>;
+
+    E.g :-
+        use 8DECSE;
+
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=
+
+    Table :-
+        -> one database can cntaon multiple tables.
+
+        e.g.
+
+            table contain row & column.
+
+    ** Table Createion ** 
+
+        -> Syntax :-
+
+            cretae table <tb_nm>(
+                <col_nm1> <datatype>,
+                <col_nm2> <datatype>,
+                <col_nm3> <datatype>,
+                <col_nm4> <datatype>,
+            );
+
+        -> E.g :-
+            mysql> create table student
+            -> (
+            -> id int,
+            -> name varchar(20),
+            -> subject varchar(20),
+            -> score int
+            -> );
+        Query OK, 0 rows affected (0.16 sec)
+
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=
+
+    Check table is proper created or not using describe commend.
+
+    Syntax :-
+         desc <tb_nm>;
+    
+    E.g :-
+
+        ->  mysql> desc student;
+
+        +---------+-------------+------+-----+---------+-------+
+        | Field   | Type        | Null | Key | Default | Extra |
+        +---------+-------------+------+-----+---------+-------+
+        | id      | int         | YES  |     | NULL    |       |
+        | name    | varchar(20) | YES  |     | NULL    |       |
+        | subject | varchar(20) | YES  |     | NULL    |       |
+        | score   | int         | YES  |     | NULL    |       |
+        +---------+-------------+------+-----+---------+-------+
+        4 rows in set (0.03 sec)
+    
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=
+
+    Alter :-
+        -> it command is most important part of DDL commands.
+        
+        -> using of Alter command we can add, remove or modify  filed of Table.
+
+            1] add 
+            2] drop 
+            3] modify 
+
+
+        1] add:-
+
+            Syntax :-
+                -> alter table <table_nm> <alter_command _nm> filed_nm  datatype.
+
+            E.g:-
+
+                -> alter table student add city varchar(20);
+                -> desc student;
+
+                +---------+-------------+------+-----+---------+-------+
+                | Field   | Type        | Null | Key | Default | Extra |
+                +---------+-------------+------+-----+---------+-------+
+                | id      | int         | YES  |     | NULL    |       |
+                | name    | varchar(20) | YES  |     | NULL    |       |
+                | subject | varchar(20) | YES  |     | NULL    |       |
+                | score   | int         | YES  |     | NULL    |       |
+                | city    | varchar(20) | YES  |     | NULL    |       |   //new added
+                +---------+-------------+------+-----+---------+-------+
+                5 rows in set (0.01 sec)
+
+        ******************************************************************
+        2] drop :-
+
+            Syntax:-
+                ->  alter table <table_nm> <drop> filed_nm;
+            E.g:-
+                -> alter table student drop dummy;
+        
+        ******************************************************************
+        
+
+            

@@ -1,0 +1,551 @@
+---------------------------jk-------------------------------Date:- 12/2/2026--------------------------------------------------------------------------------------------
+What is c++ :-
+    -> it is an extend version of c language.
+    -> C language + 1
+    -> c+1
+    -> it showing postfix increment.
+
+*************************************************
+
+
+
+*************************************************
+POP vs OOP :-
+
+    POP :-
+        -> procedure orianted programing.
+        -> which is mainly focus on function.
+        -> our all program divide in chunks of function.
+
+    OOP :-
+        -> objeect orianted programing langauge.
+        -> every thing depends on object.
+
+**************************************************
+
+-> C++ is oop langauge developed by Bjaarne Stroustrup at AT &T Bell lab in 1983.
+-> Simula was the first object orianted programing langauge.
+-> It was developed during 1960s by Kristen Nygaard and Ole Dahl.
+-> Stroustrup had initially given the name "C with classes" to C++ in 1983, the name was changes to C++.
+-> C++ can be used to write procedural as well as OOP, That's why C++ is also called a hybried language.
+
+**************************************************
+
+** Object Based :-
+    -> The langauge which supports the class and object but does not support the inheritance, polymorphism 
+        is called object based language.
+
+** Object Orianted Language :-
+    -> the oop supports all the Features such as class, object, inheritance, polymorphism, etc.
+
+**************************************************
+--------------------------------------------------------------------------------------------------------------------------
+|                         oop                                 |                            pop  (procedure)              |     
+--------------------------------------------------------------------------------------------------------------------------                                    
+| -> Data is secured                                          |    -> Data isnot secured.                                |     
+| -> Data & feunction are combined together                   |    -> data & function are not combin together.           |                             
+| -> this is good programing approach for real-time design    |    -> this is good scientific application development.   |                     
+| -> all Features of POP may be present in OOP                |    -> it does not support the Features of OOP.           |         
+| -> we can define an abstract data type which describe all   |    -> we can not define an abstract data type.           |                        
+|     object of a class                                       |                                                          |         
+| -> Object communicate with each other by message passing    |    -> Manu function can access the same data.            |         
+| -> this follows the bottom-up design concept.               |    -> it follows the top-down concept.                   |        
+--------------------------------------------------------------------------------------------------------------------------     
+
+********************************************************
+** Advantages Of OOPs :-
+    -> Security :-
+        -> the data function are combined together and the data can be made hidden from the outside so that 
+            security of data incresses.
+    
+    -> Resubility :-
+        -> New object can be created with small modifications to the exiesting once inheritance provied 
+            the facility of resuablity.
+
+    -> Due the modularity , OOP concept is good for development.
+    -> OOP provied good quality of software, increse in productivity and less maintenence.
+
+** Disadvantages of OOPs :-
+    -> the message - based communication between many object in a complex systems is difficult to trace and debug.
+    -> it required more memory to process at greater speed.
+    -> it runs slowere the tradition programing language.
+    -> the resuablity of code is not always possible.
+
+********************************************************
+
+Similarities In C And C++ :=
+
+    -> C++ is superset of C. It contains the synta and Features of c langauge.
+    -> Most of the basic syntax of c++ is similar to that of except some rules and construction of its own.
+    -> It contains the same control statements ; the same scope and storage class rules, Even the arithmetic ,
+        logical , bitwise operators and the data type.
+    -> Both the langauge start with the main function.
+
+---------------------------jk-------------------------------Date:- 13/2/2026--------------------------------------------------------------------------------------------
+
+>> ::
+    -> Extraction operator
+
+<< ::
+    -> Insertion Operator 
+
+
+endl :: 
+    -> End Of Line - for new Line
+
+------------------------------------------
+**  Difference Between Endl or \n  **
+------------------------------------------
+    \n ::  
+        -> For new line but faster than endl.
+
+    endl ::
+        -> mainly use for new line and flush memory.
+
+---------------------------jk-------------------------------Date:- 16/2/2026--------------------------------------------------------------------------------------------
+
+ ** OOPS :: **
+
+    -> object orianted programing systems.
+
+    =================================================
+     ** CLass :-
+            -> class is a collection of different different data member.
+            -> class is a collection of object.
+            -> class is a userdefiend datatype.
+
+            synta:- 
+                -> class <class_nm>()
+                {
+                    public:
+                        data member;
+                        member function();
+                }
+
+    ===============================================
+    ** Object ** :-
+            -> object is an instance of class. or We can say that objedt is a variable of class.
+            -> using of object we csn access properties of class.
+
+            Syntax :-
+                -> class_nm obj_nm = classname();
+
+    ===============================================
+    
+    ** Constructor ** :-
+        -> it is a most powerfull concept of C++ .\
+        -> constructor is a special member function.
+        -> we can say that constructor is a special method.
+
+        -> which is invoke automatically whenver we create object of class.
+
+        -> it is usually work for initilization of member.
+        -> Note:-
+            -> constructor is does not have any return type.
+            -> and it always declare in public.
+
+        constructor name and class name both are smae we can't take \ different as a constructor.
+
+        Syntax :-
+
+            class <clas_nm>
+            {
+                constructor :
+                    body of it.
+            }
+        
+    ==========================================================
+    There are mainly Three Type of Constructor 
+
+    1] default constructor
+    2] parameterized constructor
+    3] copy constructor
+
+
+    1] default Constructor :-
+        -> does not contain any parameters
+        -> when we want to display or do some static value we can use defualt constructor.
+
+    2] parameterized Constructor :-
+        -> when we pass parameters at object creation time it's called parameterized constructor.
+
+---------------------------jk-------------------------------Date:- 17/2/2026--------------------------------------------------------------------------------------------
+
+** This :- 
+
+    -> this pointer which is refer current class object.
+    -> means we can define current class member using of this pointer.
+
+======================================================================
+
+    3] Copy Constructor :-
+        -> it is a special  constructor which create new object of existing object.
+
+        Syntax :-
+            -> constructor_nm  (const class_nm &obj)
+            {
+                ...
+            }
+
+            hear, & means address operator.
+    
+    ==================================================
+
+    ** Pass By Value :-
+                    -> function parameter we are passing only object 
+                    -> it will not affect original value.
+    
+    ** Pass by Reference :-
+                    -> we are passing reference of object.
+                    -> So, whenever we apply change it affect original value.
+    
+    ** Pass by address :-
+                    -> hear, we pass address of object so,whenever we apply changes in address it affet original value.
+
+---------------------------jk-------------------------------Date:- 18/2/2026--------------------------------------------------------------------------------------------
+
+** inheritance ** ::-
+
+    -> inheritance is a most powerfull concept of oops concept.
+    -> inheritance provied resuablity - so, we can reduce our work save develoopment time.
+    -> inheritance provide parent and child reletionship.
+
+    ==> Threr are 5 type of inheritance <==
+        1] single level inheritance.
+        2] multi- level inheritance.
+        3] multiple inheritance.
+        4] hierarchical inheritance.
+        5] hybrid inheritance.
+
+    -> inheritance is a part of reletionship so, it represnet IS-A reletionship.
+
+    parent - child (100% utiliy of parent's properties.)
+
+    1] single level inheritance :-
+        -> when perent and child  reletionship it's call single level inheritance.
+
+        class A     (parent)
+        |
+        V
+        class B      (child)
+
+        Syntax :-
+            -> class parentclass
+            {
+
+            };
+            class childclass :<accessSpecifier> <parentclass>
+            {
+
+            };
+    **********************************************
+
+    ==> Accesss Specifiers or Visiblity mode <==
+
+        -> There are Three type of access modifiers
+            i] public
+           ii] private
+          iii] protected
+
+        -> in structure by default all member are public but in class by defualt all member are private So,
+            we have to define in public mode.
+
+            -> i] Public :-
+                -> we can access class properties from anywere inside & outside the class.
+                -> anywere from the program.
+
+            -> ii] private :-
+                -> it means private data - we can't access outside the class even child class can't user private class data
+                    member and member function.
+                    So, private provide data protection and data hiding in class functionality.
+
+                    -> only own class can access.
+
+            -> iii] protected :-
+                -> it is similer like private but protected member can access by own class and child class.
+
+                -> own class and child class.
+
+
+    **********************************************
+
+    2] multi - level inheritance :-
+        -> Extended level of multi level inheritance.
+
+        Syntax :-
+            
+            class A 
+            {
+                        // class A is Super class OR Base class OR parent class.
+            };
+            class B : public A
+            {
+                        // Class B is a intermediat parent class.
+            };
+            class C : public B 
+            {
+                        // Class C is a sub class OR derived class OR child class.
+            };
+
+    =========================================================
+
+    3]  Multiple inheritance :-
+        -> there are more than parent class and one child class.
+        -> means one child have more than one parent .
+        -> but in real world multiple inheritance not supported because in real world two parents not support that 
+            why JAVA not support this concept.
+        -> it the main aim to achive multiple paret's functionality in one child class.
+
+        Syntax :-
+            class parent 1
+            {
+
+            };
+            class parent 2
+            {
+
+            };
+            class child : <accessSpecifier> <parent class1>,<accessSpecifier> <parent class2>
+            {
+
+            };
+
+        -> but there are possiblity of ambiugity (confusion between same name properties.)
+
+    =========================================================
+
+---------------------------jk-------------------------------Date:- 19/2/2026--------------------------------------------------------------------------------------------
+
+There is one issue or we can say problam with multiple inheritance.
+
+** ambiugity ** :-
+            -> Ambiugity means both perent have same name methods and child import , it generated confusion it's 
+                called ambiugity.
+            
+            -> unfortunatlly child have 2 same name method so, compiler get confuse which method i have to acess first.
+
+**==> How To fix It <==**
+    
+    ::  -> this is scope resoultion operator.
+        -> which is class property you want to access it.
+
+    =========================================================
+
+    4] Hierarchical inheritance :-
+        -> when one perent have multiple child class.
+
+                      Class A 
+                         |
+                         V 
+        -------------------------------------
+        |                                   |
+        V                                   V 
+    Class B                             Class C
+
+    =========================================================
+
+    5] Hybrid Inheritance :-
+        -> Most complicated inheritance
+        -> because it represnet like diamond - and create Ambigity.
+        -> in simple langauge we can say that hubrit inheritance.
+        -> is a combination of multiple and hierarchical inheritance.
+
+
+                      Class A 
+                         |
+                         V 
+        -------------------------------------
+        |                                   |
+        V                                   V 
+    Class B                             Class C
+       \                                    /
+        \                                  /
+         \                                /
+          \------------------------------/
+                        |
+                        V 
+                     class D
+
+    **==> How To fix It <==**
+    
+    virtual :-
+            -> virtual keyword inform compiler that you don't have to create saparate copy of parent class.
+            -> insted of separate copy you csn paass duplicate copy so it remove ambigity.
+
+---------------------------jk-------------------------------Date:- 20/2/2026--------------------------------------------------------------------------------------------
+
+Destructor :-
+    -> it mainly work for destroy object.
+    -> whenever we close our block it automatically destroy object after use.
+    -> same like constructor declare in public mode as Destructor declare in public mode.
+    -> but in destructor we have to add ~ (till) sign in prefix and same as cllass name.
+
+    Syntax :-
+        ->  ~Class_nm
+            {
+                // body
+            }
+
+=============================================================================================
+
+Ancapsulation :-
+    -> so sounds like capsule.
+    -> it is a most powerfull concept of OOp. which bind  different data member and member function in single 
+      entity and provide data hiding from outside the world.
+
+    -> encapsulation concept is achhive by class and object example.
+
+    getter And setter.
+
+=============================================================================================
+
+Polymorphism  :-
+    -> ploy means many & morphism meas forms.
+    -> one named method has different froms its called polymorphism.
+    -> polymorphism is dirived from greek word means one class contain same name multile method.
+
+    -> There are 2 type of polymorphism.
+        1] method overloading - compile time polymorphism.
+        2] method overriding - run time polymorphism.
+
+        i] Compile time Polymorphism :-
+            -> which is also know as erly binding and static polymorphism.
+            -> which is achived by method overloading & operator overloading.
+
+        ii] Run time Polymorphism :-
+            -> which is also know as kate binding and dynamic polymorphism.
+            -> which is achived by method overloading(inheritance) & virtual function; 
+
+    ************************************************************************************
+
+    1] Method overloading :-
+        -> when one class can control same name of multiple methods that's call Method Overloading.
+
+        -> Product :-
+            clickEvent(image)
+                      (button)
+                      (text)
+
+        Note :-
+            -> same name method with different signature(different parameters).
+
+---------------------------jk-------------------------------Date:- 21/2/2026--------------------------------------------------------------------------------------------
+
+    2] Method Overriding :-
+       
+        -> when parent &b child both have same name method and same name arguments it's called method overriding.
+        -> Syntax :-
+            class perent
+            {
+                void display()
+                {
+                    ...
+                }
+            };
+            class child(parent)
+            {
+                void display()
+                {
+                    ...
+                }
+            };
+===========================================================
+
+** Abstract **
+    -> Abstraction is a concept which provide only few information not allocated information.
+    -> the main aim of abstraction concept is to achive data hidding and hide implementation.
+    -> abstraction is a concept which is onlye achived by abstract clas and abstract method.
+
+    => Abstract Method & pure virtual function :- <=
+        -> pure virtual function means dose not contain implementation.
+        -> abstract method which is indicated by pure virtual function means without dody only method declaration.
+
+        Syntax:-
+            -> virtual <return type> function_nm() = 0;
+        
+        -> at the time of inheritance there is no data hiding between two child.
+        -> resolve this situation we can use abstraction concept here
+
+    => Abstract Class <=
+
+        -> a class which can contain abstract method it's called abstract class.
+
+---------------------------jk-------------------------------Date:- 25/2/2026--------------------------------------------------------------------------------------------
+
+ ** Aggregation :-
+                -> Aggregation is a part of reletionship.
+                -> inheritance provide IS-A reletionship.
+                -> Aggregation provide HAS-A reletionship.
+
+                IS-A :- parent is connected with child (100% inheritance).
+                HAS-A :- Department gas staff 
+                        (we are use properties of another class using of reference insted of inherite).
+
+    ==============================================================================
+
+** Friend Function :-
+        -> it is a specail member function.
+        -> which can access private member outside the class.
+        -> friend function delcare with using of friend keywords.
+
+        Syntax :-
+            friend <return Type> <funname> {class obj};
+
+=+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=
+
+** Friend Class :-
+        -> A Class can access properties of another class's private property.
+
+        Syntax :-
+            -> class anotherclass;  // forword class.
+
+            class MainClass
+            {
+                private:
+                    member
+
+                friend class <friend_class_nm>;
+            }
+---------------------------jk-------------------------------Date:- 26/2/2026--------------------------------------------------------------------------------------------
+
+** File Handling Concept in C++ :-
+
+    -> File Handling :-
+        => to accept data from user and store in file or we can say that to perform opration on files.
+
+        ** File operation  **
+           1] create
+           2] read
+           3] write
+           4] delete
+           5] update
+
+        File handling class :-
+            1] fstream   
+            2] ifstream
+            3] ofstream
+
+        1] fstream  :-
+            -> #include<fstream>
+            -> file stream.
+            -> it is used for both read and write operation.
+        
+        2] ifstream :-
+            ->input file stream.
+            -> it is used for read operation.
+        
+        3] ofstream :-
+            -> output file stream.
+            -> it is used for write operation.
+
+   ** File Handling Stntax :-
+
+        1] ios ::in - input mode
+        2] ios::out - output mode
+        3] ios::app - append mode
+        4] ios::trunc - truncate mode
+        5] ios::binary - binary mode
+        6] ios:: ate - at the end mode
+        
+
+=+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=

@@ -1,0 +1,70 @@
+---------------------------jk-------------------------------Date:- 13/2/2026--------------------------------------------------------------------------------------------
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	// std::cout<<"Hello Welcome to C++";   // if not use namespace std.
+	cout <<"Hello Welcome To C++";
+}
+
+=======================JK===============================
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	cout <<"Hello Welcome To C++"<<endl;
+	cout <<"C++";
+}
+
+// endl :- End Of Line - for new Line
+// Difference Between Endl or \n 
+-> \n :-  For new line but faster than endl.
+-> endl :- mainly use for new line and flush memory.
+
+
+=======================JK===============================
+
+// get value frome the user
+
+#include<iostream>
+using namespace std;
+
+main()
+{
+	// in c++ we can declare anyware in program
+	// in c languuage we have to declare variable at top of the block.
+	
+	int num; // variable diclareation.
+	
+	cout<< "Enter A Number :- ";
+	cin>>num;
+	
+	// Note:- There is no need to use %d, %s Any placeholder
+	
+	cout << "number = "<<num;
+	
+}
+
+=======================JK===============================
+
+#include<iostream>
+using namespace std;
+
+main()
+{
+	int a,b,c;
+	cout<<"Enter Number 1 :- ";
+	cin>>a;
+	
+	cout<<"Enter Number 2 :- ";
+	cin>>b;
+	
+	c = a+b;
+	
+	cout << a << " + " << b << " = " << c << endl;
+	cout << "A = " << a << " And B = " << b ;
+}

@@ -1,0 +1,128 @@
+---------------------------jk-------------------------------Date:- 21/2/2026--------------------------------------------------------------------------------------------
+
+// Abstraction using virtual keyword.
+
+#include<iostream>
+using namespace std;
+
+class RBI
+{	
+	public :
+		virtual void ROI () = 0;
+};
+
+class SBI : public RBI
+{
+	
+	public :
+		void ROI()
+		{
+			cout<<"\n7.5";	
+		}	
+	
+};
+
+
+class BOB : public RBI
+{
+	
+	public :
+		void ROI()
+		{
+			cout<<"\n8.3";	
+		}	
+	
+};
+
+main()
+{
+	SBI sbi;
+	BOB bob;
+	
+	sbi.ROI();
+	bob.ROI();
+}
+
+// this is solution.
+=======================JK===============================
+
+// Abstraction using virtual keyword.
+
+#include<iostream>
+using namespace std;
+
+class RBI
+{	
+	public :
+		void ROI ()
+		{
+			cout<<"9.5"<<endl;
+		}
+};
+
+class SBI : public RBI
+{
+	
+	
+	
+};
+
+
+class BOB : public RBI
+{
+	
+	
+};
+
+main()
+{
+	SBI sbi;
+	BOB bob;
+	
+	sbi.ROI();
+	bob.ROI();
+}
+
+// this is a problam both child access same data 
+
+=======================JK===============================
+
+#include<iostream>
+using namespace std;
+class Vehicale
+{
+	public:
+		virtual void wheels() =0;   // abstract method.
+		
+};
+
+class Car : public Vehicale
+{
+	public:
+		void wheels()
+		{
+			cout<<"\n i have 4 wheels.";
+		}
+	
+};
+
+class Bike : public Vehicale
+{
+	public:
+		void wheels()
+		{
+			cout<<"\n i have 2 wheels.";
+		}
+	
+};
+
+main()
+{
+	Car car = Car();
+	Bike bike = Bike();
+	
+	car.wheels();
+	bike.wheels();
+}
+
+=======================JK===============================

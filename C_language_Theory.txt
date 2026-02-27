@@ -804,4 +804,207 @@ void main()
     |-> 3] strcat(str_1,str_2):-
             -> When you want to join or combin two string.
             -> We can use inbuilt strcat() function.
+
+---------------------------jk-------------------------------Date:- 2/2/2026--------------------------------------------------------------------------------------------
+
+#include <ctype.h>
+    ** LoweCase & UpperCase :-
+        when we convert any characters into Lowercase there is on method 
+            -> toLower()
+        When to convert characters in to upperCase there is on method
+            -> toUpper()
+        both method are connected with ctype header file
+            -> include <ctype.h>
+
+---------------------------jk-------------------------------Date:- 09/2/2026--------------------------------------------------------------------------------------------
+
+Nested Structuer :-
+
+        -> When structuer call inside the structuer
+
+            There are 2 way to write nested structuer
+
+            1] struct <name_1>
+                {
+                    filed
+                    struct <innner_name_2>
+                    {
+                        filed
+                    }innner_name_2 obj;
+
+                }name_1 obj;
+
+            2] struct <struct_name_1>
+                {
+                    filed
+                };
+                struct <struct_name_2>
+                {
+                    filed
+                    struct struct_name_1 obj;
+
+                }struct_name_2 obj;
+
+***********************************************************************
+
+POINTER :-
+
+    -> pointer is variable which contain another variable's memory address.
+
+    e.g.
+
+        A: 
+            101     201
+            102     202
+            103     203
+
+    -----------------------------
+    In c program whenever we create any new variable it assign a specific memory
+
+        int a = 10;
+
+            10 --------- value
+            10250 ------- address
+
+    ------------------------------
+
+    * ->  value of operator
+    & ->   Address of operator
+
+---------------------------jk-------------------------------Date:- 10/2/2026--------------------------------------------------------------------------------------------
+
+Actual Parameter :-
+    -> it pass at function calling time.
+
+Formal Parameter:-
+    -> it pass in function defination time.
+
+    Ex:-
+        void sum (int a, int b)  // Formal Parameters
+        {
+            int ans = a+b ;
+            printf("Ans = %d",ans);
+        }
+
+        void main()
+        {
+            int a=10,b=20;
+            sum(a,b);       // actual Parameters
+        }
+
+***************************************
+
+CALL BY VALUE :-
+    -> it is a most powerfull concept of function and pointer topic.
+    -> it dose not change actuak Parameter if we apply change in formal Parameters.
+    -> in call by value we just passing copy of value not passing actual Parameter.
+
+    Ex:-
+        #include<stdio.h>
+
+        void swap(int a,int b)
+        {
+            int temp =a;
+            a=b;
+            b=temp;
+        }
+
+        main()
+        {
+            int a=10, b=20;
+            
+            printf("\nBefore function calling..");
+            printf("\nA= %d  B= %d",a,b);
+            swap(a,b);   								// call by value
+            printf("\nAftere finction calling..");
+            printf("\nA= %d  B= %d",a,b);		
+        }
+
+CALL BY REFERENCE :-
+    -> when we pass actual Parameter actual in function calling time.
+    -> apply change in formal Parameter it direct affect actual Parameter.
+    -> because insted of Parameter copy of value here we are passing address of parameters.
+
+    Ex :-
+    
+        #include<stdio.h>
+
+        void swap(int *a,int *b)
+        {
+            int temp = *a;
+            *a = *b;
+            *b=temp;
+        }
+
+        main()
+        {
+            int a=10, b=20;
+            
+            printf("\nBefore function calling..");
+            printf("\nA= %d  B= %d",a,b);
+            swap(&a,&b);   								// call by reference
+            printf("\nAftere function calling..");
+            printf("\nA= %d  B= %d",a,b);		
+        }
+
+---------------------------jk-------------------------------Date:- 11/2/2026--------------------------------------------------------------------------------------------
+
+** FILE HANDLING **
+
+    -> When we create my variable it store memory in temporary format when we close program it destroy memory.
+    -> memory place area is ram not a hardisk.
+
+    e.g:-
+        int a =10;
+    -> But after some time if i want to accesss memory or value, we can't access it so, at time we have to store
+        value or memory in hardisk.
+    e.g:-
+        Zoom application - cheat.
+
+    -> FILE HANDLING :-
+        -> to store variable's value in spacific file and to open this kind file and close file 
+
+        =>there are two Type of files <= 
+            1] Text file.
+            2] Binary File.
+    Note:-
+        -> file handling which is connected with memory loaction - so, it requered address
+        so, hear we use file pointer concept.
+
+        int a= 10;
+        char name[20];
+
+        FILE *fp;  -> hear, FILE retrive from <stdio.h> file
+
+    ****************************************************************
+
+    fopen() :-
+        -> to open spefic file
+
+        modes:-
+            r -> Read mode.
+            w -> write mode.
+            a -> apped mode.
+
+        Syntax:-
+            fopen("File_name",mode);
+
+    fclose() :
+        -> close a file.
+
+        Syntax:-
+            fclose(fp);
+    
+    fprintf() :
+        -> to write something in file.
+
+    fscanf() :
+        -> to read from file.
+    
+    fgetc(fp):
+        -> this method accept single charecter from the file.
+
+    EOF :-
+        -> ENd of File 
+        -> it is indicate file is end now.
     

@@ -1,0 +1,60 @@
+---------------------------jk-------------------------------Date:- 25/2/2026--------------------------------------------------------------------------------------------
+// friend function 
+#include<iostream>
+using namespace std;
+
+class Sample
+{
+	private:
+		int score = 100;
+	
+	public :
+		friend void displayScore(Sample obj); // method declareation only
+		
+};
+
+// outside the class
+void displayScore(Sample obj)
+{
+	cout<<"\n score = "<<obj.score;
+}
+main()
+{
+	Sample obj = Sample();
+	displayScore(obj);
+}
+
+=======================JK===============================
+
+
+// friend class ex
+#include<iostream>
+using namespace std;
+
+class B;   // forword declaretion.
+
+class A
+{	
+	private:
+		int record = 100;  // private data member
+		
+		friend class B; // friend class
+		
+};
+
+class B
+{
+	public :
+		void display(A obj)
+		{
+			cout<<"\n recode :- "<<obj.record;
+		}
+};
+
+main()
+{
+	A obj = A();
+	B objB = B();
+	
+	objB.display(obj);
+}

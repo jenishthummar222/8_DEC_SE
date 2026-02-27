@@ -1,0 +1,170 @@
+// Poniter Demo
+
+#include<stdio.h>
+
+main()
+{
+	int a=10;
+	
+	int *p = &a; 
+	
+	// find address
+	
+	printf("\n Address of A :- %d",&a); // & use for find address for variable.
+	
+	printf("\n Address of P %d",p);  // also get address.
+	
+	// check value of variable
+	
+	printf("\n value of A : %d",a);
+	printf("\n Value of *p : %d",*p);
+	
+	//Change Value Using Pointer 
+	*p = 222;
+	
+	printf("\n After Change Value Using Pointer Variable.");
+	printf("\n a= %d",a);
+	printf("\n *p= %d",*p);
+	
+}
+
+
+=======================JK===============================
+// call by value
+#include<stdio.h>
+
+void swap(int a,int b)
+{
+	int temp =a;
+	a=b;
+	b=temp;
+}
+
+main()
+{
+	int a=10, b=20;
+	
+	printf("\nBefore function calling..");
+	printf("\nA= %d  B= %d",a,b);
+	swap(a,b);   								// call by value
+	printf("\nAftere finction calling..");
+	printf("\nA= %d  B= %d",a,b);		
+}
+
+=======================JK===============================
+// pointer using call by reference
+#include<stdio.h>
+
+void swap(int *a,int *b)
+{
+	int temp = *a;
+	*a=*b;
+	*b=temp;
+}
+
+main()
+{
+	int a=10, b=20;
+	
+	printf("\nBefore function calling..");
+	printf("\nA= %d  B= %d",a,b);
+	swap(&a,&b);   								// call by reference
+	printf("\nAftere function calling..");
+	printf("\nA= %d  B= %d",a,b);		
+}
+
+=======================JK===============================
+
+// Pointer using Array
+
+#include<stdio.h>
+
+main()
+{
+	int arr[5]={12,22,32,42,52};
+	int *p = arr;
+	
+	for(int i=0; i<5; ++i)
+	{
+		printf(" %d ",*(p+i));
+	}
+}
+
+=======================JK===============================
+
+// Pointer using Array :- sum of array
+
+#include<stdio.h>
+
+main()
+{
+	int arr[5]={12,22,32,42,52};
+	int *p = arr;
+	
+	int sum=0;
+	
+	for(int i=0; i<5; ++i)
+	{
+		sum+=*(p+i);
+	}
+	printf("Sume is = %d",sum);
+}
+
+=======================JK===============================
+
+// Pointer using Array :- Find largest Number 
+
+#include<stdio.h>
+
+main()
+{
+	int arr[5]={12,22,72,42,52};
+	int *p = arr;
+	
+	int max = *p;
+	
+	for(int i=0; i<5; ++i)
+	{
+		if(*(p+i) > max)
+		{
+			max = *(p+i);
+		}
+	}
+	printf("Max is = %d",max);
+}
+
+=======================JK===============================
+
+// Pointer with structuer 
+
+#include<stdio.h>
+
+struct Student
+{
+	int id;
+	char name[20];	
+};
+main()
+{
+	struct Student s1;  // structuer variable declaration
+	
+	struct Student *p = &s1;  // Pointer variable declaration
+	
+	// Note:-
+		// -> when we access structuer member using of structuer variable
+		// we have use .(dot operator)  e.g. s1.name , s1.id 
+		
+	// Note :-
+		// -> when we want to access structuer member using pointer
+		// -> we have use -> (arrow operator) e.g. p->name, p->id
+		
+	printf("Enter Student Id :- ");
+	scanf("%d",&p->id);
+	getchar();
+	printf("Enter Student Name :- ");
+	gets(p->name);
+	
+	printf("\nStudent Id = %d",p->id);
+	printf("\nStudent NAme = %s",p->name);
+	
+}

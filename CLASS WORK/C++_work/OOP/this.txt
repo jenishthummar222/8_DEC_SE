@@ -1,0 +1,61 @@
+---------------------------jk-------------------------------Date:- 17/2/2026--------------------------------------------------------------------------------------------
+
+// without using this poniter with name parameter and same name member
+#include<iostream>
+using namespace std;
+
+class Sample
+{
+	public :
+		int a= 10;
+		
+		Sample(int a)
+		{
+			a= a;
+		}
+		
+		void display()
+		{
+			cout<<"\na = "<<a;
+		}
+};
+main()
+{
+	Sample s(200);
+	s.display();
+}
+
+OutPut:-
+    -> a = 10
+
+=======================JK===============================
+
+// Using this poniter with name parameter and same name member
+#include<iostream>
+using namespace std;
+
+class Sample
+{
+	public :
+		int a= 10;
+		
+		Sample(int a)
+		{
+			this->a= a;                 // Using this -> pointer to change actual value.
+		}
+		
+		void display()
+		{
+			cout<<"\na = "<<a;
+		}
+};
+main()
+{
+	Sample s(200);
+	s.display();
+}
+
+OutPut:-
+    -> a = 200
+
+=======================JK===============================
