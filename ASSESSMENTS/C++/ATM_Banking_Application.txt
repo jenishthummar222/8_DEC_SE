@@ -1,0 +1,215 @@
+// Project to demonstrate an ATM Banking Application
+
+#include<iostream>
+#include<ctime>				// The <ctime> library allows us to work with dates and times
+
+using namespace std;
+
+class DateTime
+{
+	public :
+		DateTime()
+		{
+			time_t timestemp;			// A data type defined in the <ctime> header file. It is used to store time values
+			
+			time(&timestemp);			// A function from the <ctime> library.
+			
+			// function from <ctime>. Converts time_t value into a human-readable string format.		
+			cout<<"\tCurrent Date : "<<        ctime(&timestemp)                                  <<endl;
+		   	
+		}
+};
+
+class Help
+{
+	public:
+		void help()
+		{
+			cout<<"\n+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+"<<endl;
+			cout<<"|                       ATM Account STATUS                          |"<<endl;
+			cout<<"+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+\n"<<endl;
+			cout<<"You Must have currect pin number to access this acount.See your\n"
+			"bank representative for assistance during bake opening hours\nThanks for,Your choice today!!\n"<<endl;
+							
+		}
+};
+
+class Account : public Help
+{
+	protected :
+		string name="Jenish Thummar";
+		string address="bhesan,Junagadh";
+		string branchLocation="Junagadh";
+		long int account_no=78935264101;
+		const int pin = 12345;
+		int balance = 20000;
+	
+	public :
+		void accountDetails()
+		{
+			
+			cout<<"The Name of the Account Holder\'s are : "<<name<<endl;
+			cout<<"\n\tThe Account Holder\'s Address is : "<<address<<endl;
+			cout<<"\n\t\tThe Branch location is : "<<branchLocation<<endl;
+			cout<<"\n\t\tAccount Number is : "<<account_no<<endl;
+			
+		}
+		
+		virtual void CaseDeposite() = 0;
+		virtual void CaseWithdraw() = 0;
+		virtual void BalanceInquiry() = 0; 	
+};
+
+class ATM : public Account
+{
+	public:
+			void AccessAtm(int no)
+			{
+				switch(no)
+				{
+					case 1:
+					{					
+						bool check=true;
+						int user_pin,key;
+						cout<<"\n+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+"<<endl;
+						cout<<"|                       ATM Account Access                          |"<<endl;
+						cout<<"+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+\n"<<endl;
+						
+						cout<<"Enter Your  Acc Pin Access Number ! [Only one attempt is allowed.]\n"<<endl;
+						cin>>user_pin;
+						
+						if(user_pin == pin)
+						{
+							cout<<"\nEnter [1] To Deposite Case"<<endl;
+							cout<<"Enter [2] To Withdraw Case"<<endl;
+							cout<<"Enter [3] To Balance Inquiry"<<endl;
+							cout<<"Enter [0] To Exit ATM\n"<<endl;
+							
+							cout<<"Enter a selection and press return key : ";
+							cin>>key;
+							
+							switch(key)
+							{
+								case 1:
+									{
+										CaseDeposite();
+										break;
+									}
+								case 2:
+									{
+										CaseWithdraw();
+										break;
+									}
+								case 3:
+									{
+										BalanceInquiry();
+										break;
+									}
+								default:
+									{
+										cout<<"Thank You!!";
+									}
+							}
+						}
+						else
+						{
+							cout<<"\n+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+"<<endl;
+							cout<<"|                         THANK  YOU                                |"<<endl;
+							cout<<"+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+\n"<<endl;
+							cout<<"you had made your attempt which failed!!! No more attempt allowed!! Sorry!!"<<endl;
+						}
+						
+						break;
+					}
+					case 0:
+					{
+						help();
+						break;
+					}
+					default:
+						cout<<"please! Enter Valid Number.."<<endl;
+						
+				}
+			}
+			
+			void CaseDeposite()
+			{
+				int deposite_amount;
+				cout<<"\n+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+"<<endl;
+				cout<<"|                ATM Account Deposite System                        |"<<endl;
+				cout<<"+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+\n"<<endl;
+				accountDetails();
+				cout<<"\n---------------------------------------------------------------------\n"<<endl;
+				cout<<"Present Available Balance Is : "<<balance<<endl;
+				cout<<"\nEnter Your Amount To Deposite : ";
+				cin>>deposite_amount;
+				balance+=deposite_amount;
+				cout<<"\nYour New Available Amount is Rs. "<<balance<<endl;				
+				cout<<"\t\tThank You.."<<endl;
+			}
+			
+			void CaseWithdraw()
+			{
+				int withdrawal_amount;
+				cout<<"\n+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+"<<endl;
+				cout<<"|                ATM Account Withdrawal System                        |"<<endl;
+				cout<<"+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+\n"<<endl;					
+				accountDetails();
+				cout<<"\n---------------------------------------------------------------------\n"<<endl;
+				cout<<"\nEnter Your Amount To Withdraw : ";
+				cin>>withdrawal_amount;
+				
+				if(withdrawal_amount<=balance)
+				{
+					if(withdrawal_amount >0)
+					{					
+						cout<<"\nAmount is Withdraw.."<<endl;
+						balance-=withdrawal_amount;
+						cout<<"\nYour New Available Amount is Rs. "<<balance<<endl;				
+						cout<<"\t\tThank You.."<<endl;
+					}
+					else
+					{
+						cout<<"\nNot Valid Amount..Retry.."<<endl;
+					}
+				}
+				else
+				{
+					cout<<"\nInsufficient Available Balance in Your Account.\n\t\t SORRY..!!"<<endl;
+				}
+			}
+			
+			void BalanceInquiry()
+			{
+				cout<<"\n+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+"<<endl;
+				cout<<"|                ATM Account Balance Inquiry                        |"<<endl;
+				cout<<"+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+\n"<<endl;					
+				accountDetails();
+				cout<<"\n---------------------------------------------------------------------\n"<<endl;
+				cout<<"Available Balance Is :- "<<balance<<endl;
+						
+			}
+};
+
+main()
+{
+	
+	ATM atm = ATM();
+	int press;
+	
+	cout<<"+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+"<<endl;
+	cout<<"|                        WELCOME TO ATM                             |"<<endl;
+	cout<<"+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+\n"<<endl;
+	cout<<"---------------------------------------------------------------------\n"<<endl;
+	
+	DateTime datetime;   // call constructer.
+	
+	cout<<"---------------------------------------------------------------------\n"<<endl;
+	
+	cout<<"Press 1 & Press Enter to Access Your Account Via Pin Number.\n\t\t\tOR"<<endl;
+	cout<<"Press 0 & press Enter to Get Help..\n"<<endl;
+	cin>>press;
+	
+	atm.AccessAtm(press);
+	
+}
