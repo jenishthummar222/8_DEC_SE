@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Disply Block</title>
+</head>
+<style>
+    .container {
+        background-color: rgb(13, 52, 85);
+        color: white;
+        height: 250px;
+        display: flex;
+    }
+    
+    .subcontainer {
+        background-color: rgb(56, 98, 131);
+        color: white;
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    div h1 {
+        text-align: center;
+    }
+    
+    .content {
+        background-color: rgb(41, 6, 19);
+        color: white;
+        padding: 20px;
+        display: none;
+    }
+    
+    a {
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
+    
+    a:hover {
+        color: aqua;
+    }
+    
+    .content:target {
+        display: block;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="subcontainer">
+            <a href="#python">
+                <h1>Python</h1>
+            </a>
+        </div>
+        <div class="subcontainer">
+            <a href="#java">
+                <h1>Java</h1>
+            </a>
+        </div>
+        <div class="subcontainer">
+            <a href="#html">
+                <h1>HTML</h1>
+            </a>
+        </div>
+    </div>
+
+    <div id="python" class=" content ">
+        <h1>Python: Most Powerfull Programing Language</h1>
+    </div>
+    <div id="java" class="content ">
+        <h1>Java :- Higher Programing Language</h1>
+    </div>
+    <div id="html" class="content ">
+        <h1>Html: HyperText Markup Language </h1>
+    </div>
+
+
+
+</body>
+
+</html>
+
+</html>
+
+</html>

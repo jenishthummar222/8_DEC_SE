@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+</head>
+
+<style>
+    #opt {
+        background-color: black;
+        color: rgb(0, 174, 255);
+        size: 1000px;
+        border-radius: 20px;
+        border-width: 5px;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 20px;
+        margin-left: 600px;
+        padding: 10px;
+    }
+    
+    option {
+        color: blueviolet;
+        font-size: medium;
+        font-family: castellar;
+    }
+</style>
+
+<script>
+    function checkList(value) {
+
+        document.getElementById(1).style.display = 'none';
+        document.getElementById(2).style.display = 'none';
+        document.getElementById(3).style.display = 'none';
+
+
+        if (value) {
+            document.getElementById(value).style.display = "block";
+        }
+    }
+</script>
+
+<body>
+
+    <select id="opt" name="list" onclick="checkList(this.value)">
+        <option value="" >Select List</option>
+        <option value="1">Un Order List</option>       
+        <option value="2">Order List</option>
+        <option value="3">Discription List</option>
+    </select>
+
+    <div id="1" style="display: none;">
+        <h1>UnOrder List</h1>
+        <ul>
+
+            <li>Python</li>
+            <li>Java</li>
+            <li>Node Js</li>
+        </ul>
+
+        <hr>
+
+        <ul style="list-style-type: square;">
+
+            <li>Python</li>
+            <li>Java</li>
+            <li>Node Js</li>
+        </ul>
+
+        <hr>
+
+        <ul style="list-style-type: circle;">
+            <li>Python</li>
+            <li>Java</li>
+            <li>Node Js</li>
+        </ul>
+
+        <hr>
+
+        <ul style="list-style-type: none;">
+            <li>Python</li>
+            <li>Java</li>
+            <li>Node Js</li>
+        </ul>
+
+        <hr>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------- -->
+    <div id="2" style="display: none;">
+        <h1>Order List</h1>
+        <ol>
+
+            <li>Python</li>
+            <li>Java</li>
+            <li>Node Js</li>
+        </ol>
+
+        <hr>
+
+        <ol start="4">
+
+            <li>Python</li>
+            <li>Java</li>
+            <li>Node Js</li>
+        </ol>
+
+        <hr>
+
+        <ol style="list-style-type: upper-roman;">
+            <li>Python</li>
+            <li>Java</li>
+            <li>Node Js</li>
+        </ol>
+
+        <hr>
+
+        <ol style="list-style-type: lower-alpha">
+            <li>Python</li>
+            <li>Java</li>
+            <li>Node Js</li>
+        </ol>
+
+        <hr>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------- -->
+    <div id="3" style="display: none;">
+
+        <h1>Discription List</h1>
+        <dl>
+
+            <dt>Narendra Modi</dt>
+            <dd>
+                <b>Narendra Damodardas Modi</b> (born 17 September 1950) is an Indian politician who has served as
+                <mark>the prime minister </mark> of India since 2014. Modi was <i> the chief minister </i> of Gujarat from 2001 to 2014 and is the member of parliament (MP) for Varanasi. He is a member of the Bharatiya Janata Party (BJP) and of the Rashtriya
+                Swayamsevak Sangh (RSS), a right-wing Hindutva paramilitary volunteer organisation. He is the longest-serving prime minister outside the Indian National Congress.
+            </dd>
+
+        </dl>
+
+        <hr>
+
+        <dl>
+
+            <dt>Gujarat Titans</dt>
+            <dd>
+                The Gujarat Titans, also known as GT, are a professional Twenty20 cricket team based in Ahmedabad, Gujarat, that competes in the Indian Premier League (IPL). The home ground of the team is Narendra Modi Stadium in Ahmedabad. The franchise is owned by
+                Torrent Group and CVC Capital Partners. The team is captained by Shubman Gill and coached by Ashish Nehra.[1] They won their maiden title in their debut season in 2022 under captain Hardik Pandya and secured the runners-up position the
+                following season, in 2023.
+            </dd>
+
+        </dl>
+
+
+    </div>
+
+
+</body>
+
+</html>

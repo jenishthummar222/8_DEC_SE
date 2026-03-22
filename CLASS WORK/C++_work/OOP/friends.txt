@@ -18,6 +18,7 @@ void displayScore(Sample obj)
 {
 	cout<<"\n score = "<<obj.score;
 }
+
 main()
 {
 	Sample obj = Sample();

@@ -76,7 +76,8 @@ POP vs OOP :-
 Similarities In C And C++ :=
 
     -> C++ is superset of C. It contains the synta and Features of c langauge.
-    -> Most of the basic syntax of c++ is similar to that of except some rules and construction of its own.
+    -> Most of the basic syntax of c++ is similar to t
+    hat of except some rules and construction of its own.
     -> It contains the same control statements ; the same scope and storage class rules, Even the arithmetic ,
         logical , bitwise operators and the data type.
     -> Both the langauge start with the main function.
@@ -413,7 +414,8 @@ Polymorphism  :-
             -> which is achived by method overloading & operator overloading.
 
         ii] Run time Polymorphism :-
-            -> which is also know as kate binding and dynamic polymorphism.
+            -> which is also know as late binding and dynamic polymorphism.
+            
             -> which is achived by method overloading(inheritance) & virtual function; 
 
     ************************************************************************************

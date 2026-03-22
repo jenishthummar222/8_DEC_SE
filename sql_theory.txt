@@ -394,6 +394,15 @@ SQl :-
             -> it means we can prevent unwanted record in database.
             -> we can restrict data from the world.
 
+            There Are many Type Of constraint 
+            1) Not Null
+            2) Default
+            3) Unique
+            4) Primary Key
+            5) Auto Increment
+            6) Check
+            7) Foreign Key
+
         1) NOT NULL :-
                 -> when we add any filed as not null means at a insert time we can't skip this filed.
                 -> by defualt all filed are null, if we want to specifiy to specific filed with not null we can
@@ -671,15 +680,1184 @@ SQl :-
                         +----+------+---------+-------+-------+
                         2 rows in set (0.01 sec)
 
+---------------------------jk-------------------------------Date:- 06/3/2026--------------------------------------------------------------------------------------------
 
+        6) Check :- 
+                -> check is constraint which is use to apply restriction on specific filed for 
+                E.g :- 
+                    -> emp table we can allow only more than 18 years old employee.
 
+                Syntax:-
+                    filed_nm check filed_nm condition;
 
+                E.g :-
 
+                   ===> create table user
+                        (
+                            id int primary key auto_increment,
+                            name varchar(20),
+                            age int check (age > 18)
+                        );
 
-
-
+                                OR
                     
+                    ===> alter table user add column age int check (age > 18);
+
+                    ===> desc user;
+
+                        +-------+-------------+------+-----+---------+----------------+
+                        | Field | Type        | Null | Key | Default | Extra          |
+                        +-------+-------------+------+-----+---------+----------------+
+                        | id    | int         | NO   | PRI | NULL    | auto_increment |
+                        | name  | varchar(20) | YES  |     | NULL    |                |
+                        | age   | int         | YES  |     | NULL    |                |
+                        +-------+-------------+------+-----+---------+----------------+
+                        3 rows in set (0.01 sec)
+
+                    ===> alter table user add constraint check_age check(age>18);
+
+                            Query OK, 0 rows affected (0.08 sec)
+                            Records: 0  Duplicates: 0  Warnings: 0
+
+                    ===> insert into user
+                         (name,age)
+                         values
+                         ('jenish',25);
+                    Query OK, 1 row affected (0.02 sec)
+
+                    ===> insert into user
+                         (name,age)
+                         values
+                         ('jk',17);
+
+                        ERROR 3819 (HY000): Check constraint 'check_age' is violated.
+
+                    ===> select * from user;
+                            +----+--------+------+
+                            | id | name   | age  |
+                            +----+--------+------+
+                            |  1 | jenish |   25 |
+                            +----+--------+------+
+                            1 row in set (0.00 sec)
+
+
+---------------------------jk-------------------------------Date:- 09/3/2026--------------------------------------------------------------------------------------------              
     =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=
 
-       
+    2} Update :-
+            -> when we want to update record based on spedific condition wiae we can use update command 
+            -> Update command is a part of DML.
+
+            Syntax:-
+                -> update <table_nm> set col_nm = filed_nm, col_nm = filed_nm where condition ;
+
+            E.g :-
+                ===> select * from studen;
+                        +----+------+---------+-------+-------+
+                        | id | name | subject | marks | city  |
+                        +----+------+---------+-------+-------+
+                        |  1 | jk   | python  |    92 | jnd   |
+                        |  2 | sk   | java    |    98 | surat |
+                        +----+------+---------+-------+-------+
+                        2 rows in set (0.18 sec)
+                
+                ===>update student set marks=90 where id=2;
+
+                        Query OK, 1 row affected (0.03 sec)
+                        Rows matched: 1  Changed: 1  Warnings: 0    \
+
+                ===> update student set name = 'jenish', subject = 'php',city='rajkot' where id = 2;
+                        Query OK, 1 row affected (0.02 sec)
+                        Rows matched: 1  Changed: 1  Warnings: 0
+
+                ===> select * from student;
+                        +----+--------+---------+-------+--------+
+                        | id | name   | subject | marks | city   |
+                        +----+--------+---------+-------+--------+
+                        |  1 | jk     | python  |    92 | jnd    |
+                        |  2 | jenish | php     |    90 | rajkot |
+                        +----+--------+---------+-------+--------+
+                        2 rows in set (0.00 sec)
+
+                ===> update student set name = 'JENISH' where name = 'jenish'; 
+
+                ===> select * from student;
+                        +----+--------+---------+-------+--------+
+                        | id | name   | subject | marks | city   |
+                        +----+--------+---------+-------+--------+
+                        |  1 | jk     | python  |    92 | jnd    |
+                        |  2 | JENISH | php     |    90 | rajkot |
+                        +----+--------+---------+-------+--------+
+                        
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=
+
+    3} Delete :-
+            -> When we want to delete or remove specific row condition wise we can use delete command.
+
+            Syntax :-
+                -> delete from <table_nm> where condition;
+
+            E.g :-
+                ===> select * from student;
+                    +----+--------+---------+-------+-----------+
+                    | id | name   | subject | marks | city      |
+                    +----+--------+---------+-------+-----------+
+                    |  1 | jk     | python  |    92 | jnd       |
+                    |  2 | JENISH | php     |    90 | rajkot    |
+                    |  3 | dummy  | dumm    |    50 | junk      |
+                    |  4 | dummy1 | dum     |    25 | jahandum  |
+                    |  5 | kosti  | java    |    15 | surat     |
+                    |  6 | rahul  | php     |    81 | ahmedabad |
+                    +----+--------+---------+-------+-----------+
+                    6 rows in set (0.00 sec) 
+                
+                ===> delete from student where id = 3;
+                        OK, 1 row affected (0.02 sec)
+                    
+                ===> delete from student where marks<=25;
+                        OK, 2 rows affected (0.02 sec)
+
+                ===> select * from student;
+                    +----+--------+---------+-------+-----------+
+                    | id | name   | subject | marks | city      |
+                    +----+--------+---------+-------+-----------+
+                    |  1 | jk     | python  |    92 | jnd       |
+                    |  2 | JENISH | php     |    90 | rajkot    |
+                    |  6 | rahul  | php     |    81 | ahmedabad |
+                    +----+--------+---------+-------+-----------+
+
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=
+
+    iii] DQl :- Data Query language 
+
+            -> most powerfull concept of sql.
+            -> when we want to retrive record from the table we can use dql command.
+                -> select.
+            -> using of select command we can retrive different different record with specific condition wise.
+
+            Syntax:-
+                -> select * from <table_nm>;
+
+            E.g :-
+                ===> select * from student;
+                    +----+--------+---------+-------+-----------+
+                    | id | name   | subject | marks | city      |
+                    +----+--------+---------+-------+-----------+
+                    |  1 | jk     | python  |    92 | jnd       |
+                    |  2 | JENISH | php     |    90 | rajkot    |
+                    |  6 | rahul  | php     |    81 | ahmedabad |
+                    |  7 | kosti  | java    |    15 | surat     |
+                    |  8 | dummy1 | dum     |    25 | jahandum  |
+                    |  9 | rahul  | php     |    81 | ahmedabad |
+                    | 10 | alu    | java    |    59 | surat     |
+                    | 11 | arjun  | java    |    84 | ahmedabad |
+                    +----+--------+---------+-------+-----------+
+                
+            -> fetch specific column from table;
+
+            Syntax :-
+                -> select filed_nm1, filed_nm2.. from <table_nm>;
+            E.g:-
+                -> select name,subject from student;
+                    +--------+---------+
+                    | name   | subject |
+                    +--------+---------+
+                    | jk     | python  |
+                    | JENISH | php     |
+                    | rahul  | php     |
+                    | kosti  | java    |
+                    | dummy1 | dum     |
+                    | rahul  | php     |
+                    | alu    | java    |
+                    | arjun  | java    |
+                    +--------+---------+
+                
+            -> fetch specific data using specific condition wise.
+
+            Syntax :-
+                -> select * from <table_nm> where condition;
+
+            E.g :-
+                -> select * from student where city = "ahmedabad";
+
+                    +----+-------+---------+-------+-----------+
+                    | id | name  | subject | marks | city      |
+                    +----+-------+---------+-------+-----------+
+                    |  6 | rahul | php     |    81 | ahmedabad |
+                    |  9 | rahul | php     |    81 | ahmedabad |
+                    | 11 | arjun | java    |    84 | ahmedabad |
+                    +----+-------+---------+-------+-----------+
+                
+        conditional operator:-
+                -:->  =, !=, >, <, <=, >=
+
+                E.g :-
+                    ===> select * from student where marks <60;
+                    ===> select * from student where marks>50 and marks <60;
         
+        logical operator :-
+                -:-> and,or,not
+
+                E.g :-
+                    ===> select * from student where subject = 'java' and city = 'surat';
+                    ===> select * from student where subject = 'java' or subject = 'python';
+                    ===> select name,subject from student where subject = 'java';
+
+        membership operator :-
+                -:-> in , not in, between
+
+                E.g :-
+                    ===> select name,subject,city from student where subject in ('java','php');
+                    ===> select name,city from student where city in('ahmedabad','surat');                    
+                    ===> select name,city from student where city not in('ahmedabad','surat'); 
+                    ===> select name, marks from student where marks between 50 and 80;
+        
+        pattern matching operator :-
+                -:-> like, not like
+
+                Syntax :-
+                    -> select * from <table_nm> where <filed_nm> like '%a%';
+
+                E.g :-
+                     
+                    ===> select * from student where name like '%s%';
+                        +----+--------+---------+-------+--------+
+                        | id | name   | subject | marks | city   |
+                        +----+--------+---------+-------+--------+
+                        |  2 | JENISH | php     |    90 | rajkot |
+                        |  7 | kosti  | java    |    15 | surat  |
+                        +----+--------+---------+-------+--------+
+                        2 rows in set (0.02 sec) 
+
+                    ===> select * from student where name like '__s%';
+                        +----+-------+---------+-------+-------+
+                        | id | name  | subject | marks | city  |
+                        +----+-------+---------+-------+-------+
+                        |  7 | kosti | java    |    15 | surat |
+                        +----+-------+---------+-------+-------+
+                        1 row in set (0.00 sec)
+
+                    ===> select * from student where name like 's%';
+                        Empty set (0.00 sec)
+
+                    ===> select * from student where name like '%s';
+                        Empty set (0.00 sec)
+
+                    ===> select * from student where name like '%a__';
+                        +----+------+---------+-------+-------+
+                        | id | name | subject | marks | city  |
+                        +----+------+---------+-------+-------+
+                        | 10 | alu  | java    |    59 | surat |
+                        +----+------+---------+-------+-------+
+                        1 row in set (0.00 sec)        
+
+                    ===> select * from student where name like 'a%';
+                        +----+-------+---------+-------+-----------+
+                        | id | name  | subject | marks | city      |
+                        +----+-------+---------+-------+-----------+
+                        | 10 | alu   | java    |    59 | surat     |
+                        | 11 | arjun | java    |    84 | ahmedabad |
+                        +----+-------+---------++------+-----------+
+
+        null operator :-
+                -:-> is null, is not null
+                
+                -> To check any filed contain null value or not using of IS NULL condition.
+            
+                Syntax :-
+                    -> select * from <table_nm> where col_nm is not null;
+                
+                E.g :-
+                    ===> select * from student where name is not null;
+                    
+                        +----+--------+---------+-------+-----------+
+                        | id | name   | subject | marks | city      |
+                        +----+--------+---------+-------+-----------+
+                        |  1 | jk     | python  |    92 | jnd       |
+                        |  2 | JENISH | php     |    90 | rajkot    |
+                        |  6 | rahul  | php     |    81 | ahmedabad |
+                        |  7 | kosti  | java    |    15 | surat     |
+                        |  8 | dummy1 | dum     |    25 | jahandum  |
+                        |  9 | rahul  | php     |    81 | ahmedabad |
+                        | 10 | alu    | java    |    59 | surat     |
+                        | 11 | arjun  | java    |    84 | ahmedabad |
+                        +----+--------+---------+-------+-----------+
+                        8 rows in set (0.01 sec)
+
+                    ===> select * from student where name is null;
+
+---------------------------jk-------------------------------Date:- 10/3/2026--------------------------------------------------------------------------------------------              
+
+    Order By :-
+            -> When we want to retrive data from the dataBase with specific order forment
+                by defualt order forment is ASCENDING order,
+            -> There is 2 keyword ASC and DESC 
+
+            Syntax :-
+                -> select * from <table_nm> order by <col_nm>;
+                                OR
+                -> select * from <table_nm> order by <col_nm> ASC;
+                                OR
+                -> select * from <table_nm> order by <col_nm> DESC;
+
+            E.g :-
+                ===> select * from student order by name desc;
+
+                    +----+--------+---------+-------+-----------+
+                    | id | name   | subject | marks | city      |
+                    +----+--------+---------+-------+-----------+
+                    |  6 | rahul  | php     |    81 | ahmedabad |
+                    |  9 | rahul  | php     |    81 | ahmedabad |
+                    |  7 | kosti  | java    |    15 | surat     |
+                    |  1 | jk     | python  |    92 | jnd       |
+                    |  2 | JENISH | php     |    90 | rajkot    |
+                    |  8 | dummy1 | dum     |    25 | jahandum  |
+                    | 11 | arjun  | java    |    84 | ahmedabad |
+                    | 10 | alu    | java    |    59 | surat     |
+                    +----+--------+---------+-------+-----------+
+                    8 rows in set (0.13 sec)
+
+                ===> select * from student order by marks asc;
+                    +----+--------+---------+-------+-----------+
+                    | id | name   | subject | marks | city      |
+                    +----+--------+---------+-------+-----------+
+                    |  7 | kosti  | java    |    15 | surat     |
+                    |  8 | dummy1 | dum     |    25 | jahandum  |
+                    | 10 | alu    | java    |    59 | surat     |
+                    |  6 | rahul  | php     |    81 | ahmedabad |
+                    |  9 | rahul  | php     |    81 | ahmedabad |
+                    | 11 | arjun  | java    |    84 | ahmedabad |
+                    |  2 | JENISH | php     |    90 | rajkot    |
+                    |  1 | jk     | python  |    92 | jnd       |
+                    +----+--------+---------+-------+-----------+
+                    8 rows in set (0.01 sec)
+
+                ===> select * from student order by city;
+                    +----+--------+---------+-------+-----------+
+                    | id | name   | subject | marks | city      |
+                    +----+--------+---------+-------+-----------+
+                    |  6 | rahul  | php     |    81 | ahmedabad |
+                    |  9 | rahul  | php     |    81 | ahmedabad |
+                    | 11 | arjun  | java    |    84 | ahmedabad |
+                    |  8 | dummy1 | dum     |    25 | jahandum  |
+                    |  1 | jk     | python  |    92 | jnd       |
+                    |  2 | JENISH | php     |    90 | rajkot    |
+                    |  7 | kosti  | java    |    15 | surat     |
+                    | 10 | alu    | java    |    59 | surat     |
+                    +----+--------+---------+-------+-----------+
+
+                ===> select * from student order by marks desc limit 3;
+                    +----+--------+---------+-------+-----------+
+                    | id | name   | subject | marks | city      |
+                    +----+--------+---------+-------+-----------+
+                    |  1 | jk     | python  |    92 | jnd       |
+                    |  2 | JENISH | php     |    90 | rajkot    |
+                    | 11 | arjun  | java    |    84 | ahmedabad |
+                    +----+--------+---------+-------+-----------+
+
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=
+
+    GROUP BY :-
+            -> group by row wise which is contain comman column value
+                to use concept of GROUP By we have to use Aggregate function.
+
+                -> COUNT(*) - count no. of record.
+                -> SUM : total 
+                -> Max : maximum value.
+                -> MIN : minimum value.
+                -> AVG : Avrage value.
+
+                Syntax:-
+                     -> select col_nm , count(*) from <table_nm> GROUP BY <col_nm>;
+                
+                E.g :-
+                    ===> select city, count(*) from student group by city;
+                        +-----------+----------+
+                        | city      | count(*) |
+                        +-----------+----------+
+                        | jnd       |        1 |
+                        | rajkot    |        1 |
+                        | ahmedabad |        3 |
+                        | surat     |        2 |
+                        | jahandum  |        1 |
+                        +-----------+----------+
+                        5 rows in set (0.04 sec)
+                    
+                    
+                    ===> select city, sum(marks) from student group by city;
+                        +-----------+------------+
+                        | city      | sum(marks) |
+                        +-----------+------------+
+                        | jnd       |         92 |
+                        | rajkot    |         90 |
+                        | ahmedabad |        246 |
+                        | surat     |         74 |
+                        | jahandum  |         25 |
+                        +-----------+------------+
+                        5 rows in set (0.01 sec)
+
+                    ===> select city, max(marks) from student group by city;
+                        +-----------+------------+
+                        | city      | max(marks) |
+                        +-----------+------------+
+                        | jnd       |         92 |
+                        | rajkot    |         90 |
+                        | ahmedabad |         84 |
+                        | surat     |         59 |
+                        | jahandum  |         25 |
+                        +-----------+------------+
+                        5 rows in set (0.02 sec)
+
+                    ===> select city, min(marks) from student group by city;
+                            +-----------+------------+
+                            | city      | min(marks) |
+                            +-----------+------------+
+                            | jnd       |         92 |
+                            | rajkot    |         90 |
+                            | ahmedabad |         81 |
+                            | surat     |         15 |
+                            | jahandum  |         25 |
+                            +-----------+------------+
+                            5 rows in set (0.01 sec)
+            
+                    ===> select city, avg(marks) from student group by city;
+                            +-----------+------------+
+                            | city      | avg(marks) |
+                            +-----------+------------+
+                            | jnd       |    92.0000 |
+                            | rajkot    |    90.0000 |
+                            | ahmedabad |    82.0000 |
+                            | surat     |    37.0000 |
+                            | jahandum  |    25.0000 |
+                            +-----------+------------+
+                            5 rows in set (0.01 sec)
+                            
+                *************************************************************
+
+                    ===> select * from product;
+                            +----+--------+-------+---------+
+                            | id | p_name | p_qty | p_price |
+                            +----+--------+-------+---------+
+                            |  1 | tv     |    20 |   20000 |
+                            |  2 | AC     |    45 |   85000 |
+                            |  3 | AC     |    60 |   50000 |
+                            |  4 | mobile |    69 |   19999 |
+                            |  5 | tv     |    16 |   15000 |
+                            +----+--------+-------+---------+
+                            5 rows in set (0.00 sec)
+
+                    
+                    ===> select p_name, count(*) from product group by p_name;
+                            +--------+----------+
+                            | p_name | count(*) |
+                            +--------+----------+
+                            | tv     |        2 |
+                            | AC     |        2 |
+                            | mobile |        1 |
+                            +--------+----------+
+                            3 rows in set (0.00 sec)
+
+---------------------------jk-------------------------------Date:- 11/3/2026--------------------------------------------------------------------------------------------              
+
+    * => Where and Having Clause
+    Where : apply condition before group.
+    Having : Applye condition after group creation.
+
+    Syntax :-
+        -> select filed_nm, count(*) from <table_nm> group by <col_nm> having <filed_nm> condition;
+
+        ===> select * from product;
+                +----+--------+-------+---------+
+                | id | p_name | p_qty | p_price |
+                +----+--------+-------+---------+
+                |  1 | tv     |    20 |   20000 |
+                |  2 | AC     |    45 |   85000 |
+                |  3 | AC     |    60 |   50000 |
+                |  4 | mobile |    69 |   19999 |
+                |  5 | tv     |    16 |   15000 |
+                +----+--------+-------+---------+
+                5 rows in set (0.17 sec)
+            
+        ===> select p_name as products , count(*) as total_product from product group by p_name;
+                +----------+---------------+
+                | products | total_product |
+                +----------+---------------+
+                | tv       |             2 |
+                | AC       |             2 |
+                | mobile   |             1 |
+                +----------+---------------+
+                3 rows in set (0.03 sec)
+        
+        ===> select p_name as products , count(*) as total_product from product group by p_name having count(*) >= 2;
+             
+                +----------+---------------+
+                | products | total_product |
+                +----------+---------------+
+                | tv       |             2 |
+                | AC       |             2 |
+                +----------+---------------+
+                2 rows in set (0.00 sec)
+        
+        ===> select p_name as products , sum(p_price) as Total from product group by p_name;
+                +----------+--------+
+                | products | Total  |
+                +----------+--------+
+                | tv       |  35000 |
+                | AC       | 135000 |
+                | mobile   |  19999 |
+                +----------+--------+
+                3 rows in set (0.01 sec)
+
+        ===> select p_name as products , sum(p_price) as Total from product group by p_name
+            having sum(p_price) <20000;
+                +----------+-------+
+                | products | Total |
+                +----------+-------+
+                | mobile   | 19999 |
+                +----------+-------+
+                1 row in set (0.01 sec)
+
+
+        ===> select p_name as products , sum(p_price) as Total from product group by p_name
+             having Total > 20000;
+                +----------+--------+
+                | products | Total  |
+                +----------+--------+
+                | tv       |  35000 |
+                | AC       | 135000 |
+                +----------+--------+
+                2 rows in set (0.00 sec)
+
+        ***************************************************
+
+        ===> select p_name as product, sum(p_price) from product where p_qty > 20 group by product;
+                +---------+--------------+
+                | product | sum(p_price) |
+                +---------+--------------+
+                | AC      |       135000 |
+                | mobile  |        19999 |
+                +---------+--------------+
+                2 rows in set (0.01 sec)
+
+        ===> select p_name as product, sum(p_price) as Total from product where p_qty > 20 group by product
+             having Total > 20000;
+                +---------+--------+
+                | product | Total  |
+                +---------+--------+
+                | AC      | 135000 |
+                +---------+--------+
+                1 row in set (0.00 sec)
+
+        *****************************************
+
+        ===> select distinct p_name from product;                       // use of DISTINCT keyword.
+                +--------+
+                | p_name |
+                +--------+
+                | tv     |
+                | AC     |
+                | mobile |
+                +--------+
+                3 rows in set (0.00 sec)
+    
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=
+
+    JOIN :-
+        -> when we wants to join 2 or more tables with using of same matching value its called joining 
+
+        -> There is no need to apply Foreign Ky for joining.
+
+
+        E.g :-
+
+            ===> select * from city;
+                    +----+-----------+
+                    | id | name      |
+                    +----+-----------+
+                    |  1 | surat     |
+                    |  2 | ahmedabad |
+                    |  3 | junagadh  |
+                    |  4 | mumbai    |
+                    |  5 | hydrabad  |
+                    |  6 | pune      |
+                    +----+-----------+
+                    6 rows in set (0.01 sec)
+
+            ===> select * from user;
+                    +----+---------+---------+
+                    | id | u_name  | city_id |
+                    +----+---------+---------+
+                    |  1 | jenish  |       3 |
+                    |  2 | yash    |       1 |
+                    |  3 | kavita  |       6 |
+                    |  4 | sahil   |       4 |
+                    |  5 | laxmi   |       1 |
+                    |  6 | pankaj  |       2 |
+                    |  7 | darshan |       3 |
+                    +----+---------+---------+
+                    7 rows in set (0.01 sec)
+
+            ===> select user.u_name as userName,city.name from user join city on user.city_id = city.id;
+                    +----------+-----------+
+                    | userName | name      |
+                    +----------+-----------+
+                    | jenish   | junagadh  |
+                    | yash     | surat     |
+                    | kavita   | pune      |
+                    | sahil    | mumbai    |
+                    | laxmi    | surat     |
+                    | pankaj   | ahmedabad |
+                    | darshan  | junagadh  |
+                    +----------+-----------+
+                    7 rows in set (0.00 sec)
+
+        ***************************************************
+
+        ** Real World Example :-
+
+            ===> select * from orders;
+                    +----------+------+------+
+                    | order_id | c_id | p_id |
+                    +----------+------+------+
+                    |        1 |    1 |    2 |
+                    |        2 |    2 |    5 |
+                    |        3 |    3 |    1 |
+                    |        4 |    4 |    3 |
+                    |        5 |    5 |    4 |
+                    |        6 |    6 |    3 |
+                    +----------+------+------+
+                    6 rows in set (0.00 sec)
+            
+            ===> select * from user;
+                    +----+---------+---------+
+                    | id | u_name  | city_id |
+                    +----+---------+---------+
+                    |  1 | jenish  |       3 |
+                    |  2 | yash    |       1 |
+                    |  3 | kavita  |       6 |
+                    |  4 | sahil   |       4 |
+                    |  5 | laxmi   |       1 |
+                    |  6 | pankaj  |       2 |
+                    |  7 | darshan |       3 |
+                    +----+---------+---------+
+                    7 rows in set (0.01 sec)
+
+            ===> select * from product;
+                    +----+--------+-------+---------+
+                    | id | p_name | p_qty | p_price |
+                    +----+--------+-------+---------+
+                    |  1 | tv     |    20 |   20000 |
+                    |  2 | AC     |    45 |   85000 |
+                    |  3 | AC     |    60 |   50000 |
+                    |  4 | mobile |    69 |   19999 |
+                    |  5 | tv     |    16 |   15000 |
+                    +----+--------+-------+---------+
+                    5 rows in set (0.00 sec)
+
+        --> i need order id, customer name, product name, product price.
+
+            ===> select orders.order_id,user.u_name as name,product.p_name as productName,product.p_price as price from orders
+                 join user on user.id = orders.c_id
+                 join product on product.id = orders.p_id;
+                 
+                    +----------+--------+-------------+-------+
+                    | order_id | name   | productName | price |
+                    +----------+--------+-------------+-------+
+                    |        1 | jenish | AC          | 85000 |
+                    |        2 | yash   | tv          | 15000 |
+                    |        3 | kavita | tv          | 20000 |
+                    |        4 | sahil  | AC          | 50000 |
+                    |        5 | laxmi  | mobile      | 19999 |
+                    |        6 | pankaj | AC          | 50000 |
+                    +----------+--------+-------------+-------+
+                    6 rows in set (0.01 sec)
+
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    1) INNER JOIN :-
+            --> inner join which is return only matching elements from the both table.
+
+                ===> insert into orders (c_id,p_id)
+                     values
+                     (7,2),
+                     (9,7);
+                    Query OK, 2 rows affected (0.08 sec)
+                    Records: 2  Duplicates: 0  Warnings: 0
+
+                ===> select user.u_name, orders.p_id from user
+                      inner join orders
+                      on orders.c_id = user.id;
+                        +---------+------+
+                        | u_name  | p_id |
+                        +---------+------+
+                        | jenish  |    2 |
+                        | yash    |    5 |
+                        | kavita  |    1 |
+                        | sahil   |    3 |
+                        | laxmi   |    4 |
+                        | pankaj  |    3 |
+                        | darshan |    2 |
+                        +---------+------+
+                        7 rows in set (0.00 sec)
+
+        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        2) LEFT JOIN :-
+                --> left join take all record from the laft table and display matching values from right tabel.
+                --> if there are no record found in right table it show null.
+
+                E.g :-
+                    ===> select user.u_name, orders.p_id from user
+                         left join orders
+                         on orders.c_id = user.id;
+                            +---------+------+
+                            | u_name  | p_id |
+                            +---------+------+
+                            | jenish  |    2 |
+                            | yash    |    5 |
+                            | kavita  |    1 |
+                            | sahil   |    3 |
+                            | laxmi   |    4 |
+                            | pankaj  |    3 |
+                            | darshan |    2 |
+                            | raj     | NULL |
+                            | goli    |    7 |
+                            +---------+------+
+                            9 rows in set (0.01 sec)
+                        
+        3) RIGHT JOIN :- 
+                --> fetch all record from right table and try to match with left table
+
+                E.g :-
+                    ===> select * from user right join orders on user.id = orders.c_id;
+
+                        +------+---------+---------+----------+------+------+
+                        | id   | u_name  | city_id | order_id | c_id | p_id |
+                        +------+---------+---------+----------+------+------+
+                        |    1 | jenish  |       3 |        1 |    1 |    2 |
+                        |    2 | yash    |       1 |        2 |    2 |    5 |
+                        |    3 | kavita  |       6 |        3 |    3 |    1 |
+                        |    4 | sahil   |       4 |        4 |    4 |    3 |
+                        |    5 | laxmi   |       1 |        5 |    5 |    4 |
+                        |    6 | pankaj  |       2 |        6 |    6 |    3 |
+                        |    7 | darshan |       3 |        7 |    7 |    2 |
+                        |    9 | goli    |       2 |        8 |    9 |    7 |
+                        | NULL | NULL    |    NULL |        9 |   10 |    9 |
+                        | NULL | NULL    |    NULL |       10 |   11 |   10 |
+                        +------+---------+---------+----------+------+------+
+                        10 rows in set (0.00 sec)
+
+        4) OUTER JOIN :-
+                --> fetch all record which is not match.
+
+        5) FULL JOIN :-
+                --> fetch all matching record from left side and right side .
+                --> in simple language we can say that full join combination of left and right join 
+                --> in mysql full join is no working.
+                --> Solution we can combine left and righjoin result.
+                --> Using of UNION concept.
+
+        ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        ==> Solution Of Full Join <==
+
+        6*) UNION :-
+                --> To combine two table without duplicate value we can use union .
+
+                E.g :-  
+                    ===> insert into A values (
+                        -> 'raj'),
+                        -> ('ravi'),
+                        -> ('mohan'),
+                        -> ('ram');
+                    Query OK, 4 rows affected (0.02 sec)
+                    Records: 4  Duplicates: 0  Warnings: 0
+
+                    ===> insert into B values
+                        -> ('raj'),
+                        -> ('ravi'),
+                        -> ('ram')
+                        -> ,('jenish'),
+                        -> ('raj');
+                    Query OK, 5 rows affected (0.02 sec)
+                    Records: 5  Duplicates: 0  Warnings: 0
+
+                    ===> select * from A
+                        -> union
+                        -> select * from B;
+                            +--------+
+                            | name   |
+                            +--------+
+                            | raj    |
+                            | ravi   |
+                            | mohan  |
+                            | ram    |
+                            | jenish |
+                            +--------+
+                            5 rows in set (0.02 sec)
+                            
+            7*) UNION ALL :- 
+                        
+                    ===> select * from A
+                        -> union all
+                        -> select * from B;
+                            +--------+
+                            | name   |
+                            +--------+
+                            | raj    |
+                            | ravi   |
+                            | mohan  |
+                            | ram    |
+                            | raj    |
+                            | ravi   |
+                            | ram    |
+                            | jenish |
+                            | raj    |
+                            +--------+
+                            9 rows in set (0.01 sec)
+
+---------------------------jk-------------------------------Date:- 13/3/2026--------------------------------------------------------------------------------------------              
+
+
+    ** FORIENG KEY :::  
+                ---> This is a most powerfull topic of constraint and sql langauge.
+                ---> using of foreigne key  we can bulid reletionship between two tables
+                    1) A parent -> k child
+                    2) B parent -> j child
+
+
+                    child                                   Parent
+
+            id      c_name      p_id                id      p_name
+            1       K           1                   1         A
+            2       J           1                   2         B 
+            3       L           3                   3         C 
+
+                E.g :- 
+                        
+                    ===> create table parent
+                        (
+                        id int primary key auto_increment,
+                        p_name varchar(20),
+                        city varchar(20));
+                            Query OK, 0 rows affected (0.23 sec)
+
+                    ===> insert into parent (p_name,city)
+                         values
+                         ('A_parent','rajkot'),
+                         ('B_parent','surat'),
+                         ('C_parent','junagadh'),
+                         ('D_parent','Ahmedabad');
+
+                        Query OK, 4 rows affected (0.03 sec)
+                        Records: 4  Duplicates: 0  Warnings: 0
+
+                    ===> select * from parent;
+                            +----+----------+-----------+
+                            | id | p_name   | city      |
+                            +----+----------+-----------+
+                            |  1 | A_parent | rajkot    |
+                            |  2 | B_parent | surat     |
+                            |  3 | C_parent | junagadh  |
+                            |  4 | D_parent | Ahmedabad |
+                            +----+----------+-----------+
+                            4 rows in set (0.02 sec)
+
+                    ===> create table child
+                         (
+                         id int primary key auto_increment,
+                         c_name varchar(20),
+                         p_id int,
+                         constraint fk_pid foreign key (p_id) references parent(id)
+                         on delete cascade
+                         on update cascade);
+                    Query OK, 0 rows affected (0.10 sec)
+
+                    ===> insert into child (c_name,p_id)
+                        -> values
+                        -> ('J',2),
+                        -> ('K',1),
+                        -> ('L',3),
+                        -> ('M',3);
+                    Query OK, 4 rows affected (0.02 sec)
+                    Records: 4  Duplicates: 0  Warnings: 0
+
+                    ===> select * from child;
+                        +----+--------+------+
+                        | id | c_name | p_id |
+                        +----+--------+------+
+                        |  1 | J      |    2 |
+                        |  2 | K      |    1 |
+                        |  3 | L      |    3 |
+                        |  4 | M      |    3 |
+                        +----+--------+------+
+                        4 rows in set (0.00 sec)
+
+                    ===> select child.id,child.c_name as child_name , parent.p_name as parent_name from child 
+                        join  parent on parent.id = child.p_id;
+
+                        +----+------------+-------------+
+                        | id | child_name | parent_name |
+                        +----+------------+-------------+
+                        |  1 | J          | B_parent    |
+                        |  2 | K          | A_parent    |
+                        |  3 | L          | C_parent    |
+                        |  4 | M          | C_parent    |
+                        +----+------------+-------------+
+                        4 rows in set (0.02 sec)
+                    
+                    ===> insert into child(c_name,p_id)
+                         values
+                         ('jkjj',5);
+                    ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails 
+                    (`8decse`.`child`, CONSTRAINT `fk_pid` FOREIGN KEY (`p_id`) REFERENCES `parent` (`id`) ON 
+                    DELETE CASCADE ON UPDATE CASCADE)
+
+                    Note :- Foreign key apply restriction on invalid data input or unrelavent data.
+
+        *************************************************************************************************
+
+        4} DCl :- data Control langauge 
+            -> using of dcl command we can restrict specific user to perform specific DML commads 
+
+            1) Grant : 
+                    -> when we want to assign spefic permission  to specific user.
+            
+            2) Revoke :
+                    -> retrive back permission from the spacific user.
+
+                    in my sql we can check number of user.
+
+                    ===> select user, host from mysql.user;
+
+                        +------------------+-----------+
+                        | user             | host      |
+                        +------------------+-----------+
+                        | mysql.infoschema | localhost |
+                        | mysql.session    | localhost |
+                        | mysql.sys        | localhost |
+                        | root             | localhost |
+                        +------------------+-----------+
+                        4 rows in set (0.03 sec)
+
+            ///////////////////////////////////////////////////
+
+            Create your User :-
+
+                    ===> create user 'jenish'@'localhost' identified by 'Jenish';
+
+                    ===> select user,host from mysql.user;
+                            +------------------+-----------+
+                            | user             | host      |
+                            +------------------+-----------+
+                            | jenish           | localhost |
+                            | mysql.infoschema | localhost |
+                            | mysql.session    | localhost |
+                            | mysql.sys        | localhost |
+                            | root             | localhost |
+                            +------------------+-----------+
+                            5 rows in set (0.00 sec)
+
+            --> now you login jenish 
+
+                    ===> select * from 8decse.parent;
+
+                    ERROR 1142 (42000): SELECT command denied to user 'jenish'@'localhost' for table 'parent'
+
+            Grant :-
+                syntax :-
+                    Grant <permission>
+                    on database_nm.<table_nm>
+                    to '<username>'@'<host>';
+
+            --> Add permission to allow access for parent to jenish user.
+
+                    ===> grant select on 8decse.parent to 'jenish'@'localhost';
+                        Query OK, 0 rows affected (0.02 sec)
+
+            --> Now you can try select useing jenish user.
+
+                    ===> select * from 8decse.parent;
+                        +----+----------+-----------+
+                        | id | p_name   | city      |
+                        +----+----------+-----------+
+                        |  1 | A_parent | rajkot    |
+                        |  2 | B_parent | surat     |
+                        |  3 | C_parent | junagadh  |
+                        |  4 | D_parent | Ahmedabad |
+                        +----+----------+-----------+
+                        4 rows in set (0.00 sec)
+
+            --> assign multiple permission to any user.
+
+                        ===> Grant select,update
+                            -> on 8decse.parent
+                            -> to 'jenish'@'localhost';
+                        Query OK, 0 rows affected (0.02 sec)
+
+        //////////////////////////////////////////////////////////////////
+
+        2) Revoke :-
+                Syntax :-
+                    REVOKE <permission>
+                    on <database_nm>.<table_nm>
+                    from '<username>'@'<host>';
+
+                E.g :-
+                    ===> Revoke select,update
+                        -> on 8decse.parent
+                        -> from 'jenish'@'localhost';
+                    Query OK, 0 rows affected (0.03 sec)
+
+
+                    ===> select * from 8decse.parent;
+
+                    ERROR 1142 (42000): SELECT command denied to user 'jenish'@'localhost' for table 'parent'
+
+
+    =+=+=+=+=+=+=+=+=+==+=++=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=+=+=+=+=+=+=+=
+
+    5) TCL :- Transaction Control Language 
+
+        i) Rollback
+        ii) Commit 
+        iii) SavePoint 
+
+         --> when we wnat to do some changes after excuting command we can go back to provide command.
+            using TCL commands.
+
+        --> E.g :-
+                -> we order any product - add to card - pyment.
+                -> but due to some reason payment are failed. at that time i want to cancel all pervious Transaction
+                 at that time we can use TCL.
+
+            ***************************************************************
+
+            i) RollBack :-
+                    --> when we want to go back on starting of transaction of transaction it work like undo.
+
+            ii) Commit :-
+                    --> permenet save after commit we can't RollBack.
+
+            iii) SavePoint :-
+                    --> we can create check point and we can jump on specific checkpoint.
+
+
+            E.g :-
+                    
+                ===> select * from student;
+                    +----+--------+---------+-------+-----------+
+                    | id | name   | subject | marks | city      |
+                    +----+--------+---------+-------+-----------+
+                    |  1 | jk     | python  |    92 | jnd       |
+                    |  2 | JENISH | php     |    90 | rajkot    |
+                    |  6 | rahul  | php     |    81 | ahmedabad |
+                    |  7 | kosti  | java    |    15 | surat     |
+                    |  8 | dummy1 | dum     |    25 | jahandum  |
+                    |  9 | rahul  | php     |    81 | ahmedabad |
+                    | 10 | alu    | java    |    59 | surat     |
+                    | 11 | arjun  | java    |    84 | ahmedabad |
+                    +----+--------+---------+-------+-----------+
+                    8 rows in set (0.02 sec)
+
+                ===> start transaction;
+                    Query OK, 0 rows affected (0.00 sec)
+
+                ===> update student set subject="AI" where id=6;
+                        Query OK, 1 row affected (0.02 sec)
+                        Rows matched: 1  Changed: 1  Warnings: 0
+
+                ===> select * from student limit 4;
+
+                        +----+--------+---------+-------+-----------+
+                        | id | name   | subject | marks | city      |
+                        +----+--------+---------+-------+-----------+
+                        |  1 | jk     | python  |    92 | jnd       |
+                        |  2 | JENISH | php     |    90 | rajkot    |
+                        |  6 | rahul  | AI      |    81 | ahmedabad |
+                        |  7 | kosti  | java    |    15 | surat     |
+                        +----+--------+---------+-------+-----------+
+                        4 rows in set (0.00 sec)
+
+                ===> rollback;
+                        Query OK, 0 rows affected (0.02 sec)
+
+                ===>  select * from student limit 4;
+                        +----+--------+---------+-------+-----------+
+                        | id | name   | subject | marks | city      |
+                        +----+--------+---------+-------+-----------+
+                        |  1 | jk     | python  |    92 | jnd       |
+                        |  2 | JENISH | php     |    90 | rajkot    |
+                        |  6 | rahul  | AI      |    81 | ahmedabad |
+                        |  7 | kosti  | java    |    15 | surat     |
+                        +----+--------+---------+-------+-----------+
+                        4 rows in set (0.00 sec)
+
+                
+                ===> update student set subject="Data Science" where id=2;
+                        Query OK, 1 row affected (0.01 sec)
+                        Rows matched: 1  Changed: 1  Warnings: 0
+
+                ===> select * from student limit 2;
+                        +----+--------+--------------+-------+--------+
+                        | id | name   | subject      | marks | city   |
+                        +----+--------+--------------+-------+--------+
+                        |  1 | jk     | python       |    92 | jnd    |
+                        |  2 | JENISH | Data Science |    90 | rajkot |
+                        +----+--------+--------------+-------+--------+
+                        2 rows in set (0.00 sec)                
+                
+                 
+                ===> commit;
+                        Query OK, 0 rows affected (0.00 sec)
+
+            ==================================================================
+
+                ===> start transaction;
+                    Query OK, 0 rows affected (0.00 sec)
+
+                
+                ===> update student set subject="AI" where id=1;
+                    Query OK, 1 row affected (0.01 sec)
+                    Rows matched: 1  Changed: 1  Warnings: 0
+
+                ===> savepoint s1;
+                    Query OK, 0 rows affected (0.01 sec)
+
+                ===> update student set subject="jada" where id=6;
+                    Query OK, 1 row affected (0.00 sec)
+                    Rows matched: 1  Changed: 1  Warnings: 0
+
+                ===> select * from student;
+                    +----+--------+--------------+-------+-----------+
+                    | id | name   | subject      | marks | city      |
+                    +----+--------+--------------+-------+-----------+
+                    |  1 | jk     | AI           |    92 | jnd       |
+                    |  2 | JENISH | Data Science |    90 | rajkot    |
+                    |  6 | rahul  | jada         |    81 | ahmedabad |
+                    |  7 | kosti  | java         |    15 | surat     |
+                    |  8 | dummy1 | dum          |    25 | jahandum  |
+                    |  9 | rahul  | php          |    81 | ahmedabad |
+                    | 10 | alu    | java         |    59 | surat     |
+                    | 11 | arjun  | java         |    84 | ahmedabad |
+                    +----+--------+--------------+-------+-----------+
+                    8 rows in set (0.00 sec)
+
+                ===> rollback to s1;
+                    Query OK, 0 rows affected (0.00 sec)
+
+                ===> commit;
+                    Query OK, 0 rows affected (0.01 sec)
+
+                ===> select * from student limit 4;
+                    +----+--------+--------------+-------+-----------+
+                    | id | name   | subject      | marks | city      |
+                    +----+--------+--------------+-------+-----------+
+                    |  1 | jk     | AI           |    92 | jnd       |
+                    |  2 | JENISH | Data Science |    90 | rajkot    |
+                    |  6 | rahul  | php          |    81 | ahmedabad |
+                    |  7 | kosti  | java         |    15 | surat     |
+                    +----+--------+--------------+-------+-----------+
+                    4 rows in set (0.00 sec)
+
+                

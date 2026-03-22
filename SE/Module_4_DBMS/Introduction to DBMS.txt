@@ -1,0 +1,2068 @@
+1]  Introduction to SQL  
+ 
+    Theory Questions: 
+    -------------------------------------------------------------------------
+    
+        1. What is SQL, and why is it essential in database management? 
+
+            --> Sql " (Structured Query Language)  "
+            --> it is use to interect with database.
+            --> it is used to store, retrieve, update, and delete data.
+
+            --> Why it is essential :-
+                    ~> Helps manage large amounts of data.
+                    ~> Allows easy data retrieval using queries.
+                    ~> Used in almost all database systems.
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        2. Explain the difference between DBMS and RDBMS.
+
+                --------------------------------------------------------------------------------------
+            --> | Feature       |           DBMS             |               RDBMS                    |
+                | ------------- | -------------------------- | -------------------------------------- |
+                | Full Form     | Database Management System | Relational Database Management System  |
+                | Data Storage  | Stores data in files       | Stores data in tables (rows & columns) |
+                | Relationship  | No relation between data   | Supports relationships using keys      |
+                | Example       | File System, XML           | MySQL, Oracle, SQL Server              |
+                ---------------------------------------------------------------------------------------
+
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        3. Describe the role of SQL in managing relational databases. 
+
+            --> SQL is used to perform operations on relational databases such as:
+
+                    ~> Creating tables and databases
+
+                    ~> Perform CRUD operation on Tables Data like (Inserting, updating, deleting and select). 
+
+                    ~> Managing relationships using keys (Primary Key, Foreign Key).
+        
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        4. What are the key features of SQL?
+
+            --> Easy to learn and use.
+            --> perform CRUD operations.
+            --> Support data Security.
+            --> Works with relational databases.
+            --> save time.
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+    
+    -------------------------------------------------------------------------
+
+        Lab 1: Create a new database named school_db and a table called students with the 
+            following columns: student_id, student_name, age, class, and address. 
+
+
+            --> C:\Users\Jenish> mysql -u root -p
+                Enter password: ****** 
+
+            --> create database school_db;
+
+            --> use school_db;
+                Database changed
+
+            --> create table students
+                 (
+                 student_id int primary key auto_increment,
+                 student_name varchar(20),
+                 age int,
+                 class varchar(20),
+                 address varchar(20)
+                 );
+                Query OK, 0 rows affected (0.10 sec)
+
+            --> desc students;
+                    +--------------+-------------+------+-----+---------+----------------+
+                    | Field        | Type        | Null | Key | Default | Extra          |
+                    +--------------+-------------+------+-----+---------+----------------+
+                    | student_id   | int         | NO   | PRI | NULL    | auto_increment |
+                    | student_name | varchar(20) | YES  |     | NULL    |                |
+                    | age          | int         | YES  |     | NULL    |                |
+                    | class        | int         | YES  |     | NULL    |                |
+                    | address      | varchar(20) | YES  |     | NULL    |                |
+                    +--------------+-------------+------+-----+---------+----------------+
+                    5 rows in set (0.01 sec)
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        Lab 2: Insert five records into the students table and retrieve all records using 
+               the SELECT statement. 
+
+               -->  insert into students
+                    (student_name,age,class,address)
+                    values                 
+                    ("jenish",15,10,'bhesan,junagadh'),
+                    ("yash",15,10,'kamrej,surat'),
+                    ("laxmi",18,12,'rajkot'),
+                    ("krishna",17,11,'dwarka,jamnager'),
+                    ("radha",18,12,'ahmedabad');
+
+                --> select * from students;
+                        +------------+--------------+------+-------+-----------------+
+                        | student_id | student_name | age  | class | address         |
+                        +------------+--------------+------+-------+-----------------+
+                        |          1 | jenish       |   15 |    10 | bhesan,junagadh |
+                        |          2 | yash         |   9  |    4  | kamrej,surat    |
+                        |          3 | laxmi        |   18 |    12 | rajkot          |
+                        |          4 | krishna      |   17 |    11 | dwarka,jamnager |
+                        |          5 | radha        |   18 |    12 | ahmedabad       |
+                        +------------+--------------+------+-------+-----------------+
+                        5 rows in set (0.01 sec)
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+2]  SQL Syntax  
+
+    Theory Questions: 
+    -------------------------------------------------------------------------            
+        
+        1. What are the basic components of SQL syntax? 
+
+            -->  Keywords  :-
+                    ~>  Special  predefined word
+
+                    e.g.:- 
+                        SELECT, INSERT, WHERE ...
+
+                Identifiers :-
+                    ~> Names of database objects (table name, column name)
+
+                Operators :-
+                    ~> Used for conditions and calculations 
+                    
+                    e.g :-
+                        =, >, <, AND, OR ...
+
+                Clauses :-
+                    ~> Parts of a query that perform specific tasks 
+                    
+                    e.g :- 
+                        WHERE, ORDER BY ...
+
+                Functions :-
+                    ~> Perform operations on data 
+                    
+                    e.g :- 
+                        COUNT, SUM, AVG ...
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        2. Write the general structure of an SQL SELECT statement. 
+
+            syntax :-
+                ~> SELECT < col_nm / *> FROM <table_nm> WHERE  condition ;
+
+                ~> E.g:-
+                    -> select * from students;
+
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        3. Explain the role of clauses in SQL statements. 
+
+            --> it's use for filter and control output data.
+
+            --> Main SQL Clauses (Most Important)
+
+                1) SELECT → Choose columns
+
+                2) FROM → Specify table
+
+                3) WHERE → Filter rows
+
+                4) GROUP BY → Group data
+
+                5) HAVING → Filter grouped data
+
+                6) ORDER BY → Sort results
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+    
+    -------------------------------------------------------------------------
+
+        Lab 1: Write SQL queries to retrieve specific columns (student_name and age) from the 
+            students table. 
+
+            --> select student_name as name, age from students;
+                    +---------+------+
+                    | name    | age  |
+                    +---------+------+
+                    | jenish  |   15 |
+                    | yash    |   9  |
+                    | laxmi   |   18 |
+                    | krishna |   17 |
+                    | radha   |   18 |
+                    +---------+------+
+                    5 rows in set (0.01 sec)
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        Lab 2: Write SQL queries to retrieve all students whose age is greater than 10. 
+
+            --> select * from students where age > 10;
+
+                    +------------+--------------+------+-------+-----------------+
+                    | student_id | student_name | age  | class | address         |
+                    +------------+--------------+------+-------+-----------------+
+                    |          1 | jenish       |   15 |    10 | bhesan,junagadh |
+                    |          3 | laxmi        |   18 |    12 | rajkot          |
+                    |          4 | krishna      |   17 |    11 | dwarka,jamnager |
+                    |          5 | radha        |   18 |    12 | ahmedabad       |
+                    +------------+--------------+------+-------+-----------------+
+                    4 rows in set (0.00 sec)
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+3] SQL Constraints  
+ 
+    Theory Questions: 
+
+    -------------------------------------------------------------------------
+    
+        1. What are constraints in SQL? List and explain the different types of constraints. 
+        
+        --> Constraints :-  
+            ~> it means we can prevent unwanted record in database.
+            ~> we can restrict data from the world.
+
+            There Are many Type Of constraint :-
+
+                1) Not Null :-
+
+                    ~> at insret time you can't leave any filed as null.
+                    ~> at table createion time you meantion filed as not null and you are not put value 
+                    on this filed that's time it's geeting error.
+
+                     E.g:-
+                        -> alter table dummy1 modify name varchar(20) not null;
+
+                2) Default :-
+
+                    ~> it use for set as defualt value for this filed.
+                    ~> that's why at insert time you not put value on this filed it's take defualt value.
+
+                    E.g:-
+                        -> alter table dummy2 modify col_1 varchar(20) defualt "Pandding";
+
+                3) Unique :-
+
+                    ~> it is use for unique value for pertiqular filed.
+                    ~> set Unique key on multiple fileds in single table.
+                    ~> set unique filed at one time, you can't be enter duplicate value for thoes filed.
+
+                    E.x:-  mobile no, adhar no, email...etc unique filed.
+
+                    E.g:-
+                        -> 
+                        create table dummy2 ( name varchar(20) unique);
+
+
+                4) Primary Key :- 
+
+                    ~> primary key is a one type of unique key.
+                    ~> not be enter duplicate value in filed.
+                    ~> primary key set on one filed at one table.
+
+                    E.g :- 
+                        -> alter table student add primary key(id);
+
+
+                5) Auto Increment :-
+
+                    ~> it auto increment a value. start form 1.
+                    ~> once you apply on filed that filed increment value automatic.
+
+                    E.g :-
+                        -> alter table student modify id int auto_increment; 
+
+                6) Check :-
+
+                    ~> it is use for apply restriction on filed.
+
+                    ~> E.g :- age int check(age > 18); 
+
+                7) Foreign Key :-
+
+                    ~> it is one type of reference key.
+                    ~> it refer a parent table one filed.
+                    ~> it relation between two table like parent and child.
+
+                    E.g:-
+                        A parent   -> K child.
+
+                    syntax :-
+
+                        -> constraint fk_id forenign key(parent_id) reference <parent_table> (parent_filed);
+
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        2. How do PRIMARY KEY and FOREIGN KEY constraints differ? 
+
+            --> | Feature          | PRIMARY KEY                                | FOREIGN KEY                          |
+                | ---------------- | ------------------------------------------ | ------------------------------------ |
+                | Definition       | Uniquely identifies each record in a table | Links one table to another           |
+                | Uniqueness       | Must be unique                             | Can have duplicate values            |
+                | NULL Values      | Not allowed                                | Allowed (in most cases)              |
+                | Number per Table | Only one primary key                       | Can have multiple foreign keys       |
+                --------------------------------------------------------------------------------------------------------
+
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        3. What is the role of NOT NULL and UNIQUE constraints? 
+
+            --> Not Null :-
+                    -> column not have empty value.
+                    -> store duplicate value.
+            
+            --> unique :-
+                    -> only first time allowe null value.
+                    -> column not have duplicate values.
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+    
+    -------------------------------------------------------------------------
+
+        Lab 1: Create a table teachers with the following columns: teacher_id (Primary Key), 
+              teacher_name (NOT NULL), subject (NOT NULL), and email (UNIQUE). 
+
+              --> create table teachers
+                    (
+                    teacher_id int primary key auto_increment,
+                    teacher_name varchar(20) not null,
+                    subject varchar(20) not null,
+                    email varchar(20) unique);
+                
+                Query OK, 0 rows affected (0.20 sec)
+
+                --> desc teachers;
+                    +--------------+-------------+------+-----+---------+----------------+
+                    | Field        | Type        | Null | Key | Default | Extra          |
+                    +--------------+-------------+------+-----+---------+----------------+
+                    | teacher_id   | int         | NO   | PRI | NULL    | auto_increment |
+                    | teacher_name | varchar(20) | NO   |     | NULL    |                |
+                    | subject      | varchar(20) | NO   |     | NULL    |                |
+                    | email        | varchar(20) | YES  | UNI | NULL    |                |
+                    +--------------+-------------+------+-----+---------+----------------+
+                    4 rows in set (0.05 sec)
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        Lab 2: Implement a FOREIGN KEY constraint to relate the teacher_id from the 
+              teachers table with the students table. 
+
+            --> alter table teachers add std_id int,add foreign key(std_id) references students(student_id);
+
+                    Query OK, 0 rows affected (0.14 sec)
+                    Records: 0  Duplicates: 0  Warnings: 0
+
+            --> desc teachers;
+                    +--------------+-------------+------+-----+---------+----------------+
+                    | Field        | Type        | Null | Key | Default | Extra          |
+                    +--------------+-------------+------+-----+---------+----------------+
+                    | teacher_id   | int         | NO   | PRI | NULL    | auto_increment |
+                    | teacher_name | varchar(20) | NO   |     | NULL    |                |
+                    | subject      | varchar(20) | NO   |     | NULL    |                |
+                    | email        | varchar(20) | YES  | UNI | NULL    |                |
+                    | std_id       | int         | YES  | MUL | NULL    |                |
+                    +--------------+-------------+------+-----+---------+----------------+
+                    5 rows in set (0.01 sec)
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+4] Main SQL Commands and Sub-commands (DDL) 
+ 
+    Theory Questions: 
+
+    -------------------------------------------------------------------------
+    
+        1. Define the SQL Data Definition Language (DDL). 
+
+            --> DDl is use for create or modify database And tables.
+
+            1] Create :-
+                ~> create database or table .
+            
+            2] Drop :-
+                ~> delete table or database from the storeag.
+
+            3] Alter :-
+                ~> modify data fileds or table structure in table.
+                ~> Modes :-
+                    -> add 
+                    -> modify
+                    -> rename
+                    -> drop 
+            
+            4] Truncate :-
+                ~> it's use for delete table data not table.
+
+            5] Rename :-
+                ~> change table filed name or table name when use rename.
+
+                Syntax:-
+                    RENAME TABLE old_table_name TO new_table_name;
+
+                Rename Column:
+
+                alter table <table_nm> rename column <clo_nm> to <new_col_nm>;
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        2. Explain the CREATE command and its syntax. 
+
+            Create :-
+                ~> it is use for create table or database in sql.
+                ~> it very usefull command in DDl.
+
+                Database :-
+                    create database <db_name>;
+
+                Table :-
+                    create table table_nm (
+                        filed name  datatype
+                    );
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        3. What is the purpose of specifying data types and constraints during table creation?         
+
+            * Data Types :-
+                ~> Define the type of data a column can store (e.g., INT, VARCHAR)
+
+            * Constraints :-
+                ~> Apply rules on data (e.g., NOT NULL, UNIQUE, PRIMARY KEY)
+    
+    ===============================================================================================================
+
+    LAB EXERCISES:
+    
+    -------------------------------------------------------------------------
+
+        Lab 1: Create a table courses with columns: course_id, course_name, and 
+            course_credits. Set the course_id as the primary key. 
+
+            --> create table courses
+                 (
+                 course_id int primary key auto_increment,
+                 course_name varchar(20),
+                 course_credits int );
+
+            Query OK, 0 rows affected (0.19 sec)
+
+            --> desc courses;
+                    +----------------+-------------+------+-----+---------+----------------+
+                    | Field          | Type        | Null | Key | Default | Extra          |
+                    +----------------+-------------+------+-----+---------+----------------+
+                    | course_id      | int         | NO   | PRI | NULL    | auto_increment |
+                    | course_name    | varchar(20) | YES  |     | NULL    |                |
+                    | course_credits | int         | YES  |     | NULL    |                |
+                    +----------------+-------------+------+-----+---------+----------------+
+                    3 rows in set (0.04 sec)
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        Lab 2: Use the CREATE command to create a database university_db.
+
+            --> create database university_db;
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+5] ALTER Command  
+ 
+    Theory Questions: 
+
+    -------------------------------------------------------------------------         
+ 
+        1. What is the use of the ALTER command in SQL? 
+
+            --> using of Alter command we can add, remove or modify  filed of Table.
+
+                1] add  :-
+                        ~> add some column or filed in the table
+                2] drop :-
+                        ~> drop column or filed in the table.
+                3] modify :-
+                        ~> modify column data type , add constraint in the table.
+                4] rename
+                        ~> rename column name i the table.
+
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        2. How can you add, modify, and drop columns from a table using ALTER? 
+
+            --> Add :-
+
+                    Syntax :-
+                        ~> alter table <table_nm> <alter_command _nm> filed_nm  datatype.
+
+                    E.g:-
+
+                        ~> alter table student add city varchar(20);
+
+            --> Modify :-
+
+                    Syntax :-
+                        ~> alter table <table-nm> modify <col_nm> <dataType>;
+
+                    E.G:-
+                        ~> alter table student modify name varhar(25);
+                
+            --> Drop :-
+
+                    Syntax:-
+                        ~>  alter table <table_nm> <drop> filed_nm;
+
+                    E.g:-
+                        ~> alter table student drop dummy;
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+    
+    -------------------------------------------------------------------------
+
+        Lab 1: Modify the courses table by adding a column course_duration using the ALTER command. 
+
+            -->  mysql> alter table courses add course_duration int;
+
+                    Query OK, 0 rows affected (0.27 sec)
+                    Records: 0  Duplicates: 0  Warnings: 0
+
+            --> desc courses;
+                    +-----------------+-------------+------+-----+---------+----------------+
+                    | Field           | Type        | Null | Key | Default | Extra          |
+                    +-----------------+-------------+------+-----+---------+----------------+
+                    | course_id       | int         | NO   | PRI | NULL    | auto_increment |
+                    | course_name     | varchar(20) | YES  |     | NULL    |                |
+                    | course_credits  | int         | YES  |     | NULL    |                |
+                    | course_duration | int         | YES  |     | NULL    |                |
+                    +-----------------+-------------+------+-----+---------+----------------+
+                    4 rows in set (0.01 sec)
+        
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        Lab 2: Drop the course_credits column from the courses table. 
+
+            --> alter table courses drop course_credits;
+
+                Query OK, 0 rows affected (0.09 sec)
+                Records: 0  Duplicates: 0  Warnings: 0
+
+            --> desc courses;
+                +-----------------+-------------+------+-----+---------+----------------+
+                | Field           | Type        | Null | Key | Default | Extra          |
+                +-----------------+-------------+------+-----+---------+----------------+
+                | course_id       | int         | NO   | PRI | NULL    | auto_increment |
+                | course_name     | varchar(20) | YES  |     | NULL    |                |
+                | course_duration | int         | YES  |     | NULL    |                |
+                +-----------------+-------------+------+-----+---------+----------------+
+                3 rows in set (0.00 sec)
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+6]  DROP Command   
+ 
+    Theory Questions: 
+
+    -------------------------------------------------------------------------         
+ 
+        1. What is the function of the DROP command in SQL? 
+
+            --> Drop is use for delete database or table form the systems.
+            --> Using Drop command you can drop table or database .
+            --> Drop use with alter command you just drop column.
+
+            Syntax:-
+                Drop tabel <Table_nm>;
+
+                Drop database <db_nm>;
+
+                
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        2. What are the implications of dropping a table from a database? 
+
+            --> Dropping a table in a database using DROP TABLE table_name;
+
+            --> 1. Permanent Deletion of Data :-
+
+                    ~> All data inside the table is completely deleted.
+
+            --> 2. Table Structure is Removed :-
+
+                    ~> The table definition (columns, data types, constraints) is also deleted.
+            
+            --> 3. Loss of Relationships :-
+
+                    ~> If the table is connected to other tables using foreign keys, those relationships will be affected.
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+    
+    -------------------------------------------------------------------------
+
+        Lab 1: Drop the teachers table from the school_db database. 
+
+            --> drop table teachers;
+
+                    Query OK, 0 rows affected (0.09 sec)
+
+            --> show tables;
+                    +---------------------+
+                    | Tables_in_school_db |
+                    +---------------------+
+                    | courses             |
+                    | students            |
+                    +---------------------+
+                    2 rows in set (0.00 sec)
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        Lab 2: Drop the students table from the school_db database and verify that the table has 
+        been removed. 
+
+                --> mysql> drop table students;
+
+                        Query OK, 0 rows affected (0.04 sec)
+
+                --> desc students;
+
+                        ERROR 1146 (42S02): Table 'school_db.students' doesn't exist
+                
+                 --> show tables;
+                        +---------------------+
+                        | Tables_in_school_db |
+                        +---------------------+
+                        | courses             |
+                        +---------------------+
+                        2 rows in set (0.00 sec)
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+7] Data Manipulation Language (DML)  
+
+    Theory Questions: 
+
+    -------------------------------------------------------------------------         
+ 
+        1. Define the INSERT, UPDATE, and DELETE commands in SQL.
+
+            --> Insert :-
+                    ~> it is use for inserting data into table.
+
+                    Syntax :-
+                        INSERT INTO <table_nm> (filed_nm) VALUES ();
+            
+            --> Update :-
+                    ~> it is use for updating data from the table.
+
+                    Syntax:-
+                        ~> UPDATE <table_nm> SET column_nm = value, col_2 = value WHERE condition;
+                
+            --> DELETE :-
+                    ~> it is use to delete pertiqular row from the table.
+
+                    Syntax:-
+                        ~> DELETE FROM <table_nm> WHERE condition;
+                
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        2. What is the importance of the WHERE clause in UPDATE and DELETE operations? 
+
+            -->  Where in update:-
+                    ~> it so important in Update Command.
+                    ~> without Where clause you can update recorde on tables but output is not valid.
+                    ~> using where you can update pertiqular record and get expected outcome.
+                    ~> if you are not put where condition and you try to change data. 
+                        so that all data is updated with same value.
+
+                        E.g :-
+                            update student set name = "ram"; 
+
+                            update student set name = "ram" where id=1;
+
+            --> Where in Delete :-
+                    ~> it also important in Delete.
+                    ~> without where clause you ca  delete all record from table.
+                    ~> using where you delete pertiqular data from the table.
+
+                        E.g :-
+                            delete from studen;  -> it's delete all record.
+
+                            delete from student where id = 1; -> delete only 1 record. 
+    
+    ===============================================================================================================
+
+    LAB EXERCISES:
+    
+    -------------------------------------------------------------------------
+
+        Lab 1: Insert three records into the courses table using the INSERT command. 
+
+            -->  mysql> insert into courses (course_name,course_duration)
+                    -> values
+                    -> ('Python',4),
+                    -> ('Java',6),
+                    -> ('Php',2);
+
+                Query OK, 3 rows affected (0.02 sec)
+                Records: 3  Duplicates: 0  Warnings: 0
+                
+            --> select * from courses;
+                    +-----------+-------------+-----------------+
+                    | course_id | course_name | course_duration |
+                    +-----------+-------------+-----------------+
+                    |         1 | Python      |               4 |
+                    |         2 | Java        |               6 |
+                    |         3 | Php         |               2 |
+                    +-----------+-------------+-----------------+
+                    3 rows in set (0.01 sec)
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        Lab 2: Update the course duration of a specific course using the UPDATE command. 
+
+            --> update courses set course_duration = 4 where course_id = 3;
+
+                    Query OK, 1 row affected (0.02 sec)
+                    Rows matched: 1  Changed: 1  Warnings: 0
+
+            --> select * from courses;
+
+                    +-----------+-------------+-----------------+
+                    | course_id | course_name | course_duration |
+                    +-----------+-------------+-----------------+
+                    |         1 | Python      |               4 |
+                    |         2 | Java        |               6 |
+                    |         3 | Php         |               4 |
+                    +-----------+-------------+-----------------+
+                    3 rows in set (0.00 sec)
+                
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        Lab 3: Delete a course with a specific course_id from the courses table using the DELETE 
+               command. 
+
+            --> delete from courses where course_id = 3;
+                       
+                    Query OK, 1 row affected (0.01 sec)
+
+            --> select * from courses;
+
+                    +-----------+-------------+-----------------+
+                    | course_id | course_name | course_duration |
+                    +-----------+-------------+-----------------+
+                    |         1 | Python      |               4 |
+                    |         2 | Java        |               6 |
+                    +-----------+-------------+-----------------+
+                    2 rows in set (0.00 sec)
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+8] Data Query Language (DQL)   
+
+    Theory Questions: 
+
+    -------------------------------------------------------------------------         
+ 
+         
+        1. What is the SELECT statement, and how is it used to query data? 
+                
+            --> Select :-
+                    ~> it is DQl command.
+                    ~> it is used for retrive data from table.
+
+                    Syntax :-
+                        SELECT * FROM <Table_nm>;
+
+                    ~> use Where condition in select that's why you retriev data for condition whys.
+
+                    Syntax :-
+                        SELECT * FROM <Table_nm> where condition;
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        2. Explain the use of the ORDER BY and WHERE clauses in SQL queries. 
+
+            --> ORDER BY :-
+                    ~> it used for data retrive for ASCENDING and Descending order from the table.
+                    ~> by defualt data as set as ASC Order. 
+                 Syntax :-
+                    -> select * from <table_nm> order by <col_nm>;
+                                    OR
+                    -> select * from <table_nm> order by <col_nm> ASC;
+                                    OR
+                    -> select * from <table_nm> order by <col_nm> DESC;
+
+            --> Where :-
+                    ~> Used to filter data based on specific conditions
+                    ~> Returns only the rows that match the condition
+
+                    Syntax:-
+                        Where <Col_nm> from <table_nm> where condition;
+ 
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+ 
+        Lab 1: Retrieve all courses from the courses table using the SELECT statement. 
+
+            --> select * from courses;
+                    +-----------+-------------+-----------------+
+                    | course_id | course_name | course_duration |
+                    +-----------+-------------+-----------------+
+                    |         1 | Python      |               4 |
+                    |         2 | Java        |               6 |
+                    |         4 | php         |               3 |
+                    |         5 | c           |               2 |
+                    |         6 | c++         |               2 |
+                    |         7 | html        |               1 |
+                    |         8 | Django      |               5 |
+                    +-----------+-------------+-----------------+
+                    7 rows in set (0.01 sec)
+                
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+         
+        Lab 2: Sort the courses based on course_duration in descending order using ORDER BY. 
+
+            --> select * from courses order by course_duration DESC;
+                    +-----------+-------------+-----------------+
+                    | course_id | course_name | course_duration |
+                    +-----------+-------------+-----------------+
+                    |         2 | Java        |               6 |
+                    |         8 | Django      |               5 |
+                    |         1 | Python      |               4 |
+                    |         4 | php         |               3 |
+                    |         5 | c           |               2 |
+                    |         6 | c++         |               2 |
+                    |         7 | html        |               1 |
+                    +-----------+-------------+-----------------+
+                    7 rows in set (0.02 sec)
+                
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        Lab 3: Limit the results of the SELECT query to show only the top two courses using LIMIT. 
+
+            --> select course_name,course_duration from courses limit  2;
+                    +-------------+-----------------+
+                    | course_name | course_duration |
+                    +-------------+-----------------+
+                    | Python      |               4 |
+                    | Java        |               6 |
+                    +-------------+-----------------+
+                    2 rows in set (0.01 sec)
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+9] Data Control Language (DCL)    
+
+    Theory Questions: 
+
+    -------------------------------------------------------------------------         
+ 
+         
+        1. What is the purpose of GRANT and REVOKE in SQL?  
+
+            -->  GRANT :-
+                        ~> it is used for assign Special permissions to user. 
+                        ~> like get database access, select , update etc..
+                        
+                    Syntax:-
+                        GRANT <permission> on <database_nm>.<table_nm> to '<user>'@'<host>' ;
+
+            --> REVOKE :-
+                        ~> it's used for remove permission to user.
+
+                    Syntax :-
+                        REVOKE <Permission> on <database_nm>.<table_name> from '<user>'@'<host>';
+                
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        2. How do you manage privileges using these commands?  
+
+            --> 1. GRANT (Give Permission)
+                    Use:
+                        ~> Used to assign privileges to a user
+
+                    E.g :-
+                        GRANT SELECT, INSERT
+                        ON student
+                        TO 'user1'@'localhost';
+                    
+            --> 2. REVOKE (Remove Permission)
+                    Use:
+                       ~> Used to remove privileges from a user.
+
+                    E.g :-
+
+                        REVOKE SELECT, INSERT
+                        ON student
+                        FROM 'user1'@'localhost';
+                        
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+ 
+        Lab 1:  Create two new users user1 and user2 and grant user1 permission to SELECT 
+                from the courses table.   
+                
+                --> create user 'user1'@'localhost' identified by 'user1';
+                        Query OK, 0 rows affected (0.12 sec)
+
+                --> create user 'user2'@'localhost' identified by 'user2';
+                        Query OK, 0 rows affected (0.02 sec)
+
+                --> select user, host from mysql.user;
+                        +------------------+-----------+
+                        | user             | host      |
+                        +------------------+-----------+
+                        | jenish           | localhost |
+                        | mysql.infoschema | localhost |
+                        | mysql.session    | localhost |
+                        | mysql.sys        | localhost |
+                        | root             | localhost |
+                        | user1            | localhost |
+                        | user2            | localhost |
+                        +------------------+-----------+
+                        7 rows in set (0.00 sec)
+                    
+                --> grant select on school_db.courses to 'user1'@'localhost';
+                        Query OK, 0 rows affected (0.02 sec)
+
+                --> select * from school_db.courses;
+                        +-----------+-------------+-----------------+
+                        | course_id | course_name | course_duration |
+                        +-----------+-------------+-----------------+
+                        |         1 | Python      |               4 |
+                        |         2 | Java        |               6 |
+                        |         4 | php         |               3 |
+                        |         5 | c           |               2 |
+                        |         6 | c++         |               2 |
+                        |         7 | html        |               1 |
+                        |         8 | Django      |               5 |
+                        +-----------+-------------+-----------------+
+                        7 rows in set (0.01 sec)
+
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+         
+        Lab 2: Revoke the INSERT permission from user1 and give it to user2. 
+
+                --> revoke select on school_db.courses from 'user1'@'localhost';
+                        Query OK, 0 rows affected (0.01 sec)
+
+                --> select * from school_db.courses;
+
+                        ERROR 1142 (42000): SELECT command denied to user 'user1'@'localhost' for table 'courses'
+
+                --> grant select on school_db.courses to 'user2'@'localhost';
+                        Query OK, 0 rows affected (0.02 sec)
+                
+                --> select * from school_db.courses;
+                        +-----------+-------------+-----------------+
+                        | course_id | course_name | course_duration |
+                        +-----------+-------------+-----------------+
+                        |         1 | Python      |               4 |
+                        |         2 | Java        |               6 |
+                        |         4 | php         |               3 |
+                        |         5 | c           |               2 |
+                        |         6 | c++         |               2 |
+                        |         7 | html        |               1 |
+                        |         8 | Django      |               5 |
+                        +-----------+-------------+-----------------+
+                        7 rows in set (0.01 sec) 
+                
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+10] Transaction Control Language (TCL)     
+
+    Theory Questions: 
+
+    -------------------------------------------------------------------------         
+ 
+         
+        1. What is the purpose of the COMMIT and ROLLBACK commands in SQL?
+
+            --> COMMIT :-
+                    ~> it is permenet save all changes in databsae.
+                    ~> once you do commit you can't be do rollback.
+
+                    E.g :-
+                        ~> start transaction;
+
+                        ~> UPDATE student
+                            SET name = 'Ram'
+                            WHERE id = 1;
+
+                        ~> COMMIT;
+
+            --> ROLLBACK :-
+                    ~> it is use for roll back to start transation.
+                    ~> it is work like undo on changes.
+                
+                    E.g :-
+                        ~> start transaction;
+
+                        ~> UPDATE student
+                           SET name = 'Shyam'
+                           WHERE id = 1;
+
+                        ~> ROLLBACK;
+                    
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        2. Explain how transactions are managed in SQL databases. 
+
+            --> A transaction is a group of SQL operations executed as a single unit of work.
+             
+            --> it's have 3 part 
+
+                1} RollBack
+                2} CheckPoint 
+                3} Commit 
+
+            --> Transaction Flow:-
+
+                    ~> START TRANSACTION;
+
+                    ~> SQL operations
+
+                        UPDATE account SET balance = balance - 500 WHERE id = 1;
+                        UPDATE account SET balance = balance + 500 WHERE id = 2;
+
+                    ~> COMMIT;
+
+            --> If everything is correct → COMMIT
+            --> If error occurs → ROLLBACK
+
+            SavePoint :-
+                --> we can create check point and we can jump on specific checkpoint.
+
+                E.g :
+                    ~> SAVEPOINT sp1;
+                    
+                E.x:-
+                    ~> START TRANSACTION;
+
+                    ~> SQL operations
+
+                        UPDATE account SET balance = balance - 500 WHERE id = 1;
+
+                        SAVEPOINT sp1;
+
+                        UPDATE account SET balance = balance + 500 WHERE id = 2;
+
+                        SAVEPOINT sp2;
+
+                    ~> ROLLBACK to sp1;
+            
+ 
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+ 
+        Lab 1: Insert a few rows into the courses table and use COMMIT to save the changes.  
+
+            --> start transaction;
+                Query OK, 0 rows affected (0.01 sec)
+
+            --> insert into courses (course_name,course_duration)
+                -> values
+                -> ('java',6),
+                -> ('Python',5),
+                -> ('C',2),
+                -> ('Php',4);
+                Query OK, 4 rows affected (0.02 sec)
+                Records: 4  Duplicates: 0  Warnings: 0
+
+            --> commit;
+                Query OK, 0 rows affected (0.01 sec)
+
+            --> select * from courses;
+                +-----------+-------------+-----------------+
+                | course_id | course_name | course_duration |
+                +-----------+-------------+-----------------+
+                |         9 | java        |               6 |
+                |        10 | Python      |               5 |
+                |        11 | C           |               2 |
+                |        12 | Php         |               4 |
+                +-----------+-------------+-----------------+
+                4 rows in set (0.01 sec)
+                
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+         
+        Lab 2: Insert additional rows, then use ROLLBACK to undo the last insert operation. 
+
+            --> start transaction;
+                Query OK, 0 rows affected (0.00 sec)
+
+            --> insert into courses (course_name,course_duration)
+                -> values
+                -> ('HTML',2),
+                -> ('c++',3);
+                Query OK, 2 rows affected (0.00 sec)
+                Records: 2  Duplicates: 0  Warnings: 0
+
+            --> rollback;
+                Query OK, 0 rows affected (0.02 sec)
+
+            --> select * from courses;
+                +-----------+-------------+-----------------+
+                | course_id | course_name | course_duration |
+                +-----------+-------------+-----------------+
+                |         9 | java        |               6 |
+                |        10 | Python      |               5 |
+                |        11 | C           |               2 |
+                |        12 | Php         |               4 |
+                +-----------+-------------+-----------------+
+                4 rows in set (0.00 sec)
+                
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        Lab 3: Create a SAVEPOINT before updating the courses table, and use it to roll back specific changes.  
+
+            --> start transaction;
+                Query OK, 0 rows affected (0.00 sec)
+
+            --> insert into courses (course_name,course_duration)
+                -> values
+                -> ('HTML',2),
+                -> ('c++',3);
+                Query OK, 2 rows affected (0.01 sec)
+                Records: 2  Duplicates: 0  Warnings: 0
+
+            --> savepoint sp1;
+                Query OK, 0 rows affected (0.01 sec)
+
+            --> update courses set course_duration = 1 where course_name = 'HTML';
+                Query OK, 1 row affected (0.01 sec)
+                Rows matched: 1  Changed: 1  Warnings: 0
+
+            --> select * from courses;
+                +-----------+-------------+-----------------+
+                | course_id | course_name | course_duration |
+                +-----------+-------------+-----------------+
+                |         9 | java        |               6 |
+                |        10 | Python      |               5 |
+                |        11 | C           |               2 |
+                |        12 | Php         |               4 |
+                |        15 | HTML        |               1 |
+                |        16 | c++         |               3 |
+                +-----------+-------------+-----------------+
+                6 rows in set (0.00 sec)
+
+            --> rollback to sp1;
+                Query OK, 0 rows affected (0.00 sec)
+
+            --> select * from courses;
+                +-----------+-------------+-----------------+
+                | course_id | course_name | course_duration |
+                +-----------+-------------+-----------------+
+                |         9 | java        |               6 |
+                |        10 | Python      |               5 |
+                |        11 | C           |               2 |
+                |        12 | Php         |               4 |
+                |        15 | HTML        |               2 |
+                |        16 | c++         |               3 |
+                +-----------+-------------+-----------------+
+                6 rows in set (0.00 sec)
+
+            --> commit;
+                Query OK, 0 rows affected (0.01 sec)
+
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+11] SQL Joins   
+
+    Theory Questions: 
+
+    -------------------------------------------------------------------------         
+ 
+         
+        1. Explain the concept of JOIN in SQL. What is the difference between INNER JOIN, LEFT JOIN, 
+           RIGHT JOIN, and FULL OUTER JOIN? 
+
+            --> JOIN :-
+
+                ~> when we wants to join 2 or more tables with using of same matching value its called joining 
+
+                ~> There is no need to apply Foreign Ky for joining.
+
+            1. INNER JOIN :-                
+               
+                    ~> Returns only matching records from both tables
+                
+                Result: ->  Non-matching rows are excluded
+
+                Example Result: -> Common data only
+
+            2. LEFT JOIN (LEFT OUTER JOIN)
+            
+                    ~> Returns all records from left table
+                    ~> matching records from right table
+                    ~> If no match → NULL
+                Example Result: ->   All Left + Matching Right
+
+            3. RIGHT JOIN (RIGHT OUTER JOIN)
+            
+                    ~> Returns all records from right table
+                    ~> matching records from left table
+                    ~> If no match → NULL
+                Example Result: -> All Right + Matching Left
+
+            4. FULL OUTER JOIN
+            
+                    ~> Returns all records from both tables
+                    ~> If no match → NULL on either side
+
+                Example Result: -> All Left + All Right (including unmatched)
+                
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        2. How are joins used to combine data from multiple tables ?  
+
+            --> JOINs are used to link tables using a common column (usually a Primary Key ↔ Foreign Key) 
+               so you can fetch related data in one query.
+
+            Syntax :-
+                SELECT s.name, c.course_name, o.order_id
+                FROM student s
+                JOIN course c ON s.course_id = c.course_id
+                JOIN orders o ON s.id = o.student_id;
+
+ 
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+ 
+        Lab 1: Create two tables: departments and employees. Perform an INNER JOIN to 
+               display employees along with their respective departments.  
+
+            --> create table department
+                (
+                id int primary key auto_increment,
+                dept_name varchar(20));
+                
+                    Query OK, 0 rows affected (0.10 sec)
+
+            --> create table employee
+                (
+                id int primary key auto_increment,
+                emp_name varchar(20),
+                dept_id int ,
+                foreign key(dept_id) references department(id));
+
+                    Query OK, 0 rows affected (0.07 sec)
+
+            --> select employee.id,employee.emp_name,department.dept_name from employee 
+                inner join department 
+                on employee.dept_id=department.id;
+
+                    +----+----------+------------------+
+                    | id | emp_name | dept_name        |
+                    +----+----------+------------------+
+                    |  1 | yash     | IT               |
+                    |  2 | Jenish   | IT               |
+                    |  3 | Ram      | HR               |
+                    |  4 | krishna  | Sales            |
+                    |  5 | Radha    | Customer Support |
+                    +----+----------+------------------+
+                    5 rows in set (0.01 sec)
+                
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+         
+        Lab 2: Use a LEFT JOIN to show all departments, even those without employees. 
+
+                        
+            --> select * from department as dept
+                left join employee as emp
+                on emp.dept_id = dept.id;
+
+                +----+------------------+------+----------+---------+
+                | id | dept_name        | id   | emp_name | dept_id |
+                +----+------------------+------+----------+---------+
+                |  1 | IT               |    1 | yash     |       1 |
+                |  1 | IT               |    2 | Jenish   |       1 |
+                |  2 | HR               |    3 | Ram      |       2 |
+                |  3 | Accounts         | NULL | NULL     |    NULL |
+                |  4 | Sales            |    4 | krishna  |       4 |
+                |  5 | Marketing        | NULL | NULL     |    NULL |
+                |  6 | Operations       | NULL | NULL     |    NULL |
+                |  7 | Customer Support |    5 | Radha    |       7 |
+                +----+------------------+------+----------+---------+
+                8 rows in set (0.01 sec)
+                
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+12] SQL Group By     
+
+    Theory Questions: 
+
+    -------------------------------------------------------------------------         
+ 
+         
+        1. What is the GROUP BY clause in SQL? How is it used with aggregate functions?
+
+            --> GROUP BY :-
+                    ~> group by row wise which is contain comman column value
+                    ~> to use concept of GROUP By we have to use Aggregate function.
+
+                    -> COUNT(*) - count no. of record.
+                    -> SUM : total 
+                    -> Max : maximum value.
+                    -> MIN : minimum value.
+                    -> AVG : Avrage value.
+
+                    Syntax:-
+                        -> select col_nm , count(*) from <table_nm> GROUP BY <col_nm>;
+                
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        2. Explain the difference between GROUP BY and ORDER BY.  
+
+            --> -----------------------------------------------------------------
+                | Feature    | GROUP BY            | ORDER BY                   |
+                | ---------- | ------------------- | -------------------------- |
+                | Purpose    | Group data          | Sort data                  |
+                | Works with | Aggregate functions | Any column                 |
+                | Output     | One row per group   | Same rows, different order |
+                | Syntax     | SELECT column_name, | SELECT * FROM table_name   |
+                |            | aggregate_function  | ORDER BY column_name       |
+                |            | (column) FROM tbl_nm| ASC/DESC;                  |
+                |            | GROUP BY column_nm; |                            |
+                -----------------------------------------------------------------
+ 
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+ 
+        Lab 1: Group employees by department and count the number of employees in each 
+               department using GROUP BY.  
+                
+                --> SELECT dept.dept_name, count(*) as total FROM employee as emp 
+                    JOIN department as dept ON dept.id = emp.dept_id 
+                    GROUP BY dept.dept_name;
+
+                        +------------------+-------+
+                        | dept_name        | total |
+                        +------------------+-------+
+                        | IT               |     2 |
+                        | HR               |     3 |
+                        | Sales            |     3 |
+                        | Marketing        |     1 |
+                        | Customer Support |     2 |
+                        +------------------+-------+
+                        5 rows in set (0.03 sec)
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+         
+        Lab 2:  Use the AVG aggregate function to find the average salary of employees in each department.  
+                
+            --> SELECT dept.dept_name, avg(emp.salary) FROM employee as emp
+                JOIN department as dept on dept.id = emp.dept_id
+                GROUP BY dept.dept_name;
+                    +------------------+-----------------+
+                    | dept_name        | avg(emp.salary) |
+                    +------------------+-----------------+
+                    | IT               |      27500.0000 |
+                    | HR               |      17516.6667 |
+                    | Sales            |      21666.6667 |
+                    | Customer Support |      22500.0000 |
+                    | Marketing        |      22500.0000 |
+                    +------------------+-----------------+
+                    5 rows in set (0.01 sec)
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+13]  Rollback and Commit Savepoint      
+
+    Theory Questions: 
+
+    -------------------------------------------------------------------------         
+ 
+         
+        1. Explain the concept of SAVEPOINT in transaction management. How do ROLLBACK and 
+           COMMIT interact with savepoints? 
+
+            --> A SAVEPOINT is a point inside a transaction to which you can roll back, instead of undoing the whole transaction.
+
+            Syntax:-
+
+                SAVEPOINT savepoint_name;
+                
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        2. When is it useful to use savepoints in a database transaction? 
+
+             --> 1. Complex Transactions 
+             --> 2. Error Handling
+             --> 3. Large Data Operations
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+ 
+        Lab 1:  Perform a transaction where you create a savepoint, insert records, then rollback to the savepoint.  
+                
+            --> START TRANSACTION;
+
+            --> INSERT INTO student (id, name) VALUES (1, 'Ram');
+
+            --> SAVEPOINT sp1;
+
+            --> INSERT INTO student (id, name) VALUES (2, 'Shyam');
+            --> INSERT INTO student (id, name) VALUES (3, 'Ravi');
+
+            --> ROLLBACK TO sp1;
+
+            --> COMMIT;
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+         
+        Lab 2:   Commit part of a transaction after using a savepoint and then rollback the remaining changes.   
+                
+            --> START TRANSACTION;
+
+            --> UPDATE employee 
+                SET salary = salary + 5000 
+                WHERE id = 1;
+
+            --> SAVEPOINT sp1;
+
+            --> UPDATE employee 
+                SET salary = salary + 3000 
+                WHERE id = 2;
+
+            -> DELETE FROM employee WHERE id = 3;
+
+            --> ROLLBACK TO sp1;
+
+            --> COMMIT;
+
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+ 
+                                EXTRA LAB PRACTISE FOR DATABASE CONCEPTS
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+1. Introduction to SQL      
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+        Lab 3: Create a database called library_db and a table books with columns: book_id, 
+                title, author, publisher, year_of_publication, and price. Insert five records into 
+                the table. 
+
+                --> create databsae library_db;
+                --> use library_db;
+                --> create table books
+                    (
+                    book_id int primary key auto_increment,
+                    tital varchar(20),
+                    author varchar(20),
+                    publisher varchar(20),
+                    year_of_publication varchar(20),
+                    price int 
+                    );
+                        Query OK, 0 rows affected (0.07 sec)
+
+                --> INSERT INTO books VALUES
+                    (1,'The Alchemist', 'Paulo Coelho', 'HarperCollins', 1988, 299),
+                    (2, 'Rich Dad Poor Dad', 'Robert Kiyosaki', 'Plata Publishing', 1997, 350),
+                    (3, 'Think and Grow Rich', 'Napoleon Hill', 'Rupa', 1937, 250),
+                    (4, 'Atomic Habits', 'James Clear', 'Avery', 2018, 450),
+                    (5, 'Wings of Fire', 'A.P.J Abdul Kalam', 'Universities Press', 1999, 300);
+
+
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+        Lab 4: Create a table members in library_db with columns: member_id, member_name, 
+                date_of_membership, and email. Insert five records into this table. 
+
+                --> mysql> create table members
+                    (
+                    member_id int primary key auto_increment,
+                    member_name varchar(20),
+                    date_of_membership date,
+                    email varchar(50));
+                         Query OK, 0 rows affected (0.09 sec)
+
+                --> INSERT INTO members VALUES
+                    (1, 'Rahul Sharma', '2023-01-15', 'rahul@gmail.com'),
+                    (2, 'Amit Patel', '2026-03-15', 'amit@gmail.com'),
+                    (3, 'Sneha Mehta', '2024-05-17', 'sneha@gmail.com'),
+                    (4, 'Priya Shah', '2025-06-08', 'priya@gmail.com'),
+                    (5, 'Karan Verma', '2023-09-05', 'karan@gmail.com');
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+2. SQL Syntax        
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+       Lab 3: Retrieve all members who joined the library before 2022. Use appropriate SQL syntax 
+                with WHERE and ORDER BY.  
+
+                --> select * from members where date_of_membership >'2022-01-01' order by date_of_membership asc;
+
+                    +-----------+--------------+--------------------+-----------------+
+                    | member_id | member_name  | date_of_membership | email           |
+                    +-----------+--------------+--------------------+-----------------+
+                    |         1 | Rahul Sharma | 2023-01-15         | rahul@gmail.com |
+                    |         5 | Karan Verma  | 2023-09-05         | karan@gmail.com |
+                    |         3 | Sneha Mehta  | 2024-05-17         | sneha@gmail.com |
+                    |         4 | Priya Shah   | 2025-06-08         | priya@gmail.com |
+                    |         2 | Amit Patel   | 2026-03-15         | amit@gmail.com  |
+                    +-----------+--------------+--------------------+-----------------+
+                    5 rows in set (0.01 sec)
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+       Lab 4: Write SQL queries to display the titles of books published by a specific author. Sort the 
+                results by year_of_publication in descending order.
+
+                --> select title,author,year_of_publication from books order by year_of_publication desc;
+                        +---------------------+-------------------+---------------------+
+                        | title               | author            | year_of_publication |
+                        +---------------------+-------------------+---------------------+
+                        | Atomic Habits       | James Clear       |                2018 |
+                        | Wings of Fire       | A.P.J Abdul Kalam |                1999 |
+                        | Rich Dad Poor Dad   | Robert Kiyosaki   |                1997 |
+                        | The Alchemist       | Paulo Coelho      |                1988 |
+                        | Think and Grow Rich | Napoleon Hill     |                1937 |
+                        +---------------------+-------------------+---------------------+
+                        5 rows in set (0.01 sec)
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+3.  SQL Constraints          
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+       Lab 3: Add a CHECK constraint to ensure that the price of books in the books table is 
+                greater than 0. 
+
+            --> alter table books modify price int check(price>0);
+                    Query OK, 5 rows affected (0.11 sec)
+                    Records: 5  Duplicates: 0  Warnings: 0
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+       Lab 4: Modify the members table to add a UNIQUE constraint on the email column, 
+                ensuring that each member has a unique email address.
+
+                --> alter table members add unique(email);
+                        Query OK, 0 rows affected (0.13 sec)
+                        Records: 0  Duplicates: 0  Warnings: 0
+
+                --> desc members;
+                        +--------------------+-------------+------+-----+---------+----------------+
+                        | Field              | Type        | Null | Key | Default | Extra          |
+                        +--------------------+-------------+------+-----+---------+----------------+
+                        | member_id          | int         | NO   | PRI | NULL    | auto_increment |
+                        | member_name        | varchar(20) | YES  |     | NULL    |                |
+                        | date_of_membership | date        | YES  |     | NULL    |                |
+                        | email              | varchar(50) | YES  | UNI | NULL    |                |
+                        +--------------------+-------------+------+-----+---------+----------------+
+                        4 rows in set (0.01 sec)
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+4.  Main SQL Commands and Sub-commands (DDL)           
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+        Lab 3: Create a table authors with the following columns: author_id, first_name, 
+            last_name, and country. Set author_id as the primary key.  
+
+            --> create table authors
+               (
+               author_id int primary key auto_increment,
+               first_name varchar(20),
+               last_name varchar(20),
+               country varchar(20));
+                Query OK, 0 rows affected (0.04 sec)
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+       Lab 4: Create a table publishers with columns: publisher_id, publisher_name, 
+            contact_number, and address. Set publisher_id as the primary key and 
+            contact_number as unique.
+
+            --> create table publishers
+                (
+                publishers_id int primary key auto_increment,
+                publishers_name varchar(20),
+                contact_number bigint unique,
+                address varchar(50));
+        Query OK, 0 rows affected (0.06 sec)
+
+        --> desc publishers;
+            +-----------------+-------------+------+-----+---------+----------------+
+            | Field           | Type        | Null | Key | Default | Extra          |
+            +-----------------+-------------+------+-----+---------+----------------+
+            | publishers_id   | int         | NO   | PRI | NULL    | auto_increment |
+            | publishers_name | varchar(20) | YES  |     | NULL    |                |
+            | contact_number  | bigint      | YES  | UNI | NULL    |                |
+            | address         | varchar(50) | YES  |     | NULL    |                |
+            +-----------------+-------------+------+-----+---------+----------------+
+            4 rows in set (0.01 sec)
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+5.   ALTER Command             
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+        Lab 3: Add a new column genre to the books table. Update the genre for all existing records. 
+
+            --> alter table books add genre varchar(50);
+
+                    Query OK, 0 rows affected (0.06 sec)
+                    Records: 0  Duplicates: 0  Warnings: 0
+
+            --> UPDATE books SET genre = 'Fiction';
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+        Lab 4: Modify the members table to increase the length of the email column to 100 characters.
+
+            --> alter table members modify email varchar(100);
+            
+                    Query OK, 7 rows affected (0.08 sec)
+                    Records: 7  Duplicates: 0  Warnings: 0
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+6.   DROP Command             
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+        Lab 3:  Drop the publishers table from the database after verifying its structure.
+
+            --> desc publishers;
+                    +-----------------+-------------+------+-----+---------+----------------+
+                    | Field           | Type        | Null | Key | Default | Extra          |
+                    +-----------------+-------------+------+-----+---------+----------------+
+                    | publishers_id   | int         | NO   | PRI | NULL    | auto_increment |
+                    | publishers_name | varchar(20) | YES  |     | NULL    |                |
+                    | contact_number  | bigint      | YES  | UNI | NULL    |                |
+                    | address         | varchar(50) | YES  |     | NULL    |                |
+                    +-----------------+-------------+------+-----+---------+----------------+
+                    4 rows in set (0.01 sec)
+                
+            --> drop table publishers;
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+        Lab 4:  Create a backup of the members table and then drop the original members table.
+
+            --> create table members_backup as select * from members;
+                    Query OK, 7 rows affected (0.05 sec)
+                    Records: 7  Duplicates: 0  Warnings: 0
+
+            --> drop table members;
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+7.  Data Manipulation Language (DML)            
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+        Lab 3:  Insert three new authors into the authors table, then update the last name of one of the authors.
+
+            --> insert into authors values
+                (1,'yash','sabhaya','india'),
+                (2,'piter','parker','Spain'),
+                (3,'subhaman','gill','Vietnam');
+            Query OK, 3 rows affected (0.02 sec)
+            Records: 3  Duplicates: 0  Warnings: 0
+
+            --> update authors set last_name = 'rana' where author_id=3;
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+        Lab 4:  Delete a book from the books table where the price is higher than $400.  
+
+            --> delete from books where price > 400;
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+8.   UPDATE Command               
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+        Lab 3: Update the year_of_publication of a book with a specific book_id. 
+
+            --> update books set year_of_publication=2026 where book_id =5;
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+        Lab 4: Increase the price of all books published before 2015 by 10%.  
+
+            --> update books set price=price+(price*0.10) where year_of_publication <2015;
+                    Query OK, 3 rows affected (0.02 sec)
+                    Rows matched: 3  Changed: 3  Warnings: 0
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+9.   DELETE Command             
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+        Lab 3:  Remove all members who joined before 2020 from the members table. 
+
+            --> delete from members_backup where date_of_membership < '2020-01-01';
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+        Lab 4: Delete all books that have a NULL value in the author column.  
+
+            --> delete from books where author = null;
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+10. Data Query Language (DQL)             
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+        Lab 3:  Write a query to retrieve all books with price between $50 and $100.
+
+            --> select * from books where price between 300 and 350;
+                +---------+---------------+-------------------+--------------------+---------------------+-------+---------+
+                | book_id | title         | author            | publisher          | year_of_publication | price | genre   |
+                +---------+---------------+-------------------+--------------------+---------------------+-------+---------+
+                |       1 | The Alchemist | Paulo Coelho      | HarperCollins      |                1988 |   329 | Fiction |
+                |       5 | Wings of Fire | A.P.J Abdul Kalam | Universities Press |                2026 |   300 | Fiction |
+                +---------+------------------------------------------------------------------------------------------------+
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+        Lab 4:  Retrieve the list of books sorted by author in ascending order and limit the results 
+                to the top 3 entries.
+
+                --> select * from books order by author asc limit 3;
+                    +---------+---------------------+-------------------+--------------------+---------------------+-------+---------+
+                    | book_id | title               | author            | publisher          | year_of_publication | price | genre   |
+                    +---------+---------------------+-------------------+--------------------+---------------------+-------+---------+
+                    |       5 | Wings of Fire       | A.P.J Abdul Kalam | Universities Press |                2026 |   300 | Fiction |
+                    |       3 | Think and Grow Rich | Napoleon Hill     | Rupa               |                1937 |   275 | Fiction |
+                    |       1 | The Alchemist       | Paulo Coelho      | HarperCollins      |                1988 |   329 | Fiction |
+                    +---------+---------------------+-------------------+--------------------+---------------------+-------+---------+
+                    3 rows in set (0.02 sec)
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+11. Data Control Language (DCL)               
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+        Lab 3:  Grant SELECT permission to a user named librarian on the books table.
+
+            --> Grant Select on library_db.books to 'librarian'@'localhost';
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+        Lab 4:  Grant INSERT and UPDATE permissions to the user admin on the members table. 
+
+            -->  GRANT insert,update on library_db.members to 'admin'@'localhost';
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+12.  REVOKE Command             
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+        Lab 3:   Revoke the INSERT privilege from the user librarian on the books table. 
+
+            --> Revoke Insert on library_db.books from 'librarian'@'localhost';
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+        Lab 4:  Revoke all permissions from user admin on the members table.  
+
+            --> REVOKE all on library_db.members FROM 'admin'@'localhost';
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+13. Transaction Control Language (TCL)              
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+        Lab 3:  Use COMMIT after inserting multiple records into the books table, then make another 
+                insertion and perform a ROLLBACK.
+
+                --> start transaction;
+                        Query OK, 0 rows affected (0.01 sec)
+
+                --> select * from books;
+                        +---------+---------------------+-------------------+--------------------+---------------------+-------+---------+
+                        | book_id | title               | author            | publisher          | year_of_publication | price | genre   |
+                        +---------+---------------------+-------------------+--------------------+---------------------+-------+---------+
+                        |       1 | The Alchemist       | Paulo Coelho      | HarperCollins      |                1988 |   329 | Fiction |
+                        |       2 | Rich Dad Poor Dad   | Robert Kiyosaki   | Plata Publishing   |                1997 |   385 | Fiction |
+                        |       3 | Think and Grow Rich | Napoleon Hill     | Rupa               |                1937 |   275 | Fiction |
+                        |       5 | Wings of Fire       | A.P.J Abdul Kalam | Universities Press |                2026 |   300 | Fiction |
+                        +---------+---------------------+-------------------+--------------------+---------------------+-------+---------+
+                        4 rows in set (0.01 sec)
+
+                --> insert into books values
+                   (6,'Python Basics', 'John Doe', 'ABC Publications', 2022, 350.00, 'Education'),
+                   (7,'Clean Code', 'Robert C. Martin', 'Prentice Hall', 2008, 550.00, 'Programming'),
+                   (8,'Deep Work', 'Cal Newport', 'Grand Central', 2016, 400, 'Productivity');
+                        Query OK, 3 rows affected (0.05 sec)
+                        Records: 3  Duplicates: 0  Warnings: 0
+
+                --> commit;
+                        Query OK, 0 rows affected (0.02 sec)
+
+                --> start transaction;
+
+                --> insert into books values
+                    (9,'Zero to One', 'Peter Thiel', 'Crown Business', 2014, 420.00, 'Business');
+                        Query OK, 1 row affected (0.01 sec)
+
+                --> rollback;
+                        Query OK, 0 rows affected (0.01 sec)
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+        Lab 4:  Set a SAVEPOINT before making updates to the members table, perform some 
+                updates, and then roll back to the SAVEPOINT.
+
+                --> select * from members_backup;
+                    +-----------+--------------+--------------------+-----------------+
+                    | member_id | member_name  | date_of_membership | email           |
+                    +-----------+--------------+--------------------+-----------------+
+                    |         1 | Rahul Sharma | 2023-01-15         | rahul@gmail.com |
+                    |         2 | Amit Patel   | 2026-03-15         | amit@gmail.com  |
+                    |         3 | Sneha Mehta  | 2024-05-17         | sneha@gmail.com |
+                    |         4 | Priya Shah   | 2025-06-08         | priya@gmail.com |
+                    |         5 | Karan Verma  | 2023-09-05         | karan@gmail.com |
+                    |         6 | rohit Sharma | 2020-01-10         | rohit@gmail.com |
+                    +-----------+--------------+--------------------+-----------------+
+                    6 rows in set (0.01 sec)
+
+                --> start transaction;
+                    Query OK, 0 rows affected (0.00 sec)
+
+                --> update members_backup set email='rahul12@gmail.com' where member_id=1;
+                    Query OK, 1 row affected (0.01 sec)
+                    Rows matched: 1  Changed: 1  Warnings: 0
+
+                --> savepoint sp1;
+                    Query OK, 0 rows affected (0.01 sec)
+
+                --> update members_backup set email='rahul12@gmail.com' where member_id=5;
+                    Query OK, 1 row affected (0.00 sec)
+                    Rows matched: 1  Changed: 1  Warnings: 0
+
+                --> rollback to sp1;
+                    Query OK, 0 rows affected (0.01 sec)
+
+                --> select * from members_backup;
+                    +-----------+--------------+--------------------+-------------------+
+                    | member_id | member_name  | date_of_membership | email             |
+                    +-----------+--------------+--------------------+-------------------+
+                    |         1 | Rahul Sharma | 2023-01-15         | rahul12@gmail.com |
+                    |         2 | Amit Patel   | 2026-03-15         | amit@gmail.com    |
+                    |         3 | Sneha Mehta  | 2024-05-17         | sneha@gmail.com   |
+                    |         4 | Priya Shah   | 2025-06-08         | priya@gmail.com   |
+                    |         5 | Karan Verma  | 2023-09-05         | karan@gmail.com   |
+                    |         6 | rohit Sharma | 2020-01-10         | rohit@gmail.com   |
+                    +-----------+--------------+--------------------+-------------------+
+                    6 rows in set (0.00 sec)
+
+                --> commit;
+                    Query OK, 0 rows affected (0.00 sec) 
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+14. SQL Joins              
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+        Lab 3:  Perform an INNER JOIN between books and authors tables to display the title 
+                of books and their respective authors' names. 
+
+                --> select a.author_id,books.title,concat(a.first_name,' ',a.last_name) as author from books 
+                    inner join authors as a on concat(a.first_name,' ',a.last_name) = books.author;
+
+                        +-----------+---------------------+-------------------+
+                        | author_id | title               | author            |
+                        +-----------+---------------------+-------------------+
+                        |         4 | The Alchemist       | Paulo Coelho      |
+                        |         5 | Rich Dad Poor Dad   | Robert Kiyosaki   |
+                        |         6 | Think and Grow Rich | Napoleon Hill     |
+                        |         7 | Wings of Fire       | A.P.J Abdul Kalam |
+                        |         9 | Deep Work           | Cal Newport       |
+                        |        10 | Zero to One         | Peter Thiel       |
+                        +-----------+---------------------+-------------------+
+                        6 rows in set (0.00 sec)
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+        Lab 4:  Use a FULL OUTER JOIN to retrieve all records from the books and authors tables, 
+                including those with no matching entries in the other table. 
+
+                --> select books.title,concat(a.first_name,' ',a.last_name) as author_name,books.publisher,books.price from books 
+                    left join authors as a on concat(a.first_name,' ',a.last_name)=books.author
+                    union
+                    select books.title,concat(a.first_name,' ',a.last_name) as author_name,books.publisher,books.price from books 
+                    right join authors as a on concat(a.first_name,' ',a.last_name)=books.author;
+
+                            +---------------------+-------------------+--------------------+-------+
+                            | title               | author_name       | publisher          | price |
+                            +---------------------+-------------------+--------------------+-------+
+                            | The Alchemist       | Paulo Coelho      | HarperCollins      |   329 |
+                            | Rich Dad Poor Dad   | Robert Kiyosaki   | Plata Publishing   |   385 |
+                            | Think and Grow Rich | Napoleon Hill     | Rupa               |   275 |
+                            | Wings of Fire       | A.P.J Abdul Kalam | Universities Press |   300 |
+                            | Python Basics       | NULL              | ABC Publications   |   350 |
+                            | Clean Code          | NULL              | Prentice Hall      |   550 |
+                            | Deep Work           | Cal Newport       | Grand Central      |   400 |
+                            | Zero to One         | Peter Thiel       | Crown Business     |   420 |
+                            | NULL                | yash sabhaya      | NULL               |  NULL |
+                            | NULL                | piter parker      | NULL               |  NULL |
+                            | NULL                | subhaman rana     | NULL               |  NULL |
+                            | NULL                | Robert Martin     | NULL               |  NULL |
+                            +---------------------+-------------------+--------------------+-------+
+                            12 rows in set (0.02 sec)
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+15. SQL Group By              
+
+    ===============================================================================================================
+
+    LAB EXERCISES:
+
+    -------------------------------------------------------------------------
+
+        Lab 3:  Group books by genre and display the total number of books in each genre.
+
+            --> select genre , count(*) as total from books group by genre ;
+
+                    +--------------+-------+
+                    | genre        | total |
+                    +--------------+-------+
+                    | Fiction      |     4 |
+                    | Education    |     1 |
+                    | Programming  |     1 |
+                    | Productivity |     1 |
+                    | Business     |     1 |
+                    +--------------+-------+
+                    5 rows in set (0.01 sec)
+
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
+                
+        Lab 4:   Group members by the year they joined and find the number of members who joined each year.  
+
+            --> select year(date_of_membership) as year, count(*) as total from members_backup group by year;
+                    +------+-------+
+                    | year | total |
+                    +------+-------+
+                    | 2023 |     2 |
+                    | 2026 |     1 |
+                    | 2024 |     1 |
+                    | 2025 |     1 |
+                    | 2020 |     1 |
+                    +------+-------+
+                    5 rows in set (0.01 sec)
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+ 
+                                                        THE  END
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=

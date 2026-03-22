@@ -1,0 +1,209 @@
+---------------------------jk-------------------------------Date:- 16/3/2026--------------------------------------------------------------------------------------------              
+HTML :-
+        -> Hyper Text Markup Language.
+
+        -> html stands for markup langauge.
+
+        -> using of html we can design web pages which is run on web browser.
+
+        -> html is a combination or collection of multiple tags.
+
+        ** There are 2 types of tags.
+        1} singular tag.
+        2} pairde tag.
+
+
+        --------------------------------------------
+
+        1} Singular Tag :-
+                -> There are only 3 tag.
+
+                1] <br>
+                2] <hr>
+                3] <img>
+        
+        2} Paired Tag :-
+                -> Which is contain opning and closing bracket.
+
+                Syntax:-
+                    -> <opning_tag> content goes hear... </closing_tag>
+        
+    *********************************************************************************
+
+    Structure Of HTML :-
+
+            <html>
+            
+                <head> 
+                    ......
+                </head>
+
+                <body>
+                    ....
+                </body>
+            
+            </html>
+
+    ************************************************************************************
+
+    Heading Tags :::
+
+        <h1> ... </h1>
+        <h2> ... </h2>
+        <h3> ... </h3>
+        <h4> ... </h4>
+        <h5> ... </h5>
+        <h6> ... </h6>
+
+    *****************************
+
+    Paragraph Tag :::
+
+        ---> Paragraph tag which is represent by p tag which contain Paragraph value.
+
+    *******************************
+
+    List :::
+
+        There are 3 type of List
+
+        1] unorder List
+        2] order List
+        3] description List
+
+        --------------------------------------
+
+        1] unorder List :-
+                -> which is represent by <ul> tag.
+
+                <ul>
+                    <li> ... item content hear.. </li>
+                    <li> ... item content hear.. </li>
+                </ul>
+
+        2] Order List :-
+                -> which is represent by <ol>
+                <ol>
+                    <li> ... <li>
+                    .
+                    .
+                </ol>
+
+        3] description List :-
+
+            -> which is represent by <dl>
+
+            <dl>
+                <dt> ... </dt>
+                :
+                :
+            </dl>
+
+---------------------------jk-------------------------------Date:- 17/3/2026--------------------------------------------------------------------------------------------              
+
+CSS ::-
+    --> Cascading Style Sheet
+
+    There Are 3 way to apply css in html web pages.
+
+    1) inline css 
+    2) internal css
+    3) external css 
+
+    ----------------------------------------------------
+
+    1) inline css ::
+            --> apply css on specific element it's called inline css 
+
+            Syntax:-
+                -> <h1 Style = "properties : value"> context </h1>
+
+    2) internal css ::
+            ---> it is apply on specific web pages
+
+            <Style> .. css goes hear.. </Style>
+
+    3) external css ::
+            --> this is usefull for whole project.
+            --> we can apply external css on full pages.
+            --> create external css web page and connect with  
+            <link> element
+
+    =============================================================
+
+    Selectors ::
+        1] Element Selectors :-
+                -> apply css element wise.
+
+                E.g:-
+                    -> h1
+                    {
+                        property : value
+                    }
+        
+        2] Group Selectors :-
+                -> to apply same styles same css on specific Group of element
+                
+                E.g:-
+                    -> h1,h3{
+                        property : value
+                    }
+        
+        3] Class Selectors :-
+                -> to apply specific class on specific element.
+                -> class Selectors denoted by . opretor.
+
+                E.g :-
+                    .myClass
+                    {
+
+                    }
+
+        4] id Selectors :-  
+                --> to represent unique styles for specific element we can use id Selectors.
+                --> id Selectors represent by #
+
+                E.g :-
+                    -> #muId
+                    {
+                        property : value
+                    }
+
+        5] universal Selectors :-
+                -> 
+
+                * 
+                {
+                    property : value
+                }
+
+---------------------------jk-------------------------------Date:- 18/3/2026--------------------------------------------------------------------------------------------              
+
+    <div> ::-
+        --> div is a most powerfull element of html.
+        --> which is represent as a division tag.
+        -> Syntax:-
+            -> <div>  ... </div>
+            
+        -> each div tag start from new block.
+        -> which is mainly use to create block or division on specific web page.
+
+---------------------------jk-------------------------------Date:- 20/3/2026--------------------------------------------------------------------------------------------              
+
+<Table> :-
+        --> to create table for html web page.
+
+<thead> :-
+        --> this is use to display table heading.
+
+<th> :-
+        -> table heading tag 
+
+<tbody> :-
+        --> table body tag witch display table body content.
+
+<tr> :-
+        --> table body tag witch display table body content.
+
+<td> :-
+        --> table data.
