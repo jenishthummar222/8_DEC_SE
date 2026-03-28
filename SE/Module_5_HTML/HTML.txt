@@ -1,0 +1,97 @@
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+1} Define the terms: Website, Webpage, Web browser, Web server, HTML, CSS 
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+
+        1. Website :-
+
+                ~> A website is a collection of related web pages that are accessible through the internet 
+                    under a single domain name.
+
+                Example: www.google.com
+
+        2. Webpage :-
+
+                ~> A webpage is a single document or page on a website, usually written in HTML and viewed in a browser.
+                
+                Example: Login page, About page
+
+        3. Web Browser :-
+
+                ~> A web browser is a software application used to access and display web pages on the internet.
+                
+                Examples: Google Chrome, Microsoft Edge, Firefox
+
+        4. Web Server :-
+
+                ~> A web server is a computer or software that stores websites and delivers web pages to users 
+                when they request them through a browser.
+
+        5. HTML (HyperText Markup Language) :-
+
+                ~> HTML is the standard language used to create the structure of web pages. 
+                ~> It defines elements like headings, paragraphs, images, etc.
+
+        6. CSS (Cascading Style Sheets) :-
+
+                ~> CSS is used to style and design web pages. 
+                ~> It controls layout, colors, fonts, spacing, and overall appearance.
+
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+2. Create a webpage to show “This is my first HTML page”  
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+<html>
+    <head>
+        <title> First HTMl Page </title>
+    </head>
+
+    <body>
+
+        <h1> This is my first HTML page </h1>
+
+    </body>
+
+</html>
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+8. In how many ways can a CSS be integrated as a web page?
+
++=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+
+CSS ::-
+
+    --> Cascading Style Sheet
+
+    There Are 3 way to apply css in html web pages.
+
+    1) inline css 
+    2) internal css
+    3) external css 
+
+    ----------------------------------------------------
+
+    1) inline css ::
+            --> apply css on specific element it's called inline css 
+
+            Syntax:-
+                -> <h1 Style = "properties : value"> context </h1>
+
+    2) internal css ::
+            ---> it is apply on specific web pages
+
+            <Style> .. css goes hear.. </Style>
+
+    3) external css ::
+            --> this is usefull for whole project.
+            --> we can apply external css on full pages.
+            --> create external css web page and connect with  
+            <link> element
+
+        

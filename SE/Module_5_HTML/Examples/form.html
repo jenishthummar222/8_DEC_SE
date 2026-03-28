@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tag</title>
+</head>
+<style>
+    body {
+        background-color: violet;
+    }
+    
+    form {
+        border: 2px solid black;
+        width: fit-content;
+        padding: 20px;
+        margin: 100px 25px 30px 450px;
+        background-color: rgba(11, 167, 234, 0.598);
+        box-shadow: 0px 2px 10px rgba(15, 24, 1, 0.849);
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    input {
+        background-color: inherit;
+        border-color: rgb(9, 111, 134);
+        color: rgb(247, 243, 246);
+        font-size: medium;
+        padding: 2px;
+    }
+    
+    input[type="submit"] {
+        color: aquamarine;
+        background-color: black;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    
+    input[type="submit"]:hover {
+        color: brown;
+        box-shadow: 0px 2px 4px rgba(15, 24, 1, 0.539);
+    }
+    
+    input[name='f_name'] {
+        margin-right: 50px;
+    }
+    
+    label {
+        font-size: 17px;
+        color: black;
+    }
+</style>
+
+<body>
+    <form action="">
+        <h1> Registration Form
+        </h1>
+        <hr><br>
+        <div style="display: flex;">
+            <label for="">First Name :- </label>
+            <input type="text" name="f_name" placeholder="Enter You First Name" required>
+
+            <label for="">Last Name :- </label>
+            <input type="text" name="l_name" placeholder="Enter You Last Name" required>
+        </div> <br>
+        <div>
+            <label for="">Email :- </label><br>
+            <input style="width: 100%;" type="email" name="email" id="" placeholder="example@domain.com">
+        </div> <br>
+        <div>
+            <label for="">Password :- </label>
+            <input style="width: 100%;" type="password" name="password" id="" placeholder="***">
+        </div><br>
+        <div>
+            <label for="">Address :- </label><br>
+            <input style="width: 100%;" type="text" name="address" id="" placeholder="abc,acb">
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <input type="submit" name="submit" value="Submit" id="">
+        </div>
+    </form>
+</body>
+
+</html>

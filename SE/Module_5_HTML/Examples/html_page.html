@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Registration</title>
+</head>
+<style>
+    .container {
+        background-color: rgba(168, 221, 244, 0.961);
+        padding: 15px;
+    }
+    
+    h1 {
+        text-align: center;
+        color: brown;
+        background-color: rgb(0, 179, 255);
+        box-shadow: 0px 5px 10px black;
+    }
+    
+    h3 {
+        color: red;
+        font-weight: bolder;
+    }
+    
+    #Declaration {
+        margin-top: -20px;
+        font-size: large;
+        font-weight: bold;
+    }
+    
+    #Account {
+        margin-top: 20px;
+        margin-left: 250px;
+    }
+    
+    #Account label {
+        width: 149px;
+    }
+    
+    #persnoal {
+        margin-top: 20px;
+        margin-left: 250px;
+    }
+    
+    #user {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    span {
+        color: red;
+    }
+    
+    label {
+        font-weight: bold;
+        display: inline-block;
+        text-align: right;
+        width: 150px;
+    }
+    
+    label[for="login"] {
+        padding-right: 10px;
+    }
+    
+    input {
+        margin: 5px 0px 0px 5px;
+    }
+    
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+    }
+    
+    #dropdown {
+        margin: 5px 0px 0px 5px;
+        padding-right: 15px;
+    }
+    
+    #Button input {
+        color: aliceblue;
+        background-color: rgb(0, 179, 255);
+        padding: 0px 20px 5px 20px;
+        margin: 5px;
+        text-align: center;
+        font-size: medium;
+        box-shadow: 0px 2px 5px black;
+    }
+    
+    #Button :hover {
+        background-color: red;
+        font-size: large;
+    }
+</style>
+
+<body>
+
+    <h1>Individual Registration</h1>
+
+    <div class="container">
+        <h3>User Particulars</h3>
+        <div id="user">
+            <div>
+                <label for="login"><span>&ast;</span> Login ID</label>
+
+                <input type="text" required name="login_id">
+            </div>
+            <div>
+                <label for="login"><span>&ast;</span> Password</label>
+
+                <input type="password" required name="password">
+            </div>
+            <div id="c_pass">
+                <label for="login"><span>&ast;</span> Confirm Password</label>
+
+                <input type="password" required name="con_password">
+            </div>
+        </div>
+
+        <h3>Persnoal Particulars</h3>
+
+        <div style="display: flex;">
+            <div id="persnoal">
+
+                <div>
+                    <label for="login "><span>&ast;</span> Salutation </label>
+
+                    <select name="salutation" id="dropdown">
+                        <option disabled selected>Select</option>
+                        <option>Mr.</option>
+                        <option>Ms.</option>
+                        <option>Mrs.</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="login "> Middle Name</label>
+
+                    <input type="text " name="m_name ">
+                </div>
+                <div>
+                    <label for="login "><span>&ast;</span> Resident Status </label>
+
+                    <select name="status" id="dropdown">
+                        <option disabled selected>Select</option>
+                        <option>Resident</option>
+                        <option>Non-Resident</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="login "><span>&ast;</span> Email-Id</label>
+
+                    <input type="email" name="email" required>
+                </div>
+            </div>
+            <div id="persnoal">
+                <div>
+                    <label for="login "><span>&ast;</span> First Name</label>
+
+                    <input type="text" required name="f_name">
+                </div>
+                <div>
+                    <label for="login "><span>&ast;</span> Last Name</label>
+
+                    <input type="text" required name="l_name">
+                </div>
+                <div>
+                    <label for="login "><span>&ast;</span> Country </label>
+
+                    <select name="country" id="dropdown">
+                        <option disabled selected>Select</option>
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                        <option>Canada</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="login "><span>&ast;</span> Mobile Number</label>
+
+                    <input type="number" name="m_number " required>
+                </div>
+
+            </div>
+        </div>
+
+        <h3>Account Particulars</h3>
+
+        <div style="display: flex;">
+            <div id="Account">
+
+                <div>
+                    <label for="login "><span>&ast;</span> 15 Digit Account No</label>
+
+                    <input type="number" name="acc_number ">
+                </div>
+                <div>
+                    <label for="login "><span>&ast;</span> Fund Transfer </label>
+
+                    <select name="status" id="dropdown">
+                        <option disabled selected>Select</option>
+                        <option>Savings</option>
+                        <option>Current</option>
+                    </select>
+                </div>
+
+            </div>
+            <div id="Account">
+                <div>
+                    <label for="login "><span>&ast;</span> Nick Name</label>
+
+                    <input type="text" required name="n_name">
+                </div>
+
+            </div>
+        </div>
+        <h3>DECLARATION</h3>
+
+        <div style="display: flex;">
+            <div id="Declaration">
+
+                <div>
+                    <p>
+                        I have read, understood andhereby agree to theterms andCondition in respect of allproducts and channels.
+                        <br> I understand thatanychagesin theterms and conditions applcable to this relationship would be made availabe to me on request at any IOB branches. I Confirm that all accounts under this login name are operated singly and in
+                        case of joint account operated by either or survivor / anyone or survivor(s) under his/her joint name respectivly. I do hereby declare that information furnished in this from is true to the best of mu knowledge and belief.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="Button" style="text-align: center;">
+
+            <input type="submit" value="Submit" name="submit">
+
+            <input type="reset" value="Reset" name="reset">
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

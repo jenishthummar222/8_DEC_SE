@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    body {
+        margin-top: 50px;
+        background-color: black;
+    }
+    
+    .contain {
+        display: none;
+    }
+    
+    .contain:target {
+        display: block;
+    }
+    
+    a {
+        color: rgba(1, 1, 35, 0.829);
+        text-decoration: none;
+        border: 2px solid rgba(251, 249, 249, 0.815);
+        background-color: rgba(247, 242, 247, 0.429);
+        padding: 5px;
+        border-radius: 10px;
+        margin: 20px;
+    }
+    
+    a:hover {
+        box-shadow: 0px 5px 20px rgba(248, 249, 248, 0.849);
+        background-color: rgba(244, 247, 246, 0.785);
+        font-size: large;
+    }
+    
+    #Internal {
+        color: brown;
+        margin: 20px 150px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: large;
+    }
+</style>
+
+<body>
+
+    <a href="#External">External Css</a>
+    <a href="#Internal">Internal Css</a>
+    <a href="#Inline">Inline Css</a>
+
+    <div id="External" class="contain">
+        <br>
+        <label for="">External Css ::</label>
+        <p>--> this is usefull for whole project.<br> --> we can apply external css on full pages.
+            <br> --> create external css web page and connect with [link] element
+        </p>
+    </div>
+    <div id="Internal" class="contain">
+        <br>
+        <label for="">Internal Css ::</label>
+        <p>--> it is apply on specific web pages
+            <br><br> [Style]
+            <br>.. css goes hear..<br> [/Style] </p>
+    </div>
+    <div id="Inline" class="contain" style="color: blueviolet; margin: 20px 300px; font-size: larger; ">
+        <br>
+        <label for="">Inline Css ::</label>
+        <p>
+            apply css on specific element it's called inline css <br><br> Syntax:- <br>
+            <br> h1 Style="properties : value"> context /h1>
+        </p>
+    </div>
+
+
+</body>
+
+</html>
